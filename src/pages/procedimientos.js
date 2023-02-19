@@ -7,8 +7,7 @@ const procedimientos = () => {
       
       <h1>procedimientos</h1>
       
-    </Layout>
-    
+    </Layout>    
   )
 }
 
