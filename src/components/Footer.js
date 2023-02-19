@@ -1,14 +1,16 @@
 import React from 'react'
-import Footer from '../styles/Footer.module.scss'
+import styles from '../styles/Footer.module.scss'
 // import Link from 'next/link'
 
 const Contacto = () => {
   return (
-    <div className={Footer}>
-      <h1>Contáctame</h1>
-    </div>
-
-
+    <footer>
+      <div className={styles.container}>
+        <h1>Contacto</h1>
+        <h1>Sibundoy</h1>
+        <h1>Sibundoy</h1>
+      </div>
+    </footer>
   )
 }
 

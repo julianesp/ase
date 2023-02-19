@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+.main .description {
+  align-items: center;
+  height: 100%;
+  width: inherit;
+  border: 2px solid #000;
+  background-color: blue;
+}

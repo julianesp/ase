@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import doc from '../assets/doc.jpg'
+import logo from '../assets/logo.jpg'
 import styles from '../styles/NavBar.module.scss'
 
 const NavBar = () => {
@@ -11,9 +11,9 @@ const NavBar = () => {
             <div className={styles.person}>
                 <Image                    
                     alt='Logo de empresa'
-                    src={doc}
-                    width={100}
-                    height={100}
+                    src={logo}
+                    // width={100}
+                    // height={100}
                 />
             </div>
 
