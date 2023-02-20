@@ -1,18 +1,15 @@
 .container {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 60px;
-  padding: 0 10px;
-  background-color: bisque;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 0;
 }
-
 .container .person {
-  left: 10;
-  right: 0;
-  border-radius: 20px;
+  /* position: fixed; */
   width: 50px;
   height: 50px;
 }
@@ -21,13 +18,40 @@
   width: 50px;
   border-radius: 50%;
 }
-
 .container .burger {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
-  justify-content: right;
+  align-items: center;
+  /* justify-content: right; */
+  flex-direction: column;
+  gap: 0.64rem;
+  width: 3rem;
+  /* height: 3rem; */
+  border: 0;
+  background: transparent;
   right: 10px;
-  top: 10px;
+  top: 15px;
   margin: 0px;
   padding: 0px;
+}
+.container .burger a > p {
+  display: none;
+}
+.container .burger a {
+  background: #000;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+  /* animaciones del menu  */
+}
+.container .burger a :hover a:first-child {
+  transform: rotate(45deg);
+}
+.container .burger a :hover a:nth-child(2) {
+  opacity: 0;
+}
+.container .burger a :hover a:last-child {
+  transform: rotate(-45deg);
 }

@@ -18,9 +18,15 @@ const NavBar = () => {
             </div>
 
             <ul className={styles.burger}>
-                <Link href='/'>Inicio</Link>
-                <Link href='/procedimientos'>Procedimientos</Link>
-                <Link href='/perfil'>Perfil</Link>
+                <Link href='/'>
+                    <p>Inicio</p>
+                </Link>
+                <Link href='/procedimientos'>
+                    <p>Procedimientos</p>
+                </Link>
+                <Link href='/perfil'>
+                    <p>Perfil</p>
+                </Link>
             </ul>
         </nav>
     )
