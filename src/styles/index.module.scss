@@ -1,18 +1,66 @@
 @charset "UTF-8";
+@import "variables";
 
 .main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     
+    padding-top: .938rem;
+    margin-bottom: 250px;
 
     height: 100vh;
     width: 100vw;
 
     
 
+
     .description {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  
+        align-items: center;      
+
+        .procedimientos {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 100vw;
+            height: 14.75rem;
+
+            margin-bottom: 15px;            
+            
+            background-color: rgb(102, 165, 218);
+
+            h3 {
+                color: $color-soft;
+            }
+        }
+
+        > section:nth-child(2),
+        section:nth-child(3) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 10px;
+            /* padding-left: 20px; */
+            height: 14.75rem;
+
+            /* width: 300px; */
+            
+
+            min-width: 300px;
+            max-width: 400px;
+
+            border-radius: 20px;
+            background-color: $color-primary;
+
+            > h3 {
+                color: $color-soft;
+            }
+        }
+
     }
 }

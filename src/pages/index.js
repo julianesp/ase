@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '@/styles/index.module.scss'
-import Layout from '@/components/Layout'
+import styles from '../styles/index.module.scss'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
@@ -16,16 +16,16 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           
-          <section>
+          <section className={styles.procedimientos}>
             <h3>Slider de procedimientos</h3>
           </section>
 
-          <section>
+          <section className={styles.videos}>
             <h3>Slider de vídeos explicando</h3>
           </section>
 
-          <section>
-            <h3>Slider de explicación de enfermedades</h3>
+          <section className={styles.explicacion}>
+            <h3>Slider explicación enfermedades</h3>
           </section>
 
         </div>
