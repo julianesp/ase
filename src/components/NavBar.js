@@ -8,14 +8,15 @@ const NavBar = () => {
     return (
         <nav className={styles.container}>
 
-            <i className="gg-menu-grid-o"></i>
-
             <div className={styles.person}>
                 <Image
                     alt='Logo de empresa'
                     src={logo}
                 />
             </div>
+            
+            <i className={styles['gg-menu-grid-o']}></i>
+
 
             <menu className={styles.enlaces}>
                 <ul>
