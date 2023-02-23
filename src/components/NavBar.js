@@ -8,26 +8,37 @@ const NavBar = () => {
     return (
         <nav className={styles.container}>
 
+            <i className="gg-menu-grid-o"></i>
+
             <div className={styles.person}>
-                <Image                    
+                <Image
                     alt='Logo de empresa'
                     src={logo}
-                    // width={100}
-                    // height={100}
                 />
             </div>
 
-            <ul className={styles.burger}>
-                <Link href='/'>
-                    <p>Inicio</p>
-                </Link>
-                <Link href='/procedimientos'>
-                    <p>Procedimientos</p>
-                </Link>
-                <Link href='/perfil'>
-                    <p>Perfil</p>
-                </Link>
-            </ul>
+            <menu className={styles.enlaces}>
+                <ul>
+                    <div>
+                        <Link href='/'>
+                            <p>Inicio</p>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href='/procedimientos'>
+                            <p>Procedimientos</p>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href='/perfil'>
+                            <p>Perfil</p>
+                        </Link>
+                    </div>
+                </ul>
+
+            </menu>
+
+            
         </nav>
     )
 }
