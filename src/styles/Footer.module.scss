@@ -1,19 +1,52 @@
+@import "variables";
+
 .footer {
 
     margin-top: 50px;
 
-  .container {
+  
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
 
     height: 300px;
     background-color: rgba(114, 115, 117, 0.9);
 
+
+    .ubicacion {
+      display: flex;;
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+
+      p {
+        color: $color-soft;
+        font-size: 1.3rem;
+        line-height: .1;
+
+      }
+    }
+
+
     .redes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+
+      width: 100%;
+
       ul {
+        display: flex;
+        gap: 0 1rem;
+
         list-style: none;
+        margin: 0;
+        padding: 0;
+
         li {
           img {
             width: 40px;
@@ -22,5 +55,12 @@
         }
       }
     }
-  }
+
+    .externo {      
+
+      a {
+        font-size: .7rem;
+      }
+    }
+  
 }

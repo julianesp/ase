@@ -21,34 +21,38 @@ const Contacto = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
 
-        <div className={styles.redes}>
-          <ul>
-            <li>
-              <Link href='https://www.facebook.com/ALIRIO.SOLARTE' target='_blank'>
-                <Image
-                  alt='Facebook'
-                  src={face}
-                />
-              </Link>
-            </li>
-
-            <li>
-              <Link href='https://www.instagram.com/alirio8308/' target='_blank'>
-                <Image
-                  alt='Instagram'
-                  src={ins}
-                />
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.externo}>
-          <a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Iconos creados por Freepik - Flaticon</a>
-        </div>
+      <div className={styles.ubicacion}>
+        <p>Sibundoy - Putumayo</p>
+        <p>Comunícate al: 313-862-7818</p>
       </div>
+
+      <div className={styles.redes}>
+        <ul>
+          <li>
+            <Link href='https://www.facebook.com/ALIRIO.SOLARTE' target='_blank'>
+              <Image
+                alt='Facebook'
+                src={face}
+              />
+            </Link>
+          </li>
+
+          <li>
+            <Link href='https://www.instagram.com/alirio8308/' target='_blank'>
+              <Image
+                alt='Instagram'
+                src={ins}
+              />
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.externo}>
+        <a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Iconos creados por Freepik - Flaticon</a>
+      </div>
+
     </footer>
   )
 }
