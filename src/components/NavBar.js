@@ -4,48 +4,50 @@ import Image from 'next/image'
 import logo from '../assets/logo.jpg'
 import styles from '../styles/NavBar.module.scss'
 
+/* const menuHamburguesa = document.querySelector('.desplegar')
+menuHamburguesa.addEventListener('click', despliegueMenu)
+
+function despliegueMenu(params) {
+    despliegueMenu.classList.toogle('inactive')
+}*/
+
 const NavBar = () => {
-
-    function desplegar(params) {
-        alert('Clickaste')
-
-
-    }
 
     return (
         <nav className={styles.container}>
 
+
             <menu className={styles.enlaces}>
 
-                <i className={styles['gg-menu-grid-o']} onClick={desplegar}></i>
+                <Image
+                    className={styles['enlaces__logo']}
+                    alt='Logo de empresa'
+                    src={logo}
+                />
+                <i className={styles['gg-menu-grid-o']}></i>
 
-                <div className={styles.person}>
-                    <Image
-                        alt='Logo de empresa'
-                        src={logo}
-                    />
-                </div>
+                <ul className={styles['enlaces__menu']}>
+
+                    <Link href='/'>
+                        <p>Inicio</p>
+                    </Link>
+
+
+                    <Link href='/procedimientos'>
+                        <p>Procedimientos</p>
+                    </Link>
+
+
+                    <Link href='/perfil'>
+                        <p>Perfil</p>
+                    </Link>
+
+                </ul>
+
 
 
             </menu>
 
-            <ul className={styles.desplegar}>
-                <div>
-                    <Link href='/'>
-                        <p>Inicio</p>
-                    </Link>
-                </div>
-                <div>
-                    <Link href='/procedimientos'>
-                        <p>Procedimientos</p>
-                    </Link>
-                </div>
-                <div>
-                    <Link href='/perfil'>
-                        <p>Perfil</p>
-                    </Link>
-                </div>
-            </ul>
 
         </nav>
     )

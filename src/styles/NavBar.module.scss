@@ -3,65 +3,70 @@
 @import url("https://css.gg/menu-grid-o.css");
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 
-  @include flexCenter;
+  /* @include flexCenter; */
+
   
-
+  
+  
   .enlaces {
     position: fixed;
-
+    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 
-    @include whithoutBordes;
+    
 
-    height: 50px;
-    width: 100%;
+    margin: 0;
+    padding: 0 25px;  
+    
+    top: 2px;
 
-    top: 0;
+    height: 60px;
+    width: 80%;
+    
+    border: 1px solid $color-primary;
+    border-radius: 30px;
 
     background-color: rgba($color-soft, 0.93);
     color: $color-primary;
     box-shadow: 0px 5px 15px rgba($color-primary, 0.5);
 
-    /* logo */
-    .person {
-      padding: 0;
-      margin: 0;
-
+    .enlaces__logo {
       width: 50px;
       height: 50px;
 
-      img {
-        height: 50px;
-        width: 50px;
+      border-radius: 50%;
+    }
 
-        border-radius: 50%;
-        left: 5px;
-      }
+    .enlaces__menu {
+      display: flex;
+      display: none;
+
+      
     }
   }
 
+
   /* menu  */
   .gg-menu-grid-o {
-    box-sizing: border-box;
-    /* position: relative; */
+    box-sizing: border-box;    
     display: block;
     transform: scale(var(--ggs, 1));
     width: 16px;
     height: 16px;
 
-    /* right: 30px; */
+    /* display: none; */
   }
 
   .gg-menu-grid-o::before {
     content: "";
     display: block;
     box-sizing: border-box;
-
-    /* position: absolute; */
-
     width: 4px;
     height: 4px;
     background: currentColor;
@@ -69,42 +74,18 @@
       12px 0 0, 0 12px 0;
     border-radius: 22px;
   }
+}
 
-  .desplegar {
-    position: fixed;
-    @include whithoutBordes;
-    @include flexCenter;
-    flex-direction: column;
-    gap: 50px 0;
-
-    top: 50px;
-
-    width: 90%;
-    height: 90%;
-
-    background-color: rgba($color-soft, .85);
-    border-radius: 50px;
-    
-    a {
-      text-decoration: none;
-      
-      p {
-        @include flexCenter;
-        padding: 10px;
-
-        width: 150px;
-
-        border: 2px double $color-primary;
-        border-radius: 50px;
-
-        font-size: 1.2rem;
-
-        color: $color-primary;
-
-
-        
-
+@media screen and (min-width: 769px) {
+  .container {
+    .enlaces {
+      .gg-menu-grid-o {
+        display: none;
       }
+    }
+
+    .enlaces__menu {
+      display: flex;
     }
   }
 }

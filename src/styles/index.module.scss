@@ -2,6 +2,7 @@
 @import "variables";
 
 .main {
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -11,9 +12,6 @@
 
     height: 100vh;
     width: 100vw;
-
-    
-
 
     .description {
         display: flex;

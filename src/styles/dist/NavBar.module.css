@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* @include flexCenter; */
   /* menu  */
 }
 .container .enlaces {
@@ -10,74 +11,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
   margin: 0;
-  height: 50px;
-  width: 100%;
-  top: 0;
+  padding: 0 25px;
+  top: 2px;
+  height: 60px;
+  width: 80%;
+  border: 1px solid #008dbb;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.93);
   color: #008dbb;
   box-shadow: 0px 5px 15px rgba(0, 141, 187, 0.5);
-  /* logo */
 }
-.container .enlaces .person {
-  padding: 0;
-  margin: 0;
+.container .enlaces .enlaces__logo {
   width: 50px;
   height: 50px;
-}
-.container .enlaces .person img {
-  height: 50px;
-  width: 50px;
   border-radius: 50%;
-  left: 5px;
+}
+.container .enlaces .enlaces__menu {
+  display: flex;
+  display: none;
 }
 .container .gg-menu-grid-o {
   box-sizing: border-box;
-  /* position: relative; */
   display: block;
   transform: scale(var(--ggs, 1));
   width: 16px;
   height: 16px;
-  /* right: 30px; */
+  /* display: none; */
 }
 .container .gg-menu-grid-o::before {
   content: "";
   display: block;
   box-sizing: border-box;
-  /* position: absolute; */
   width: 4px;
   height: 4px;
   background: currentColor;
   box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0, 12px 0 0, 0 12px 0;
   border-radius: 22px;
 }
-.container .desplegar {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px 0;
-  top: 50px;
-  width: 90%;
-  height: 90%;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 50px;
-}
-.container .desplegar a {
-  text-decoration: none;
-}
-.container .desplegar a p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  width: 150px;
-  border: 2px double #008dbb;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  color: #008dbb;
+
+@media screen and (min-width: 769px) {
+  .container .enlaces .gg-menu-grid-o {
+    display: none;
+  }
+  .container .enlaces__menu {
+    display: flex;
+  }
 }
