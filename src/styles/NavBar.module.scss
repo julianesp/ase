@@ -1,91 +1,87 @@
-@import "variables";
-@import "mixins";
 @import url("https://css.gg/menu-grid-o.css");
+@import "./variables.scss";
+@import "./mixins";
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
+  position: fixed;
 
-  /* @include flexCenter; */
+  /* @import .flexCenter; */
+  /* display: flex; */
+  
+  padding-top: 5px;
 
-  
-  
-  
-  .enlaces {
-    position: fixed;
-    
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+
+  border: 1px solid #000;
+
+
+  .container__principal {
+
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 
-    
+    width: 90%;
 
-    margin: 0;
-    padding: 0 25px;  
-    
-    top: 2px;
+    margin: 0 auto;
+    padding: 5px;
 
-    height: 60px;
-    width: 80%;
-    
-    border: 1px solid $color-primary;
+    border: 1px solid #000;
     border-radius: 30px;
 
-    background-color: rgba($color-soft, 0.93);
-    color: $color-primary;
-    box-shadow: 0px 5px 15px rgba($color-primary, 0.5);
 
-    .enlaces__logo {
-      width: 50px;
-      height: 50px;
 
-      border-radius: 50%;
-    }
+  .enlaces__logo {
+    width: 50px;
+    height: 50px;
+  
+    border-radius: 50%;
 
-    .enlaces__menu {
-      display: flex;
-      display: none;
-
-      
-    }
   }
-
-
-  /* menu  */
-  .gg-menu-grid-o {
-    box-sizing: border-box;    
-    display: block;
-    transform: scale(var(--ggs, 1));
-    width: 16px;
-    height: 16px;
-
-    /* display: none; */
-  }
-
-  .gg-menu-grid-o::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    width: 4px;
-    height: 4px;
-    background: currentColor;
-    box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0,
-      12px 0 0, 0 12px 0;
-    border-radius: 22px;
-  }
+  } 
 }
 
-@media screen and (min-width: 769px) {
-  .container {
-    .enlaces {
-      .gg-menu-grid-o {
-        display: none;
-      }
-    }
 
-    .enlaces__menu {
-      display: flex;
-    }
-  }
+.enlaces__menu {
+  position: absolute;
+  
+  /* @include flexCenter; */
+  flex-direction: column;
+  
+  @include whithoutBordes;
+  
+  width: 100%;
+  display: none;
+  /* height: inherit; */
+
+  /* top: 50%; */
 }
+
+/* menu  */
+.gg-menu-grid-o {
+  box-sizing: border-box;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 40px;
+  height: 16px;
+}
+
+.gg-menu-grid-o:checked ~ .enlaces__menu {
+  display: block;
+}
+
+.gg-menu-grid-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0,
+    12px 0 0, 0 12px 0;
+  border-radius: 22px;
+}
+

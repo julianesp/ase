@@ -1,13 +1,14 @@
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin whithoutBordes {
     padding: 0;
     margin: 0;
 }
 
-@mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 @mixin flexBetweenCenter {
     display: flex;
