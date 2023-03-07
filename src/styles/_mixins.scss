@@ -4,20 +4,20 @@
     align-items: center;
 }
 
-@mixin whithoutBordes {
+.whithoutBordes {
     padding: 0;
     margin: 0;
 }
 
 
-@mixin flexBetweenCenter {
+.flexBetweenCenter {
     display: flex;
     justify-content: space-between;
     align-items: center;
     left: 50px;
 }
 
-@mixin margenLateral {
+.margenLateral {
     padding-left: 80px;
     padding-right: 80px;
 }

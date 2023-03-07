@@ -5,22 +5,23 @@ import logo from '../assets/logo.jpg'
 import styles from '../styles/NavBar.module.scss'
 
 const NavBar = () => {
-
+    
     return (
         <nav className={styles.container}>
 
             <div className={styles['container__principal']}>
-                
+
                 <Image
                     className={styles['enlaces__logo']}
                     alt='Logo de empresa'
                     src={logo}
                 />
+
                 <i className={styles['gg-menu-grid-o']}></i>
 
             </div>
 
-            <ul className={styles['enlaces__menu']}>
+            <ul id='menu' className={styles['enlaces__menu']}>
 
                 <Link href='/'>
                     <p>Inicio</p>

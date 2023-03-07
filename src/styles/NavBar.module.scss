@@ -1,13 +1,10 @@
 @import url("https://css.gg/menu-grid-o.css");
-@import "./variables.scss";
-@import "./mixins";
+@import "variables.scss";
+@import "mixins";
 
 .container {
   position: fixed;
 
-  /* @import .flexCenter; */
-  /* display: flex; */
-  
   padding-top: 5px;
 
   height: 100%;
@@ -17,9 +14,7 @@
 
   border: 1px solid #000;
 
-
   .container__principal {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,56 +27,56 @@
     border: 1px solid #000;
     border-radius: 30px;
 
+    background-color: rgba($color-soft, 0.9);
 
+    .enlaces__logo {
+      width: 50px;
+      height: 50px;
 
-  .enlaces__logo {
-    width: 50px;
-    height: 50px;
-  
-    border-radius: 50%;
+      border-radius: 50%;
+    }
 
+    /* menu  */
+    .gg-menu-grid-o {
+      box-sizing: border-box;
+      display: block;
+      transform: scale(var(--ggs, 1));
+      width: 35px;
+      height: 16px;      
+    }
+
+    .gg-menu-grid-o:checked ~ .enlaces__menu {
+      display: block;
+    }
+
+    .gg-menu-grid-o::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      width: 4px;
+      height: 4px;
+      background: currentColor;
+      box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0,
+        6px 0 0, 12px 0 0, 0 12px 0;
+      border-radius: 22px;
+    }
   }
-  } 
-}
-
-
-.enlaces__menu {
-  position: absolute;
   
-  /* @include flexCenter; */
-  flex-direction: column;
+  .enlaces__menu {
+    position: absolute;
   
-  @include whithoutBordes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   
-  width: 100%;
-  display: none;
-  /* height: inherit; */
+    top: 2px;
 
-  /* top: 50%; */
-}
+    padding: 0;
+    margin: 0;
 
-/* menu  */
-.gg-menu-grid-o {
-  box-sizing: border-box;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 40px;
-  height: 16px;
-}
-
-.gg-menu-grid-o:checked ~ .enlaces__menu {
-  display: block;
-}
-
-.gg-menu-grid-o::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  width: 4px;
-  height: 4px;
-  background: currentColor;
-  box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0,
-    12px 0 0, 0 12px 0;
-  border-radius: 22px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
