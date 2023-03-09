@@ -14,6 +14,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
+        <div className={styles.enDesarrollo}>
+          <p>En desarrollo</p>
+        </div>
+
         <div className={styles.description}>
           
           <section className={styles.procedimientos}>

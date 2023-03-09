@@ -23,7 +23,7 @@ const NavBar = () => {
 
             <ul id='menu' className={styles['enlaces__menu']}>
 
-                <Link href='/'>
+                <Link href='/' className='active'>
                     <p>Inicio</p>
                 </Link>
 
