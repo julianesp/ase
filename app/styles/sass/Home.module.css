@@ -1,0 +1,259 @@
+/* $color-primary: rgb(0, 137, 181);
+$color-soft: #ffffff;
+$color-fondo: rgb(26, 161, 234); */
+/* styles to presentation of start page */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 1s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 300px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: aliceblue;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* ajustando width */
+.container .presentation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-top: 15px;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+.container .contenido {
+  margin-top: 100px;
+  width: 100%;
+  /* width: 200px; */
+  /* max-width: 420px; */
+  border: 1px solid red;
+}
+
+.container .contenido .procedimientos {
+  width: inherit;
+  height: 250px;
+  border: 1px solid red;
+}
+
+.container .contenido .procedimientos img {
+  /* width: min-content; */
+  height: 200px;
+  border: unset;
+=======
+.procedimientos {
+  padding-left: 90px;
+}
+
+.procedimientos .publicaciones {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+=======
+.procedimientos {
+  padding-left: 90px;
+}
+
+.procedimientos .publicaciones {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+>>>>>>> parent of 838dbd6 ([DELETE] styles redundantes)
+/* estilos slider  */
+.container .cuerpo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95dvw;
+  margin-top: 55px;
+}
+
+.container .cuerpo .contenido .slideshow {
+  display: flex;
+  margin-top: 30px;
+  /* margin-bottom: 25px; */
+  /* min-width: 290px; */
+  width: 100vw;
+  height: 300px;
+}
+
+.container .cuerpo .contenido .slideshow .images_servicios {
+  display: flex;
+  /* overflow-x: auto; */
+  /* overflow: hidden; */
+  height: inherit;
+  scroll-snap-type: y mandatory;
+  /* margin-bottom: 100px; */
+}
+
+.container .cuerpo .contenido .slideshow .images_servicios .imageContainer {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 10px;
+  /* width: inherit; */
+}
+
+.container .cuerpo .contenido .slideshow .images_servicios .imageContainer img {
+  width: 100%;
+  object-fit: contain;
+  /* height: 170px; */
+<<<<<<< HEAD
+>>>>>>> parent of 838dbd6 ([DELETE] styles redundantes)
+=======
+>>>>>>> parent of 838dbd6 ([DELETE] styles redundantes)
+  border-radius: unset;
+}
+
+.container .cuerpo .contenido .publicidad {
+  margin-top: 100px;
+}
+
+/* styles .procedimientos */
+.tratamientos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px 0;
+  /* padding: 0; */
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.tratamientos .area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  width: 70%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #fff;
+}
+
+.tratamientos .area h3 {
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.tratamientos .area ul li {
+  list-style: circle;
+  font-size: 1.15rem;
+}
+
+.tratamientos .area button {
+  margin-top: 20px;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .presentation {
+    margin-top: 30px;
+  }
+  .presentation #carousel {
+    display: inline-block;
+  }
+  .presentation #carousel #flechas {
+    /* width: 50px; */
+  }
+  .presentation .image img {
+    /* width: 90px; */
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .presentation {
+    width: 85dvw;
+  }
+  .container .cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 200px;
+    grid-template-areas: 'publicaciones publicaciones publicidad' 'publicaciones publicaciones publicidad' 'publicaciones publicaciones publicidad';
+    gap: 0 20px;
+    width: 80vw;
+  }
+  .container .cuerpo .contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: publicaciones;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    margin-top: 50px;
+    /* padding: 20px 0; */
+    border: 2px solid #024914;
+    border-radius: 20px;
+  }
+  .container .cuerpo .contenido section {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .cuerpo .publicidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: publicidad;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-top: 50px;
+    border: 2px solid red;
+    border-radius: 20px;
+  }
+}
