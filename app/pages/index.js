@@ -77,7 +77,7 @@ const Home = () => {
 
           <section className={styles.procedimientos}>
 
-            <VisorImages
+            {/*<VisorImages
               className={``}
               images={
                 [
@@ -89,9 +89,10 @@ const Home = () => {
               }
               automaticTransition={false}
 
-            />
-            {/* <Slider /> */}
+            />*/}
+
           </section>
+          {/* <Slider /> */}
 
           <section className={styles.cuerpo}>
 
