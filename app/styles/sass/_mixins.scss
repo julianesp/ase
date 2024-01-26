@@ -1,0 +1,23 @@
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whithoutBordes {
+    padding: 0;
+    margin: 0;
+}
+
+
+.flexBetweenCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50px;
+}
+
+.margenLateral {
+    padding-left: 80px;
+    padding-right: 80px;
+}
