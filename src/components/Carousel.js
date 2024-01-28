@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from '@/styles/sass/Carousel.module.scss'
+import styles from '@/styles/sass/Carousel.module.css'
 
 const Carousel = ({ images, automaticTransition = true }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -30,7 +30,7 @@ const Carousel = ({ images, automaticTransition = true }) => {
                         <Image
                             src={image.src}
                             alt={image.alt}
-                            priority={false}
+                            priority
                         />
                     </div>
                 ))}

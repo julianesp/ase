@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import arrowLeft from '../../public/aback.svg';
 import arrowLeftTwo from '../../public/aback.svg';
 
-import styles from '@/styles/sass/SliderProcedimientos.module.scss';
+import styles from '@/styles/sass/SliderProcedimientos.module.css';
 
 const SliderProcedimientos = ({ images, automaticTransition = true }) => {
 

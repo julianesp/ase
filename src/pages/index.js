@@ -2,24 +2,17 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout.js'
 import Image from 'next/image.js'
-import styles from '@/styles/sass/Home.module.scss'
+import styles from '@/styles/Home.module.css'
 import Slider from '../containers/Slider.js'
 // Importando imágenes
 import doctor1 from '/public/images/services/cirugia_laparoscopia_1.jpg'
 import doctor2 from '/public/images/services/colecistectomia.jpg'
 import doctor3 from '/public/images/services/patologias.jpg'
 import doctor4 from '/public/images/services/colonoscopia.jpg'
-import VisorImages from '@/components/VisorImages.js'
+import VisorImages from '../components/VisorImages.js'
+
 
 const Home = () => {
-  // Create a state variable for the current image
-  // const [currentImage, setCurrentImage] = useState(null);
-
-  // Update the current image
-  // const updateCurrentImage = (image) => {
-  //   setCurrentImage(image);
-  // };
-
 
   const imgs = {
     doctor: [
@@ -77,7 +70,7 @@ const Home = () => {
 
           <section className={styles.procedimientos}>
 
-            {/*<VisorImages
+            <VisorImages
               className={``}
               images={
                 [
@@ -89,7 +82,7 @@ const Home = () => {
               }
               automaticTransition={false}
 
-            />*/}
+            />
 
           </section>
           {/* <Slider /> */}

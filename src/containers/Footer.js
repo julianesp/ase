@@ -7,8 +7,7 @@ import tik from '../../public/assets/redes/tiktok.png'
 import wha from '../../public/assets/redes/whatsapp.png'
 import map from '../../public/images/map.png'
 import arrow from '../../public/next.png'
-// import GoBackButton from '@/components/GoBackButton.js'
-import styles from '../styles/sass/Footer.module.scss'
+import styles from '../styles/Footer.module.css'
 
 
 const Contacto = () => {

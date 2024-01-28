@@ -1,15 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-
-// import arrowLeft from '../../public/back.svg';
 import arrowLeft from '../../public/aback.svg';
 import arrowLeftTwo from '../../public/aback.svg';
-// import arrowRight from '../../public/next.svg';
 import colecis from '../../public/images/colecistectomia.jpg';
 import lapa from '../../public/images/cirugia_laparoscopia.jpg';
-// import patolo from '../../public/images/patologias.jpg'
 import info_1 from '../../public/images/info_1.jpg'
-import styles from '@/styles/sass/Slider.module.scss'
+import styles from '../styles/Slider.module.css'
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,7 +69,6 @@ const Slider = () => {
                             src={image.src}
                             priority={index === currentIndex}
                             alt={image.alt}
-
                             as="image"
                         />
                     </div>
@@ -88,8 +83,6 @@ const Slider = () => {
                             alt="Flecha izquierda"
                             width={40}
                             height={40}
-                            id="arrow"
-                            as="image"
                         />
                     </button>
 
@@ -100,8 +93,6 @@ const Slider = () => {
                             alt="Flecha derecha"
                             width={40}
                             height={40}
-                            id="arrow"
-                            as="image"
                         />
                     </button>
                 </div>

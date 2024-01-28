@@ -1,7 +1,3 @@
-@charset "UTF-8";
-@import './variables.scss';
-@import './mixins.scss';
-
 /* styles to presentation of start page */
 .container {
   display: flex;
@@ -158,16 +154,16 @@
         height: 250px;
 
         border: 2px solid red;
+      }
 
-        & img {
-          position: absolute;
+      .procedimientos img {
+        position: absolute;
 
-          width: 320px;
-          /* height: 300px; */
+        width: 320px;
+        /* height: 300px; */
 
-          border: unset;
-          border-radius: unset;
-        }
+        border: unset;
+        border-radius: unset;
       }
 
       /* estilos slider  */
@@ -233,13 +229,13 @@
       scroll-snap-align: start;
       margin-right: 10px;
       /* width: inherit; */
+    }
 
-      & img {
-        width: 100%;
-        object-fit: contain;
-        /* height: 170px; */
-        border-radius: unset;
-      }
+    .imageContainer img {
+      width: 100%;
+      object-fit: contain;
+      /* height: 170px; */
+      border-radius: unset;
     }
   }
 
@@ -278,28 +274,28 @@
       border: 1px solid #fff;
       border-radius: 20px;
       box-shadow: 3px 3px 10px #fff;
+    }
 
-      & h3 {
-        text-decoration: underline;
-        font-weight: bolder;
-        font-size: 1.25rem;
-      }
+    .area h3 {
+      text-decoration: underline;
+      font-weight: bolder;
+      font-size: 1.25rem;
+    }
 
-      & ul li {
-        list-style: circle;
-        font-size: 1.15rem;
-      }
+    .area ul li {
+      list-style: circle;
+      font-size: 1.15rem;
+    }
 
-      & button {
-        margin-top: 20px;
+    .area button {
+      margin-top: 20px;
 
-        width: 50%;
-        height: 40px;
+      width: 50%;
+      height: 40px;
 
-        border: 1px solid #fff;
-        border-radius: 20px;
-        box-shadow: 1px 1px 10px #fff;
-      }
+      border: 1px solid #fff;
+      border-radius: 20px;
+      box-shadow: 1px 1px 10px #fff;
     }
   }
 
