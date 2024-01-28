@@ -1,5 +1,3 @@
-// import fetch from 'node-fetch';
-// import UseFetch from '@/components/useFetch'
 import UseFetch from '@/components/useFetch'
 
 const useFetch = async (url, options) => {

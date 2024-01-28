@@ -1,6 +1,3 @@
-@import './variables.scss';
-@import './mixins';
-
 .container {
   z-index: 100;
   position: fixed;

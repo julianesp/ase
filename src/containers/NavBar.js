@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/assets/logo.jpg';
-import styles from '../styles/sass/NavBar.module.scss';
+import styles from '../styles/NavBar.module.css';
 import { UserContext } from '@/UserContext.js';
 // import UseFetch from '@/components/useFetch'
 

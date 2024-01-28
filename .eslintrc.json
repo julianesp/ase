@@ -1,3 +1,4 @@
 {
+  // asegura que mi app sea rapida por defecto || avisa cuando algun package me va a dar problemas
   "extends": "next/core-web-vitals"
 }
