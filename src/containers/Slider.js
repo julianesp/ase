@@ -5,7 +5,7 @@ import arrowLeftTwo from '../../public/aback.svg';
 import colecis from '../../public/images/colecistectomia.jpg';
 import lapa from '../../public/images/cirugia_laparoscopia.jpg';
 import info_1 from '../../public/images/info_1.jpg'
-import styles from '../styles/Slider.module.css'
+import styles from '../styles/Sli.module.css'
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,4 +102,4 @@ const Slider = () => {
     );
 };
 
-export default Slider;
+export default Slider

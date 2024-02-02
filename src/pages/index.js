@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout.js'
 import Image from 'next/image.js'
-import styles from '@/styles/Home.module.css'
 import Slider from '../containers/Slider.js'
 // Importando imágenes
 import doctor1 from '/public/images/services/cirugia_laparoscopia_1.jpg'
@@ -10,6 +9,7 @@ import doctor2 from '/public/images/services/colecistectomia.jpg'
 import doctor3 from '/public/images/services/patologias.jpg'
 import doctor4 from '/public/images/services/colonoscopia.jpg'
 import VisorImages from '../components/VisorImages.js'
+import styles from '@/styles/Home.module.scss'
 
 
 const Home = () => {
@@ -52,19 +52,16 @@ const Home = () => {
       <main className={styles.container}>
 
         <section className={styles.presentation}>
-
           <Slider images={[
             { src: doctor1, alt: 'Procedimiento 1' },
             { src: doctor2, alt: 'Procedimiento 2' },
             { src: doctor3, alt: 'Procedimiento 3' },
             { src: doctor4, alt: 'Procedimiento 4' },
-
-
           ]}
             automaticTransition={true}
           />
-          <Slider />
         </section>
+        {/* <Slider /> */}
 
         <section className={styles.contenido}>
 
