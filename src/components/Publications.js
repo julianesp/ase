@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from '@/styles/Publications.scss'
+import styles from "@/styles/Publications.module.scss"
 
 const Publicaciones = () => {
     return (
