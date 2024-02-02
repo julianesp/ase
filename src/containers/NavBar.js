@@ -62,67 +62,52 @@ const NavBar = () => {
     return (
 
         <nav className={styles.container} ref={menuRef}>
+            <>
+                <Link href='/'>
+                    <div className={styles['container__principal']}>
+                        <Image
+                            className={`${styles['enlaces__logo']} ${'cursor-pointer'}`}
+                            alt='Logo de empresa'
+                            src={logo}
+                            width={50}
+                            height={50}
+                            as='image'
+                            title='Ir a inicio'
+                        />
+                    </div>
+                </Link>
 
-            {username && (
-                <>
-                    <Link href='/create'>Crear nueva publicación</Link>
-                    <a onClick={logout}>Logout / Cerrar sesión</a>
-                </>
-            )}
+                <div className={styles.circle} onClick={menuBurger}>
+                    <button>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                </div>
 
-            {!username && (
-                <>
-                    <Link href='/'>
-                        <div className={styles['container__principal']}>
-                            <Image
-                                className={`${styles['enlaces__logo']} ${'cursor-pointer'}`}
-                                alt='Logo de empresa'
-                                src={logo}
-                                width={50}
-                                height={50}
-                                as='image'
-                                title='Ir a inicio'
-                            />
-                        </div>
+                <menu
+                    className={`${styles['enlaces__menu']} ${burgerOpen ? styles.open : styles.closed}`}
+                >
+
+
+                    <Link href='/' onClick={handleLinkClick}>
+                        Inicio
+                    </Link>
+                    <Link href='/procedimientos' onClick={handleLinkClick}>
+                        Publicaciones
                     </Link>
 
-                    <div className={styles.circle} onClick={menuBurger}>
-                        <button>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </button>
-                    </div>
-
-                    {/* <UserContext>
-
-                    </UserContext> */}
-
-                    <menu
-                        className={`${styles['enlaces__menu']} ${burgerOpen ? styles.open : styles.closed}`}
-                    >
-
-
-                        <Link href='/' onClick={handleLinkClick}>
-                            Inicio
-                        </Link>
-                        <Link href='/blog' onClick={handleLinkClick}>
-                            Publicaciones
-                        </Link>
-                        <Link href='/procedimientos' onClick={handleLinkClick}>
-                            Procedimientos
-                        </Link>
-                        <Link href='/blog' onClick={handleLinkClick}>
-                            Galería de fotos
-                        </Link>
-                        {/* <Link href='/perfil' onClick={handleLinkClick}>
+                    <Link href='/blog' onClick={handleLinkClick}>
+                        Blog
+                    </Link>
+                    {/* <Link href='/perfil' onClick={handleLinkClick}>
                             Citas
                         </Link> */}
-                        <Link href='/perfil' onClick={handleLinkClick}>
-                            Sobre mí
-                        </Link>
+                    <Link href='/perfil' onClick={handleLinkClick}>
+                        Sobre mí
+                    </Link>
 
-                        {/* <Link href='#' onClick={handleLinkClick}>
+                    {/* <Link href='#' onClick={handleLinkClick}>
                             Eventos
                         </Link>
                         <Link href='/Login' onClick={handleLinkClick}>
@@ -133,9 +118,9 @@ const NavBar = () => {
                             Registrarse
                         </Link> */}
 
-                    </menu>
-                </>
-            )}
+                </menu>
+            </>
+
 
 
         </nav>
