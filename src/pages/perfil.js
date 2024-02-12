@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 
 import doctor from '../../public/images/doctor.jpg'
-import styles from '../styles/Perfil.module.scss'
+import styles from '../styles/Perfil.module.css'
 
 const Profile = () => {
 

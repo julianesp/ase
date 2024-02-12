@@ -53,7 +53,7 @@ const Slider = () => {
 
     return (
         <div className={styles.slider}>
-            <div id="carousel"
+            <div className="carousel"
                 ref={carouselRef}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
