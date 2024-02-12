@@ -1,0 +1,29 @@
+.image {
+  position: relative;
+
+  width: 100%;
+  min-width: 310px;
+  max-width: 550px;
+
+  height: 350px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+.image img {
+  width: inherit;
+  /* max-width: 500px; */
+  height: 300px;
+
+  border-radius: 20px;
+}
+
+.image .buttonContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  bottom: -10px;
+}
