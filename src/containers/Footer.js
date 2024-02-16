@@ -7,6 +7,7 @@ import tik from '../../public/assets/redes/tiktok.png'
 import wha from '../../public/assets/redes/whatsapp.png'
 import map from '../../public/images/map.png'
 import arrow from '../../public/next.png'
+import phone from '../../public/phone.png'
 import styles from '../styles/Footer.module.css'
 
 
@@ -40,15 +41,19 @@ const Contacto = () => {
 
         <p>Sibundoy - Putumayo</p>
         {/* <p>Información: 313-862-7818</p> */}
-        <p>
-          Llamar:
-          <a href="tel:+3174503604"> ☎
+        <div className={styles.call}>
+          Llámame:
+          <a href="tel:+3174503604">
+            <Image
+              src={phone}
+            />
 
           </a>
 
-        </p>
+        </div>
 
-        <p className={styles.consultorio}>
+
+        {/* <p className={styles.consultorio}>
           <a href="https://www.google.com/maps/@1.2029865,-76.9187532,3a,75y,207.78h,74.79t/data=!3m7!1e1!3m5!1svaLjiSaMu9z6CaGL2yRraw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DvaLjiSaMu9z6CaGL2yRraw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D340.7478%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?entry=ttu" target={'_blank'} rel='noreferrer'>Ir al consultorio
 
             <Image
@@ -57,7 +62,7 @@ const Contacto = () => {
               priority
             />
           </a>
-        </p>
+        </p> */}
       </div>
 
       {/* <div className={`${styles.screenshot} ${menuOption ? styles.open : styles.closed}`}>
