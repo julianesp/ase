@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Layout from '@/components/Layout.js'
-import Publications from '@/components/Publications.js'
 
 const Blog = () => {
 
@@ -18,9 +17,7 @@ const Blog = () => {
         </button>
       </li>
 
-      <Publications />
-      <Publications />
-      <Publications />
+      <h1>Here call to the components to create publications</h1>
 
     </Layout>
   )
