@@ -46,10 +46,10 @@ const Home = () => {
   return (
     <Layout>
       <Head>
-        <title>Alirio Solarte España</title>
+        <title>Inicio</title>
         <meta name="description" content="Servicio de cirugía general" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../../public/favicon.ico" />
       </Head>
 
       <main className={styles.container}>
