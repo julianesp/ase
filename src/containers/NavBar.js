@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -88,36 +90,17 @@ const NavBar = () => {
                 <menu
                     className={`${styles['enlaces__menu']} ${burgerOpen ? styles.open : styles.closed}`}
                 >
-
-
                     <Link href='/' onClick={handleLinkClick}>
                         Inicio
-                    </Link>
-                    <Link href='/procedimientos' onClick={handleLinkClick}>
-                        Publicaciones
                     </Link>
 
                     <Link href='/blog' onClick={handleLinkClick}>
                         Blog
                     </Link>
-                    {/* <Link href='/perfil' onClick={handleLinkClick}>
-                            Citas
-                        </Link> */}
+
                     <Link href='/perfil' onClick={handleLinkClick}>
                         Sobre mí
                     </Link>
-
-                    {/* <Link href='#' onClick={handleLinkClick}>
-                            Eventos
-                        </Link>
-                        <Link href='/Login' onClick={handleLinkClick}>
-                            Iniciar sesión
-                        </Link>
-
-                        <Link href='/RegisterPage' onClick={handleLinkClick}>
-                            Registrarse
-                        </Link> */}
-
                 </menu>
             </>
 

@@ -47,10 +47,10 @@
   align-items: center;
   flex-direction: column;
 
-  top: 60px;
+  top: 100%;
   left: -300px;
 
-  height: 75vh;
+  height: 50vh;
   width: 200px;
 
   border-radius: 20px;
