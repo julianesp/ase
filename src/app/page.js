@@ -12,8 +12,8 @@ import doctor4 from '/public/images/services/colonoscopia.jpg'
 
 // import VisorImages from '../components/VisorImages.js'
 import imagesInfo from '../../data/images.json'
-import styles from '@/styles/Home.module.scss'
 import ImageSlider from '@/containers/ImageSlider.js'
+import styles from '@/styles/Home.module.scss'
 
 
 const Home = () => {
@@ -27,7 +27,7 @@ const Home = () => {
         <title>Inicio</title>
         <meta name="description" content="Servicio de cirugía general" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="../../public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.container}>
@@ -35,7 +35,6 @@ const Home = () => {
         <section className={styles.presentation}>
           <ImageSlider imagePaths={imagePath} />
         </section>
-
 
         <section className={styles.tratamientos}>
 

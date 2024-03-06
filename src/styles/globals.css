@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  /* background-color: #000; */
-  background-color: rgba(22, 139, 186, 0.2);
+  background-color: #000;
+  /* background-color: rgba(224, 92, 92, 0.4); */
 
   font-family: 'Courier New', Courier, monospace;
 }

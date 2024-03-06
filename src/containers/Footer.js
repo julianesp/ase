@@ -48,6 +48,7 @@ const Contacto = () => {
           <a href="tel:+3174503604">
             <Image
               src={phone}
+              alt='Imagen de teléfono'
             />
 
           </a>
