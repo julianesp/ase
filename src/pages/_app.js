@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import '../app/globals.css'
 import favicon from '../app/favicon.ico'
+import '../app/globals.css'
 
 export default function App({ Component, pageProps }) {
   return (

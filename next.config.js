@@ -22,17 +22,6 @@ const nextConfig = {
   },
 
 
-
-  // rules:
-  // {
-  //   test: /\.s[ac]ss$/i,
-  //   use: [
-  //     "style-loader",
-  //     "css-loader",
-  //     "sass-loader",
-  //   ],
-  // },
-
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

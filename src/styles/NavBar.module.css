@@ -14,11 +14,11 @@
 
   top: 0;
 
-  /* border: 1px solid #fff; */
   border: 1px solid #fff;
   border-radius: 30px;
   /* vista borrosa  */
   backdrop-filter: blur(10px);
+  background-color: rgba(24, 28, 36, 0.6);
 }
 
 .container .container__principal {
@@ -29,6 +29,7 @@
   margin: 0 0 0 3px;
 
   backdrop-filter: blur(10px);
+  border-radius: 50%;
 }
 
 .container .container__principal .enlaces__logo {
@@ -55,7 +56,9 @@
 
   border-radius: 20px;
 
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+
+  background-color: rgba(24, 28, 36, 0.9);
 
   /* backdrop-filter: blur(4px); */
 }
@@ -120,7 +123,7 @@
   text-decoration: none;
 
   border: 1px solid #fff;
-  background-color: #000;
+  /* background-color: #000; */
   border-radius: 10px;
 
   width: 190px;
