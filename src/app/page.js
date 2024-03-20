@@ -1,5 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
+import { Metadata } from 'next'
+
 import Layout from '../components/Layout.js'
 import Image from 'next/image.js'
 import Slider from '../containers/Slider.js'
@@ -12,8 +14,13 @@ import doctor4 from '/public/images/services/colonoscopia.jpg'
 
 // import VisorImages from '../components/VisorImages.js'
 import imagesInfo from '../../data/images.json'
-import ImageSlider from '@/containers/ImageSlider.js'
-import styles from '@/styles/Home.module.scss'
+import ImageSlider from '../containers/ImageSlider.js'
+// import styles from '@/styles/Home.module.scss'
+import styles from '../styles/Home.module.scss'
+
+// export const metadata: Metadata = {
+//   title: 'My Page Title',
+// }
 
 
 const Home = () => {
@@ -23,6 +30,7 @@ const Home = () => {
 
   return (
     <Layout>
+
       <Head>
         <title>Inicio</title>
         <meta name="description" content="Servicio de cirugía general" />
