@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/assets/logo.jpg';
 import styles from '../styles/NavBar.module.css';
-import { UserContext } from '@/UserContext.js';
-// import UseFetch from '@/components/useFetch'
+// import { UserContext } from '@/UserContext.js';
+import { UserContext } from '../UserContext';
 
 const NavBar = () => {
     const [burgerOpen, setBurgerOpen] = useState(false);

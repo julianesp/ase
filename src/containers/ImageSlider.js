@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from 'react';
-import styles from '@/styles/ImageSlider.module.css'
 import Image from 'next/image';
 import left from '../../public/left.png'
 import right from '../../public/right.png'
+import styles from '../styles/ImageSlider.module.css'
 
 const ImageSlider = ({ imagePaths }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

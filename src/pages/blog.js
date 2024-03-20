@@ -1,11 +1,13 @@
 import React from 'react'
-import Layout from '@/components/Layout.js'
+// import Layout from '@/components/Layout.js'
+import Layout from '../app/layout'
+
 
 const Blog = () => {
 
   return (
     <Layout>
-      {/* <h1 className='justify-center text-center text-3xl text-white'>Blog</h1>
+      <h1 className='justify-center text-center text-3xl text-white'>Blog</h1>
       <h1 className='justify-center text-center text-3xl text-white'>articulos</h1>
 
       <h1 className='justify-center text-center text-3xl text-white'>procedimientos</h1>
@@ -15,7 +17,7 @@ const Blog = () => {
         <button>
           Add Blog
         </button>
-      </li> */}
+      </li>
 
       <h1>Here call to the components to create publications</h1>
 
