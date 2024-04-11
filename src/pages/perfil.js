@@ -102,7 +102,7 @@
 // export default Profile
 
 import React, { useState } from 'react';
-import Layout from '../app/layout';
+import Layout from '../components/Layout';
 import Image from 'next/image';
 import Head from 'next/head';
 
