@@ -1,6 +1,6 @@
 import React from 'react'
 // import Layout from '@/components/Layout.js'
-import Layout from '../app/layout'
+import Layout from '../components/Layout'
 
 
 const Blog = () => {

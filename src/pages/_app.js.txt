@@ -1,6 +1,11 @@
-import Head from 'next/head'
+// import Head from 'next/head'
+import { Metadata } from 'next'
 import favicon from '../app/favicon.ico'
 import '../app/globals.css'
+
+export const metadata = {
+  title: 'My Page Title',
+}
 
 export default function App({ Component, pageProps }) {
   return (
