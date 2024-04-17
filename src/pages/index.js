@@ -8,8 +8,6 @@ import doctor1 from '/public/images/services/cirugia_laparoscopia_1.jpg'
 import doctor2 from '/public/images/services/colecistectomia.jpg'
 import doctor3 from '/public/images/services/patologias.jpg'
 import doctor4 from '/public/images/services/colonoscopia.jpg'
-//images procedimientos
-
 import VisorImages from '../components/VisorImages.js'
 import imagesInfo from '../../data/images.json'
 import styles from '../styles/Home.module.scss'
@@ -19,15 +17,14 @@ import ImageSlider from '..//containers/ImageSlider.js'
 const Home = () => {
 
   const imagePath = [doctor1, doctor2, doctor3, doctor4]
-  // const imageInformacion = ['']
 
   return (
     <Layout>
       <Head>
         <title>Inicio</title>
+        <link rel="icon" href="../app/favicon.ico" />
         <meta name="description" content="Servicio de cirugía general" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="../../public/favicon.ico" />
       </Head>
 
       <main className={styles.container}>
@@ -56,14 +53,8 @@ const Home = () => {
 
         </section>
 
-        {/* <section className={styles.horario}>
-          <h2>Horario de atención</h2>
-        </section> */}
-
         <section className={styles.info}>
           <h2>Información</h2>
-
-
         </section>
 
         <section className={styles.horario}>
