@@ -1,5 +1,7 @@
 .image {
   position: relative;
+  /*puede eliminarse*/
+  overflow: hidden;
 
   width: 100%;
   min-width: 370px;
@@ -8,6 +10,10 @@
   height: 350px;
   border: 2px solid #fff;
   border-radius: 20px;
+}
+
+.transition {
+  transition: opacity 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tus preferencias */
 }
 
 .image img {

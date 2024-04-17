@@ -1,17 +1,27 @@
 import Head from 'next/head'
 import { Metadata } from 'next'
-import favicon from './favicon.ico'
-// import '../app/globals.css'
+import { Lato, Roboto_Condensed, Open_Sans, Montserrat, Oswald } from '@next/font/google'
 
+// establciendo pesos para la fuente
+const lato = Lato ({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900']
+})
+const oswald = Oswald ({
+  subsets: ['latin'],
+  weight: ['300', '400', '700']
+})
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* <link rel="icon" href={favicon} /> */}
         <link rel='icon' href='./favicon.ico'/>
       </Head>
-      <Component {...pageProps} />;
+
+      <main className={lato.className}>
+        <Component {...pageProps} />;
+      </main>
     </>
   )
 }

@@ -3,11 +3,20 @@ import Head from 'next/head'
 import Layout from '../components/Layout.js'
 import Image from 'next/image.js'
 import Slider from '../containers/Slider.js'
-// Importando imágenes
-import doctor1 from '/public/images/services/cirugia_laparoscopia_1.jpg'
-import doctor2 from '/public/images/services/colecistectomia.jpg'
-import doctor3 from '/public/images/services/patologias.jpg'
-import doctor4 from '/public/images/services/colonoscopia.jpg'
+// images doc
+import d1 from '/public/images/doctor/1.png'
+import d2 from '/public/images/doctor/2.png'
+import d3 from '/public/images/doctor/3.png'
+
+// images cirugias
+import c1 from '/public/images/cirugias/cirugia_vesicula.png'
+import c2 from '/public/images/cirugias/colonoscopia.png'
+import c3 from '/public/images/cirugias/lapa_vesicula.png'
+import c4 from '/public/images/services/cirugia_laparoscopia_1.jpg'
+import c5 from '/public/images/services/colecistectomia.jpg'
+import c6 from '/public/images/services/patologias.jpg'
+import c7 from '/public/images/services/colonoscopia.jpg'
+
 import VisorImages from '../components/VisorImages.js'
 import imagesInfo from '../../data/images.json'
 import styles from '../styles/Home.module.scss'
@@ -16,13 +25,14 @@ import ImageSlider from '..//containers/ImageSlider.js'
 
 const Home = () => {
 
-  const imagePath = [doctor1, doctor2, doctor3, doctor4]
+  const imagePath = [d1,d2,d3]
+  const cirugias = [c1,c2,c3,c4, c5, c6, c7]
 
   return (
     <Layout>
       <Head>
-        <title>Inicio</title>
-        <link rel="icon" href="../app/favicon.ico" />
+        <title>Servicio de cirugía general</title>
+        {/* <link rel="icon" href="../app/favicon.ico" /> */}
         <meta name="description" content="Servicio de cirugía general" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -30,7 +40,7 @@ const Home = () => {
       <main className={styles.container}>
 
         <section className={styles.presentation}>
-          <ImageSlider imagePaths={imagePath} />
+          <ImageSlider imagePaths={imagePath} enableTransition={true}/>
         </section>
 
 
@@ -53,13 +63,15 @@ const Home = () => {
 
         </section>
 
-        <section className={styles.info}>
+        {/* <section className={styles.info}>
           <h2>Información</h2>
-        </section>
+        </section> */}
 
         <section className={styles.horario}>
-          <h2>Novedades</h2>
-          <p>Publicación de noticias publicadas de parte del cirujano</p>
+          {/* <h2>Novedades</h2>
+          <p>Publicación de noticias publicadas de parte del cirujano</p> */}
+
+          <ImageSlider imagePaths={cirugias}/>
         </section>
 
         <section className={styles.horario}>
