@@ -71,7 +71,7 @@ const Home = () => {
           {/* <h2>Novedades</h2>
           <p>Publicación de noticias publicadas de parte del cirujano</p> */}
 
-          <ImageSlider imagePaths={cirugias}/>
+          <ImageSlider imagePaths={cirugias} enableTransition={false}/>
         </section>
 
         <section className={styles.horario}>
