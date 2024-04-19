@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout.js'
 import Image from 'next/image.js'
@@ -21,12 +21,15 @@ import VisorImages from '../components/VisorImages.js'
 import imagesInfo from '../../data/images.json'
 import styles from '../styles/Home.module.scss'
 import ImageSlider from '..//containers/ImageSlider.js'
-
+import { PublicacionesContext } from '../context/PublicacionesContext.js'
 
 const Home = () => {
 
   const imagePath = [d1,d2,d3]
   const cirugias = [c1,c2,c3,c4, c5, c6, c7]
+
+  // Publicaciones
+  const {publicaciones}=useContext(PublicacionesContext);
 
   return (
     <Layout>
@@ -77,7 +80,16 @@ const Home = () => {
         <section className={styles.horario}>
           <h2>Enlaces importantes</h2>
           <p>Noticias o temas importantes que el médico cirujano considera para que sus pacientes lean</p>
-          <p>Pueden ser links externos o publicación del mismo doctor</p>
+          <p>Pueden ser links externos o publicación del mismo doctor</p>          
+
+          <div>            
+              {publicaciones.map((publicacion, index) => (
+                <div key={index}>
+                    <h2>{publicacion.titulo}</h2>
+                    <p>{publicacion.contenido}</p>
+                </div>
+            ))}            
+          </div>
         </section>
 
       </main >

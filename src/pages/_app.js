@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Metadata } from 'next'
+import { PublicacionesProvider } from '../context/PublicacionesContext'
 import { Lato, Roboto_Condensed, Open_Sans, Montserrat, Oswald } from '@next/font/google'
+import '../styles/globals.css'
 
 // establciendo pesos para la fuente
 const lato = Lato ({
@@ -20,7 +22,10 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <main className={lato.className}>
-        <Component {...pageProps} />;
+        <PublicacionesProvider>
+          <Component {...pageProps} />;
+
+        </PublicacionesProvider>
       </main>
     </>
   )
