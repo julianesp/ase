@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
+const path = require("path");
 
 const nextConfig = {
-
-  output: "export",
+  // output: "export",
 
   images: {
     unoptimized: true,
@@ -13,19 +12,16 @@ const nextConfig = {
     if (!isServer) {
       config.module.rules.push({
         test: /\.module\.s(a|c)ss$/,
-        loader: 'sass-loader',
-        options: {
-        },
+        loader: "sass-loader",
+        options: {},
       });
     }
     return config;
   },
 
-
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
+};
 
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;
