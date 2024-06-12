@@ -32,8 +32,8 @@ const Home = () => {
 
   return (
     
-    <main>
-      <div className={styles.container}>
+    // <main>
+   <div className={styles.container}>
         <section className={styles.presentation}>
           <ImageSlider imagePaths={imagePath} enableTransition={true} />
         </section>
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
         </section>
       </div>      
-    </main>
+    
   );
 };
 
