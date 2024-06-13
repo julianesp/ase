@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useContext } from "react";
 import Head from "next/head";
@@ -26,14 +26,15 @@ import ImageSlider from "../containers/ImageSlider.js";
 import { PublicacionesContext } from "../context/PublicacionesContext.js";
 
 const Home = () => {
-  const { publicaciones } = useContext(PublicacionesContext) || { publicaciones: [] };
+  const { publicaciones } = useContext(PublicacionesContext) || {
+    publicaciones: [],
+  };
   const imagePath = [d1, d2, d3];
   const cirugias = [c1, c2, c3, c4, c5, c6, c7];
 
   return (
-    
-    // <main>
-   <div className={styles.container}>
+    <main>
+      <div className={styles.container}>
         <section className={styles.presentation}>
           <ImageSlider imagePaths={imagePath} enableTransition={true} />
         </section>
@@ -56,18 +57,13 @@ const Home = () => {
 
         <section className={styles.horario}>
           {/* <h2>Novedades</h2>
-          <p>Publicación de noticias publicadas de parte del cirujano</p> */}
+             <p>Publicación de noticias publicadas de parte del cirujano</p> */}
 
           <ImageSlider imagePaths={cirugias} enableTransition={false} />
         </section>
 
-        <section className={styles.horario}>
+        <section className={`flex justify-center  ${styles.horario}`}>
           <h2>Enlaces importantes</h2>
-          <p>
-            Noticias o temas importantes que el médico cirujano considera para
-            que sus pacientes lean
-          </p>
-          <p>Pueden ser links externos o publicación del mismo doctor</p>
 
           <div>
             {publicaciones.map((publicacion, index) => (
@@ -78,8 +74,8 @@ const Home = () => {
             ))}
           </div>
         </section>
-      </div>      
-    
+      </div>
+    </main>
   );
 };
 

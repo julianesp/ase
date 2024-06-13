@@ -1,4 +1,6 @@
 import { PublicacionesProvider } from "../context/PublicacionesContext";
+import "../styles/globals.css";
+
 // import {
 //   Lato,
 //   Roboto_Condensed,
@@ -6,9 +8,8 @@ import { PublicacionesProvider } from "../context/PublicacionesContext";
 //   Montserrat,
 //   Oswald,
 // } from "@next/font/google";
-import "../styles/globals.css";
 
-// establciendo pesos para la fuente
+// estableciendo pesos para la fuente
 // const lato = Lato({
 //   subsets: ["latin"],
 //   weight: ["300", "400", "700", "900"],
