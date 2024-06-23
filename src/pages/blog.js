@@ -1,24 +1,14 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Publicaciones from '../components/Publicaciones'
+import React from "react";
+// import Publicaciones from "../components/Publicaciones";
+import RootLayout from "../app/layout";
 
 const Blog = () => {
-
   const handleSubmit = (formData) => {
     // Lógica para enviar formData al backend
-    console.log('Datos del formulario:', formData);
+    console.log("Datos del formulario:", formData);
+  };
+
+  return <h1>Este es el blog personal</h1>;
 };
 
-  return (
-    <Layout>
-      
-      
-  <Publicaciones onSubmit={handleSubmit} />
-
-      
-
-    </Layout>
-  )
-}
-
-export default Blog
+export default Blog;

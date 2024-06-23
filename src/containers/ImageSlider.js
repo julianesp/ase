@@ -4,9 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import left from "../../public/left.png";
 import right from "../../public/right.png";
-import styles from "../styles/ImageSlider.module.css";
+import styles from "../styles/ImageSlider.module.scss";
 
-const ImageSlider = ({ imagePaths, enableTransition = true }) => {
+const Procedimientos = ({ imagePaths, enableTransition = true }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const goToPreviousSlide = () => {
@@ -14,12 +14,6 @@ const ImageSlider = ({ imagePaths, enableTransition = true }) => {
       prevIndex === 0 ? imagePaths.length - 1 : prevIndex - 1
     );
   };
-
-  // const goToNextSlide = () => {
-  //   setCurrentImageIndex((prevIndex) =>
-  //     prevIndex === imagePaths.length - 1 ? 0 : prevIndex + 1
-  //   );
-  // };
 
   const goToNextSlide = useCallback(() => {
     setCurrentImageIndex((prevIndex) =>
@@ -58,4 +52,4 @@ const ImageSlider = ({ imagePaths, enableTransition = true }) => {
   );
 };
 
-export default ImageSlider;
+export default Procedimientos;

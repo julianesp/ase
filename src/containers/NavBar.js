@@ -7,6 +7,7 @@ import logo from "../../public/assets/logo.jpg";
 import styles from "../styles/NavBar.module.css";
 // import { UserContext } from '@/UserContext.js';
 import { UserContext } from "../UserContext";
+import RootLayout from "../app/layout";
 
 const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);

@@ -1,0 +1,19 @@
+
+
+.link {
+  // display: flex;
+  // flex-direction: column;
+  // background: red;
+  width: 200px;
+}
+
+.link img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.link img:hover {
+  transform: scale(1.1);
+}

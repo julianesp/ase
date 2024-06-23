@@ -12,6 +12,7 @@ import arrow from "../../public/next.png";
 import phone from "../../public/phone.png";
 import call from "../../public/call.png";
 import styles from "../styles/Footer.module.css";
+import RootLayout from "../app/layout";
 
 const Contacto = () => {
   const [menuOption, setMenuOptions] = useState(false);
@@ -38,15 +39,6 @@ const Contacto = () => {
 
       <section>
         <h3>Procedimientos</h3>
-      </section>
-
-      <section className={styles.ubicacion}>
-        <div className={styles.call}>
-          Llámame:
-          <a href="tel:+3174503604">
-            <Image src={phone} alt="Imagen de teléfono" />
-          </a>
-        </div>
       </section>
 
       <div
