@@ -2,6 +2,10 @@
 const path = require("path");
 
 const nextConfig = {
+  output: "export",
+  reactStrictMode: true,
+  swcMinify: true,
+  reactStrictMode: true,
   images: {
     unoptimized: true,
   },
