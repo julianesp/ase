@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { generateStaticParams } from "./generateStaticParams";
+// import { generateStaticParams } from "./generateStaticParams";
 
-export { generateStaticParams };
+// export { generateStaticParams };
 
 export function GET(request, { params }) {
   // here I can to do peticiones, operations, consulta a DDBB

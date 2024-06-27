@@ -51,16 +51,16 @@ const NavBar = () => {
   //     })
   // },)
 
-  function logout() {
-    fetch("http://localhost:4000/logout", {
-      credentials: "include",
-      method: "POST",
-    });
-    // setUsername(null);
-    setUserInfo(null);
-  }
+  // function logout() {
+  //   fetch("http://localhost:4000/logout", {
+  //     credentials: "include",
+  //     method: "POST",
+  //   });
+  //   // setUsername(null);
+  //   setUserInfo(null);
+  // }
 
-  const username = userInfo?.username;
+  // const username = userInfo?.username;
 
   return (
     <main className={styles.container} ref={menuRef}>
@@ -80,9 +80,9 @@ const NavBar = () => {
 
       <div className={styles.circle} onClick={menuBurger}>
         <button>
-          <div></div>
-          <div></div>
-          <div></div>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
 
@@ -95,9 +95,9 @@ const NavBar = () => {
           Inicio
         </Link>
 
-        <Link href="/blog" onClick={handleLinkClick}>
+        {/* <Link href="/blog" onClick={handleLinkClick}>
           Blog
-        </Link>
+        </Link> */}
 
         <Link href="/perfil" onClick={handleLinkClick}>
           Sobre mí
