@@ -2,9 +2,9 @@
 
 import React, { useContext } from "react";
 import Head from "next/head";
-import Layout from "../components/Layout.js";
+// import Layout from "../components/Layout.js";
 import Image from "next/image.js";
-import Slider from "../containers/Slider.js";
+// import Slider from "../containers/Slider.js";
 // images doc
 import d1 from "/public/images/doctor/1.png";
 import d2 from "/public/images/doctor/2.png";
@@ -20,19 +20,21 @@ import c6 from "/public/images/services/patologias.jpg";
 import c7 from "/public/images/services/colonoscopia.jpg";
 
 import VisorImages from "../components/VisorImages.js";
-import imagesInfo from "../../data/images.json";
+// import imagesInfo from "../../data/images.json";
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
-import { PublicacionesContext } from "../context/PublicacionesContext.js";
-import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
+// import { PublicacionesContext } from "../context/PublicacionesContext.js";
+// import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import imagenData from "../../data/imageSlider.js";
 
 const Home = () => {
-  const { publicaciones } = useContext(PublicacionesContext) || {
-    publicaciones: [],
-  };
+  // const { publicaciones } = useContext(PublicacionesContext) || {
+  //   publicaciones: [],
+  // };
   const imagePath = [d1, d2, d3];
+  // const imagePath = [imagenData];
   const cirugias = [c1, c2, c3, c4, c5, c6, c7];
+  // const cirugias = [imagenData];
 
   return (
     <div className={styles.container}>
@@ -61,7 +63,7 @@ const Home = () => {
         {/* <h2>Novedades</h2>
              <p>Publicación de noticias publicadas de parte del cirujano</p> */}
 
-        <ImageSlider imagePaths={cirugias} enableTransition={false} />
+        <ImageSlider imagePaths={imagePath} enableTransition={false} />
       </section>
 
       <section className={styles.links}>
@@ -77,7 +79,7 @@ const Home = () => {
 
         {/* <ImageSlider imagePaths={cirugias} enableTransition={false}/> */}
 
-        <Procedimientos imageData={imagenData} enableTransition={false} />
+        {/* <Procedimientos imageData={imagePath} enableTransition={false} /> */}
       </section>
     </div>
   );
