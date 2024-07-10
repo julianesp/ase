@@ -31,24 +31,37 @@ const Procedimientos = ({ imagePaths, enableTransition = true }) => {
   }, [currentImageIndex, enableTransition, goToNextSlide]);
 
   return (
-    <div className={styles.image}>
+    <section className={styles.image}>
       <Image
         src={imagePaths[currentImageIndex]}
         alt="Slide"
         width={300}
         height={200}
+        priority={true}
       />
 
       <div className={styles.buttonContainer}>
         <button onClick={goToPreviousSlide} className={styles.left}>
-          <Image alt="Arrow left" src={left} width={20} height={20} />
+          <Image
+            alt="Arrow left"
+            src={left}
+            width={20}
+            height={20}
+            priority={true}
+          />
         </button>
 
         <button onClick={goToNextSlide} className={styles.right}>
-          <Image alt="Arrow right" src={right} width={20} height={20} />
+          <Image
+            alt="Arrow right"
+            src={right}
+            width={20}
+            height={20}
+            priority={true}
+          />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
