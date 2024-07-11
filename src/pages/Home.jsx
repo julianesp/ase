@@ -55,7 +55,7 @@ const Home = () => {
             <li>The page must contain image se muestre every procedimiento</li>
           </ul>
 
-          <button>Ver más</button>
+          {/* <button>Ver más</button> */}
         </div>
       </section>
 

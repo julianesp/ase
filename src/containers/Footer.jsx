@@ -9,7 +9,8 @@ import tik from "../../public/assets/redes/tiktok.png";
 import wha from "../../public/assets/redes/whatsapp.png";
 import arrow from "../../public/next.png";
 import call from "../../public/call.png";
-import styles from "../styles/Footer.module.css";
+import logo from "../../public/logo.jpg";
+import styles from "../styles/Footer.module.scss";
 
 const Contacto = () => {
   const [menuOption, setMenuOptions] = useState(false);
@@ -30,18 +31,40 @@ const Contacto = () => {
         <Image alt="Links to navigation" src={arrow} priority />
       </section>
       <section className={styles.llamar}>
-        <Link href="tel:+573152523498">
+        <Link href="tel:+573138627818">
           <Image alt="Contáctame" src={call} priority />
         </Link>
       </section>
 
+      <section className={styles.logo}>
+        <Image src={logo} alt="Logo" />
+      </section>
+
       <section className={styles.description}>
         <p>Servicio de cirugía general</p>
+      </section>
+
+      <section className={styles.doctor}>
+        <p>Dr. Alirio Solarte España</p>
+        <p>Médico cirujano</p>
         <p>Sibundoy - Putumayo</p>
       </section>
 
-      <section>
-        <h3>Procedimientos</h3>
+      <section className={styles.procedimientos}>
+        <ul>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+        </ul>
+        <ul>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+          <li>Laparoscipia</li>
+        </ul>
       </section>
 
       {isClient && (
