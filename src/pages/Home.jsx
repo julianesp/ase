@@ -52,7 +52,6 @@ const Home = () => {
             <li>Hígado graso</li>
             <li>Bichectomía</li>
             <li>Hernioplastia umbilical</li>
-            <li>The page must contain image se muestre every procedimiento</li>
           </ul>
 
           {/* <button>Ver más</button> */}
