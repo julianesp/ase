@@ -50,7 +50,7 @@ const Contacto = () => {
         <p>Sibundoy - Putumayo</p>
       </section>
 
-      <section className={styles.procedimientos}>
+      {/* <section className={styles.procedimientos}>
         <ul>
           <li>Laparoscipia</li>
           <li>Laparoscipia</li>
@@ -65,7 +65,7 @@ const Contacto = () => {
           <li>Laparoscipia</li>
           <li>Laparoscipia</li>
         </ul>
-      </section>
+      </section> */}
 
       {isClient && (
         <div
