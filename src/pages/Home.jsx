@@ -24,7 +24,7 @@ import VisorImages from "../components/VisorImages.js";
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
 // import { PublicacionesContext } from "../context/PublicacionesContext.js";
-// import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
+import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import imagenData from "../../data/imageSlider.js";
 
 const Home = () => {
@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <section className={styles.presentation}>
+      <section className={`${styles.presentation}`}>
         <ImageSlider imagePaths={imagePath} enableTransition={true} />
       </section>
 
@@ -78,7 +78,7 @@ const Home = () => {
 
         {/* <ImageSlider imagePaths={cirugias} enableTransition={false}/> */}
 
-        {/* <Procedimientos imageData={imagePath} enableTransition={false} /> */}
+        <Procedimientos imageData={imagePath} enableTransition={false} />
       </section>
     </div>
   );
