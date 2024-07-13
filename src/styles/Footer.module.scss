@@ -339,6 +339,16 @@
     transform: translateX(-5000px);
   }
 }
+.footer .externo {
+  width: calc(100% - 10px);
+
+  text-align: center;
+}
+.footer .externo a {
+  font-size: 0.7rem;
+  text-decoration: underline;
+  color: #fff;
+}
 
 @media screen and (min-width: 768px) {
   .footer {
@@ -373,8 +383,4 @@
     grid-area: externo;
   }
 }
-.externo a {
-  font-size: 0.7rem;
-  text-decoration: underline;
-  color: #fff;
-}
+

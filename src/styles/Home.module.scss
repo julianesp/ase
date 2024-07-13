@@ -62,7 +62,7 @@
   justify-content: center;
 
   width: 80%;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .container .presentation .procedimientos {
@@ -147,4 +147,5 @@
   // height: 300px;
 
   // border-radius: 20px;
+  @include center;
 }
