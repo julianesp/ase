@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/assets/logo.jpg";
-import styles from "../styles/NavBar.module.css";
+import styles from "../styles/NavBar.module.scss";
 import { UserContext } from "../UserContext";
 
 const NavBar = () => {

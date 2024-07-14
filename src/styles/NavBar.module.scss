@@ -4,13 +4,13 @@
 
   display: flex;
   justify-content: space-between;
-
   align-items: center;
-  margin: 2.5px 0;
-  padding: 0;
-  /* padding: 3px 0; */
 
+  margin: 1px auto;
+  padding: 0;  
+  
   width: 100vw;
+  max-width: 1000px;
   height: 55px;
 
   top: 0px;
@@ -183,47 +183,58 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    /* margin: 3px 25px 0; */
-    /* position: absolute; */
+    margin: 0px 10%;
+    // position: relative;
 
-    width: 100vw;
+    
+    
+    // width: 100vw;
 
     .circle {
       display: none;
     }
 
+    .enlaces__menu {
+
+    }
+    
     .enlaces__menu.closed {
-      /* position: relative; */
 
-      display: inline;
-
-      /* flex-direction: row;
-      justify-content: center;
-      align-items: center; */
-
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      
       gap: 0 20px;
 
-      left: 9px;
-      /* top: 10px; */
+      margin: 0;
+      padding: 0;
 
+      top: -115px;
+      left: 770px;
+
+      // quitar fondo oscuro a enlaces
       background-color: transparent;
       border: transparent;
     }
 
     .enlaces__menu a {
       color: #000;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       padding: 10px 0;
 
       transition: 0.2s ease-in all;
+      
+      border: none;
+      animation: none;
     }
-
+    
     .enlaces__menu a:hover {
+      animation: none;
       color: #fff;
+      transition: .3s ease-in;
       text-decoration: underline;
-      /* font-size: 1.05rem; */
-
-      /* font-weight: 700; */
+      border: 1px solid #fff;
+      padding: 0;
     }
 
     .enlaces__menu.closed {
