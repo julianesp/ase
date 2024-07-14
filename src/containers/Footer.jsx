@@ -50,23 +50,6 @@ const Contacto = () => {
         <p>Sibundoy - Putumayo</p>
       </section>
 
-      {/* <section className={styles.procedimientos}>
-        <ul>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-        </ul>
-        <ul>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-          <li>Laparoscipia</li>
-        </ul>
-      </section> */}
-
       {isClient && (
         <div
           className={`${styles.redes} ${
