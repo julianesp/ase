@@ -35,8 +35,8 @@ const Procedimientos = ({ imagePaths, enableTransition = true }) => {
       <Image
         src={imagePaths[currentImageIndex]}
         alt="Slide"
-        width={300}
-        height={200}
+        // width={300}
+        // height={200}
         priority={true}
       />
 

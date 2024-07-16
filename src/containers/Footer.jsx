@@ -37,7 +37,9 @@ const Contacto = () => {
       </section>
 
       <section className={styles.logo}>
-        <Image src={logo} alt="Logo" />
+        <Link href="/">
+          <Image src={logo} alt="Logo" />
+        </Link>
       </section>
 
       <section className={styles.description}>
