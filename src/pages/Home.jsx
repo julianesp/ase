@@ -42,6 +42,10 @@ const Home = () => {
         <ImageSlider imagePaths={imagePath} enableTransition={true} />
       </section>
 
+      <section className={styles.aside}>
+        <h1>Noticias</h1>
+      </section>
+
       <section className={styles.tratamientos}>
         <div className={styles.area}>
           <h3>PROCEDIMIENTOS</h3>

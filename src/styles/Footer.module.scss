@@ -369,13 +369,17 @@
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 120px 1fr 50px;
+    grid-template-rows: 80px 1fr 50px;
     grid-template-areas:
       'especialidad especialidad especialidad'
-      'doctor . mapa' 
+      'doctor logo mapa' 
       'doctor externo .';
 
     justify-items: center;
+  }
+
+  .footer .logo {
+    grid-area: logo;
   }
 
   .footer .description {

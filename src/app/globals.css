@@ -7,6 +7,8 @@ body {
   box-sizing: content-box;
   /* background-color: #000; */
   /* background-color: rgba(0, 131, 225, 0.15); */
-  font-family: 'Lato';  
+  font-family: 'Lato';
+  
+  /* backdrop-filter: blur(5px); */
 }
 

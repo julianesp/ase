@@ -70,3 +70,13 @@
 .image .overlayButton {
   opacity: 1;
 }
+
+@media screen and (min-width: 1024px) {
+  .image {
+    & img {
+      margin-top: 0;
+    }
+
+  }
+  
+}
