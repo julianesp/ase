@@ -77,18 +77,14 @@
 }
 
 .container .tratamientos {
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr); 
-  justify-items: center;
-  */
+  @include border__light;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 0 -20px 0;
   padding: 15px 0;
   /* padding: 0; */
-  width: 100%;
+  width: 700px;
   height: auto;
   background-color: #000;
   color: #fff;
