@@ -9,7 +9,7 @@
 @mixin border__light {
   border: 2px solid #fff;
   border-radius: 20px;
-  box-shadow: -3px 3px 10px #fff;
+  box-shadow: -3px 5px 20px rgba(109, 107, 109, 0.667);
   // background-color: rgba(149, 177, 220, 0.5);
   color: #fff;
 }
@@ -17,7 +17,7 @@
 @mixin border__dark {
   border: 2px solid #000;
   border-radius: 20px;
-  box-shadow: -3px 3px 10px #fff;
+  box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
   // background-color: rgba(149, 177, 220, 0.5);
   color: #000;
 }
