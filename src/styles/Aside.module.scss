@@ -1,0 +1,53 @@
+@import "./mixins";
+/* components/AsideItem.module.css */
+.aside-item {
+    position: relative
+    ;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+
+    width: inherit;
+  }
+  
+  .aside-item h3 {
+    margin-top: 0;
+  }
+  
+  .aside-item ul {
+    list-style: none;
+    padding-left: 0;
+
+    & li {
+        text-align: center;
+        & a {
+            @include border__dark;
+            
+            padding: 6px;
+
+            transition: .3s ease-in all;
+
+            text-decoration: none;
+            background-color: #fff;
+
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+                transform: scale(.2);
+            }
+        }
+    }
+  }
+  
+  .aside-item li {
+    margin-bottom: 8px;
+  }
+  
+  .aside-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
