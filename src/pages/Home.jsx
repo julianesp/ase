@@ -25,6 +25,7 @@ import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
 // import { PublicacionesContext } from "../context/PublicacionesContext.js";
 import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
+import Aside from "../components/Aside.jsx";
 import imagenData from "../../data/imageSlider.js";
 
 const Home = () => {
@@ -36,6 +37,34 @@ const Home = () => {
   const cirugias = [c1, c2, c3, c4, c5, c6, c7];
   // const cirugias = [imagenData];
 
+  // aside content
+  const asideItems = [
+    {
+      title: "Hernias",
+      content: "Explicando diferencias entre sus tipos",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
+      links: [
+        {
+          text: "Ver video",
+          url: "https://www.facebook.com/share/r/jZ9eKTKxL7UqyWZt/",
+        },
+      ],
+    },
+    {
+      title: "Laparoscopia",
+      content: "Procedimiento durante la cirugía",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
+      links: [
+        {
+          text: "Ver video",
+          url: "https://www.facebook.com/ALIRIO.SOLARTE/videos/896402830951345",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <section className={`${styles.presentation}`}>
@@ -43,7 +72,18 @@ const Home = () => {
       </section>
 
       <section className={styles.aside}>
-        <h1>Noticias</h1>
+        {/* <h1>Noticias</h1> */}
+        <aside>
+          {asideItems.map((item, index) => (
+            <Aside
+              key={index}
+              title={item.title}
+              content={item.content}
+              imageUrl={item.imageUrl}
+              links={item.links}
+            />
+          ))}
+        </aside>
       </section>
 
       <section className={styles.tratamientos}>
