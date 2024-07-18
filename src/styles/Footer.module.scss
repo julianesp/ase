@@ -1,4 +1,4 @@
-@import './_mixins.scss';
+@import "./_mixins.scss";
 
 .footer {
   position: relative;
@@ -21,7 +21,7 @@
   bottom: 0;
   top: 0;
 }
-  
+
 .footer .flecha {
   position: fixed;
 
@@ -36,6 +36,29 @@
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid #000;
+
+  // Nueva animación de pulso
+  // animation: pulse 1s infinite;
+  animation: pulse 0.7s;
+
+  // Apagar la animación inicialmente
+  // animation-play-state: paused;
+  animation-play-state: running;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+// Nueva animación de pulso
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  // 50% {
+  //   transform: scale(1.05);
+  // }
+  100% {
+    transform: scale(1.10);
+  }
 }
 
 .footer .flecha img {
@@ -43,9 +66,8 @@
   height: 30px;
 
   right: 30px;
-
 }
-.footer .llamar{  
+.footer .llamar {
   position: fixed;
 
   padding: 1px 0 0 0;
@@ -61,7 +83,7 @@
   border-radius: 50%;
 }
 
-.footer .llamar img{
+.footer .llamar img {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -96,21 +118,19 @@
 
   width: calc(100% - 30px);
   height: 50px;
-  
 }
 
 .footer .description p {
   @include border__light;
   margin: 5px 0;
-  
+
   width: calc(100% - 30px);
-  
+
   color: #000;
   font-size: 1.2rem;
 
   text-transform: uppercase;
   text-align: center;
-
 
   background-color: #fff;
   border-radius: 20px;
@@ -129,7 +149,6 @@
   text-align: center;
   font-size: 1.25rem;
 
-
   & p {
     margin: 10px 0;
     // padding: 10px 0;
@@ -139,10 +158,10 @@
 .footer .procedimientos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;    
+  align-items: center;
 
   width: 75%;
-  height: 150px;  
+  height: 150px;
 
   @include border__light;
 
@@ -371,9 +390,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 80px 1fr 50px;
     grid-template-areas:
-      'especialidad especialidad especialidad'
-      'doctor logo mapa' 
-      'doctor externo .';
+      "especialidad especialidad especialidad"
+      "doctor logo mapa"
+      "doctor externo .";
 
     justify-items: center;
   }
@@ -421,4 +440,3 @@
     grid-area: externo;
   }
 }
-

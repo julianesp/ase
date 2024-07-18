@@ -15,10 +15,19 @@ import styles from "../styles/Footer.module.scss";
 const Contacto = () => {
   const [menuOption, setMenuOptions] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   // Asegurarse de que el código se ejecute en el cliente
   useEffect(() => {
     setIsClient(true);
+
+    // Configurar intervalo para activar la animación cada 10 segundos
+    const interval = setInterval(() => {
+      setAnimate(true);
+      setTimeout(() => setAnimate(false), 1000); // Desactivar la animación después de 1 segundo
+    }, 2000);
+
+    return () => clearInterval(interval); // Limpiar intervalo al desmontar
   }, []);
 
   const switchOptions = () => {
@@ -27,7 +36,10 @@ const Contacto = () => {
 
   return (
     <main className={styles.footer}>
-      <section className={styles.flecha} onClick={switchOptions}>
+      <section
+        className={`${styles.flecha} ${animate ? styles.animate : ""}`}
+        onClick={switchOptions}
+      >
         <Image alt="Links to navigation" src={arrow} priority />
       </section>
       <section className={styles.llamar}>
