@@ -27,6 +27,7 @@ import ImageSlider from "../containers/ImageSlider.js";
 import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import Aside from "../components/Aside.jsx";
 import imagenData from "../../data/imageSlider.js";
+import Carousel from "@/containers/CarouselFacebook.jsx";
 
 const Home = () => {
   // const { publicaciones } = useContext(PublicacionesContext) || {
@@ -67,12 +68,26 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <section className={`${styles.presentation}`}>
+      <article className={`${styles.presentation}`}>
         <ImageSlider imagePaths={imagePath} enableTransition={true} />
-      </section>
+      </article>
 
-      <section className={styles.aside}>
-        {/* <h1>Noticias</h1> */}
+      <article className={styles.tratamientos}>
+        <h3>PROCEDIMIENTOS</h3>
+
+        <ul>
+          <li>Laparoscopia</li>
+          <li>Endoscopia</li>
+          <li>Hígado graso</li>
+          <li>Bichectomía</li>
+          <li>Hernioplastia umbilical</li>
+        </ul>
+
+        {/* <button>Ver más</button> */}
+      </article>
+
+      <article className={styles.aside}>
+        <h1></h1>
         <aside>
           {asideItems.map((item, index) => (
             <Aside
@@ -84,32 +99,31 @@ const Home = () => {
             />
           ))}
         </aside>
-      </section>
+      </article>
 
-      <section className={styles.tratamientos}>
-        <div className={styles.area}>
-          <h3>PROCEDIMIENTOS</h3>
+      <article className={styles.facebook}>
+        <h3>Publicaciones de redes sociales</h3>
+        {/* <Carousel 
+        {asideItems.map((item, index) => (
+          <Aside
+            key={index}
+            title={item.title}
+            content={item.content}
+            imageUrl={item.imageUrl}
+            links={item.links}
+          />
+        ))}
+        /> */}
+      </article>
 
-          <ul>
-            <li>Laparoscopia</li>
-            <li>Endoscopia</li>
-            <li>Hígado graso</li>
-            <li>Bichectomía</li>
-            <li>Hernioplastia umbilical</li>
-          </ul>
-
-          {/* <button>Ver más</button> */}
-        </div>
-      </section>
-
-      <section className={styles.horario}>
+      <article className={styles.horario}>
         {/* <h2>Novedades</h2>
              <p>Publicación de noticias publicadas de parte del cirujano</p> */}
 
         <ImageSlider imagePaths={imagePath} enableTransition={false} />
-      </section>
+      </article>
 
-      <section className={styles.links}>
+      <article className={styles.links}>
         {/* <div className={styles.links_facebook}>
           {links.map((link, index) => (
             <Facebook
@@ -123,7 +137,9 @@ const Home = () => {
         {/* <ImageSlider imagePaths={cirugias} enableTransition={false}/> */}
 
         <Procedimientos imageData={imagePath} enableTransition={false} />
-      </section>
+      </article>
+
+      <article className="notices"></article>
     </div>
   );
 };

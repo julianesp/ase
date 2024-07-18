@@ -5,11 +5,10 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   margin: 1px auto;
-  padding: 0;  
-  
+  padding: 0;
+
   width: 100vw;
   max-width: 1000px;
   height: 55px;
@@ -21,8 +20,9 @@
   border-radius: 30px;
 
   //vista borrosa
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
   background-color: rgba(24, 28, 36, 0.6);
+  backdrop-filter: blur(5px);
 }
 
 .container .container__principal {
@@ -30,10 +30,12 @@
   justify-content: space-between;
   align-items: center;
 
-  margin: 9px 0 5px 2px;
+  margin-top: 1px;
+  margin-left: 3px;
+  // margin: 9px 0 5px 2px;
 
-  backdrop-filter: blur(10px);
-  border-radius: 50%;
+  // backdrop-filter: blur(10px);
+  // border-radius: 50%;
 }
 
 .container .container__principal .enlaces__logo {
@@ -53,23 +55,23 @@
   flex-direction: column;
 
   top: 100%;
-  left: -300px;
+  left: -250px;
 
-  height: 50vh;
-  width: 200px;
+  // width: 100px;
+  height: 250px;
 
   border-radius: 20px;
 
   /* background-color: rgba(255, 255, 255, 0.9); */
 
   background-color: rgba(24, 28, 36, 0.9);
-
-  /* backdrop-filter: blur(4px); */
+  color: #000;
+  backdrop-filter: blur(5px);
 }
 
 .container .enlaces__menu.open {
   position: absolute;
-  width: 250px;
+  width: 210px;
 
   left: 2px;
 
@@ -79,7 +81,6 @@
   animation-name: showMenuBurger;
   animation-duration: 0.5s;
 
-  /* filter: blur(4px); */
   padding-left: 0;
 }
 
@@ -186,61 +187,55 @@
 @media screen and (min-width: 1024px) {
   .container {
     margin: 0px 10%;
-    // position: relative;
-
-    
-    
-    // width: 100vw;
 
     .circle {
       display: none;
     }
 
     .enlaces__menu {
-
+      background-color: transparent;
     }
-    
-    .enlaces__menu.closed {
 
-      position: absolute;
-      display: flex;
+    .enlaces__menu.closed {
       flex-direction: row;
-      
-      gap: 0 20px;
 
       margin: 0;
       padding: 0;
 
-      top: -115px;
-      left: 770px;
+      width: 250px;
+      height: 50px;
+
+      top: 3px;
+      left: 745px;
 
       // quitar fondo oscuro a enlaces
       background-color: transparent;
-      border: transparent;
+      background: none;
+      border: none;
+      box-shadow: none;
+      animation: none;
+    }
+
+    .enlaces__menu.open {
+      background-color: transparent;
     }
 
     .enlaces__menu a {
-      color: #000;
-      font-size: 1.3rem;
-      padding: 10px 0;
+      transition: 0.5s ease-in all;
 
-      transition: 0.2s ease-in all;
-      
+      color: #fff;
+      font-size: 1.2rem;
+
       border: none;
       animation: none;
     }
-    
+
     .enlaces__menu a:hover {
       animation: none;
       color: #fff;
-      transition: .3s ease-in;
       text-decoration: underline;
-      border: 1px solid #fff;
+      // border: 1px solid #fff;
       padding: 0;
-    }
-
-    .enlaces__menu.closed {
-      animation: none;
     }
   }
 }
