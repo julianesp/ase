@@ -378,6 +378,16 @@
     justify-items: center;
   }
 
+  .footer .flecha {
+    bottom: 20px;
+    left: 43px;
+  }
+
+  .footer .llamar {
+    bottom: 20px;
+    right: 50px;
+  }
+
   .footer .logo {
     grid-area: logo;
   }
@@ -399,7 +409,8 @@
     grid-row-start: 2;
     grid-row-end: 4;
 
-    
+    border: unset;
+    box-shadow: unset;
   }
 
   .footer .ubicacion .consultorio {

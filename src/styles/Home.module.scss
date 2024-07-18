@@ -1,5 +1,6 @@
-@import './mixins.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import "./variables.scss";
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 /* styles to presentation of start page */
 .container {
@@ -9,10 +10,8 @@
   align-items: center;
   overflow: hidden;
 
-  
-
-  border: 2px solid #000; 
-  
+  border: 2px solid #000;
+  background-color: #fff;
 
   & .aside {
     // display: grid;
@@ -25,11 +24,11 @@
     // flex-direction: row;
 
     // padding: 2px;
-    
+
     width: 100%;
     height: auto;
     max-width: 300px;
-    
+
     & aside {
       display: inline-block;
       overflow-x: auto;
@@ -89,8 +88,11 @@
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  width: 80%;
+  width: 320px;
+  min-width: 320px;
+  max-width: 500px;
   margin-top: 25px;
 }
 
@@ -107,25 +109,35 @@
 
 .container .tratamientos {
   @include border__light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 -20px 0;
-  padding: 15px 0;
-  width: 700px;
-  height: auto;
-  color: #000;
-}
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
-.container .tratamientos .area {
+  // margin: 20px 40px;
+
+  // padding: 15px 0;
+
+  // width: 200px;
+  // min-width: 320px;
+  // max-width: 500px;
+  // height: auto;
+
+  // color: #000;
+
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
-  margin-bottom: 20px;
-  width: 70%;
+  margin: 20px 0;
+  
+  width: 300px;
+  min-width: 300px;
+  max-width: 500px;
 
+  background-color: rgba($primary-color, 0.9);
   border: 1px solid #fff;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #fff;
@@ -155,10 +167,9 @@
 
 .container .horario {
   @include center;
-  
 }
 
-.container .links{
+.container .links {
   // display: flex;
   // justify-content: center;
   // align-items: center;
@@ -188,52 +199,50 @@
 // }
 
 @media screen and (min-width: 1024px) {
-    
-  .container{
+  .container {
     @include border__light;
     // filter: blur(5px);
-  position: relative;
-  display: grid;
-  // align-items: center;
-  // justify-self: center;
-  justify-items: center;
-  align-items: center;
+    position: relative;
+    display: grid;
+    // align-items: center;
+    // justify-self: center;
+    justify-items: center;
+    align-items: center;
 
-  grid-template-columns: 70% 20%;
-  grid-template-rows: 1fr;
+    grid-template-columns: 70% 20%;
+    grid-template-rows: 1fr;
 
-  grid-template-areas:
-  'presentation presentation'
-  'contenido aside'
-  'contenido aside'
-  'contenido aside';
+    grid-template-areas:
+      "presentation presentation"
+      "contenido aside"
+      "contenido aside"
+      "contenido aside";
     gap: 0 5px;
-  
+
     margin: 70px 100px 0;
-  
+
     // width: 900px;
     // height: 100vh;
-  
-    & .presentation {      
+
+    & .presentation {
       grid-column-start: 1;
       grid-column-end: 3;
       grid-area: presentation;
-  
+
       align-items: center;
       justify-content: center;
-  
+
       margin-bottom: 30px;
     }
-  
+
     & .aside {
-      
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       grid-area: aside;
-  
+
       width: 250px;
       height: 99%;
 
@@ -243,25 +252,25 @@
       // border-radius: 20px;
       // box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
     }
-  
+
     & .tratamientos {
       // position: absolute;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
-  
+
       margin: 0;
       padding: 0;
-  
+
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       width: calc(100% - 120px);
-  
+
       // background-color: #fff;
-  
+
       & .area {
         display: flex;
         justify-items: center;
@@ -271,22 +280,21 @@
         // text-align: center;
       }
     }
-  
+
     & .horario {
       grid-column-start: 1;
       grid-column-end: 2;
-      
+
       // border: 2px solid #000;
-  
+
       margin: 0;
       & img {
       }
     }
-    
+
     & .links {
       grid-column-start: 1;
       grid-column-end: 2;
     }
-    }
-  
+  }
 }
