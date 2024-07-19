@@ -73,7 +73,7 @@ const Home = () => {
       </article>
 
       <article className={styles.tratamientos}>
-        <h3>PROCEDIMIENTOS</h3>
+        <h3>Procedimientos</h3>
 
         <ul>
           <li>Laparoscopia</li>
@@ -103,39 +103,13 @@ const Home = () => {
 
       <article className={styles.facebook}>
         <h3>Publicaciones de redes sociales</h3>
-        {/* <Carousel 
-        {asideItems.map((item, index) => (
-          <Aside
-            key={index}
-            title={item.title}
-            content={item.content}
-            imageUrl={item.imageUrl}
-            links={item.links}
-          />
-        ))}
-        /> */}
       </article>
 
       <article className={styles.horario}>
-        {/* <h2>Novedades</h2>
-             <p>Publicación de noticias publicadas de parte del cirujano</p> */}
-
         <ImageSlider imagePaths={imagePath} enableTransition={false} />
       </article>
 
       <article className={styles.links}>
-        {/* <div className={styles.links_facebook}>
-          {links.map((link, index) => (
-            <Facebook
-              key={index}
-              imageUrl={link.imageUrl}
-              facebookUrl={link.facebookUrl}
-            />
-          ))}
-        </div> */}
-
-        {/* <ImageSlider imagePaths={cirugias} enableTransition={false}/> */}
-
         <Procedimientos imageData={imagePath} enableTransition={false} />
       </article>
 
