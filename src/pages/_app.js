@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+// import "../styles/globals.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>My Website</title>
-        <meta name="Descripcción" content="Servicio de cirugía general " />
+        <meta name="Descripcción" content=" de cirugía general " />
         <meta property="og:title" content="Alirio Solarte" />
         <meta
           property="og:description"
