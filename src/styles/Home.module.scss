@@ -68,12 +68,12 @@
 
     // padding: 2px;
 
-    width: 100%;
+    // width: 100%;
     // height: auto;
-    // max-width: 300px;
+    max-width: 300px;
 
     & aside {
-      display: inline-block;
+      display: flex;
       overflow-x: auto;
 
       color: #000;
