@@ -3,56 +3,64 @@
 .aside-item {
   @include border__dark;
 
-    position: relative;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin: 0 5px 10px;
+  position: relative;
 
-    border: 1px solid #baba;
-    background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px 10px 10px;
 
-    width: 100%;
-    min-width: 320px;
-    max-width: 500px;
+  border: 1px solid #baba;
+  background-color: #f9f9f9;
+
+  width: 100%;
+  min-width: 220px;
+  max-width: 500px;
+
+  height: 320px;
+
+  & p {
+    margin: 5px 0;
+    font-size: 0.8rem;
   }
-  
-  .aside-item h3 {
-    margin-top: 0;
-  }
-  
-  .aside-item ul {
-    list-style: none;
-    padding-left: 0;
+}
 
-    & li {
-        text-align: center;
-        & a {
-            @include border__dark;
-            
-            padding: 6px;
+.aside-item h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
 
-            transition: .3s ease-in all;
+.aside-item ul {
+  list-style: none;
+  padding-left: 0;
 
-            text-decoration: none;
-            background-color: #fff;
+  & li {
+    text-align: center;
+    & a {
+      @include border__dark;
 
+      padding: 6px;
 
-            &:hover {
-                background-color: #000;
-                color: #fff;
-                transform: scale(.2);
-            }
-        }
+      transition: 0.3s ease-in all;
+
+      text-decoration: none;
+      background-color: #fff;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        transform: scale(0.2);
+      }
     }
   }
-  
-  .aside-item li {
-    margin-bottom: 8px;
-  }
-  
-  .aside-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-  }
-  
+}
+
+.aside-item li {
+  margin-bottom: 8px;
+}
+
+.aside-image {
+  margin-bottom: 16px;
+
+  width: 200px;
+  height: auto;
+}
