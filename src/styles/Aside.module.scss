@@ -11,7 +11,9 @@
     border: 1px solid #baba;
     background-color: #f9f9f9;
 
-    // width: inherit;
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
   }
   
   .aside-item h3 {
