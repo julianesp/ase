@@ -29,6 +29,14 @@ import Aside from "../components/Aside.jsx";
 import imagenData from "../../data/imageSlider.js";
 import Carousel from "@/containers/CarouselFacebook.jsx";
 
+export const metadata = {
+  title: "Alirio Solarte",
+  description: "Servicio de cirugía general",
+  image:
+    "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Flogo_circular.jpeg?alt=media&token=67019e7b-b635-4507-b1fb-70c8b9aecbef",
+  url: "https://julianesp.github.io/ase/",
+};
+
 const Home = () => {
   // const { publicaciones } = useContext(PublicacionesContext) || {
   //   publicaciones: [],

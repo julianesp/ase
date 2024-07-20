@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 // import "../styles/globals.css";
->>>>>>> tests
+
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
