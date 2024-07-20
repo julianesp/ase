@@ -66,11 +66,13 @@
 
     // flex-direction: row;
 
+    margin: 0 50px;
     // padding: 2px;
 
-    // width: 100%;
+    width: 100%;
+    min-width: 300px;
     // height: auto;
-    max-width: 300px;
+    max-width: 500px;
 
     & aside {
       display: flex;
