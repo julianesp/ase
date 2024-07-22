@@ -21,3 +21,20 @@
   // background-color: rgba(149, 177, 220, 0.5);
   color: #000;
 }
+
+@mixin publications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px 0;
+
+  width: 100px;
+  height: 300px;
+  min-width: 320px;
+  max-width: 500px;
+
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: -3px 5px 20px rgba(109, 107, 109, 0.667);
+}
