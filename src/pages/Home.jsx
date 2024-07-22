@@ -19,16 +19,13 @@ import c5 from "/public/images/services/colecistectomia.jpg";
 import c6 from "/public/images/services/patologias.jpg";
 import c7 from "/public/images/services/colonoscopia.jpg";
 
-import VisorImages from "../components/VisorImages.js";
-// import imagesInfo from "../../data/images.json";
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
-// import { PublicacionesContext } from "../context/PublicacionesContext.js";
 import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import Aside from "../components/Aside.jsx";
-import imagenData from "../../data/imageSlider.js";
-import Carousel from "@/containers/CarouselFacebook.jsx";
+
 import Border from "@/components/border/Border.jsx";
+import VisorImages from "../components/VisorImages.js";
 
 export const metadata = {
   title: "Alirio Solarte",
@@ -39,13 +36,7 @@ export const metadata = {
 };
 
 const Home = () => {
-  // const { publicaciones } = useContext(PublicacionesContext) || {
-  //   publicaciones: [],
-  // };
   const imagePath = [d1, d2, d3];
-  // const imagePath = [imagenData];
-  const cirugias = [c1, c2, c3, c4, c5, c6, c7];
-  // const cirugias = [imagenData];
 
   const asideItems = [
     {
@@ -122,7 +113,8 @@ const Home = () => {
         {/* <button>Ver más</button> */}
       </article>
 
-      <Border />
+      {/* <Border /> */}
+
       <article className={styles.aside}>
         <h1>Facebook</h1>
         <aside>
