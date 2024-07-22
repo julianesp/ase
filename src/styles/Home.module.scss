@@ -28,7 +28,7 @@
 
     width: 100%;
     min-width: 320px;
-    max-width: 500px;
+    max-width: 750px;
     margin-top: 25px;
   }
 
@@ -65,7 +65,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
 
     overflow-x: auto;
 
@@ -73,7 +72,7 @@
 
     width: 100%;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 700px;
 
     & h1 {
       margin: 0 auto;
@@ -108,7 +107,7 @@
 
     width: 100%;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 700px;
 
     & h1 {
       margin: 0 auto;
@@ -140,22 +139,27 @@
   }
 
   & .notices {
-    @include publications;
+    // @include publications;
+    display: none;
   }
 }
 
-// @media screen and (max-width: 768px) {
-//   .container{
-//    display: flex;
+@media screen and (min-width: 768px) {
+  .container {
+    // display: flex;
 
-//    & .aside {
-//     display: flex;
-//     flex-direction: row;
+    & .presentation {
+      width: 700px;
+    }
 
-//     width: 300px;
-//    }
-//   }
-// }
+    & .aside {
+      // display: flex;
+      // flex-direction: row;
+
+      // width: 300px;
+    }
+  }
+}
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -165,17 +169,18 @@
     display: grid;
     // align-items: center;
     // justify-self: center;
-    justify-items: center;
+    justify-self: center;
     align-items: center;
 
-    grid-template-columns: 70% 20%;
+    grid-template-columns: 60% 20%;
     grid-template-rows: 1fr;
 
     grid-template-areas:
       "presentation presentation"
-      "contenido aside"
-      "contenido aside"
-      "contenido aside";
+      "procedimientos notices"
+      "facebook notices"
+      "instagram notices"
+      "cirugias notices";
     gap: 0 5px;
 
     margin: 70px 100px 0;
@@ -184,8 +189,8 @@
     // height: 100vh;
 
     & .presentation {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      // grid-column-start: 1;
+      // grid-column-end: 3;
       grid-area: presentation;
 
       align-items: center;
@@ -194,30 +199,14 @@
       margin-bottom: 30px;
     }
 
-    & .aside {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      grid-area: aside;
-
-      width: 250px;
-      height: 99%;
-
-      color: #000;
-
-      // border: 2px solid #baba;
-      // border-radius: 20px;
-      // box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
-    }
-
     & .tratamientos {
       // position: absolute;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
+
+      grid-area: procedimientos;
 
       margin: 0;
       padding: 0;
@@ -229,15 +218,33 @@
       width: calc(100% - 120px);
 
       // background-color: #fff;
+    }
 
-      & .area {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 100vw;
-        // background-color: #000;
-        // text-align: center;
-      }
+    & .aside {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+
+      grid-row-start: 3;
+      grid-row-end: 4;
+
+      width: 250px;
+      height: 99%;
+
+      color: #000;
+
+      // border: 2px solid #baba;
+      // border-radius: 20px;
+      // box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
+    }
+
+    & .instagram {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      grid-row-start: 4;
+      grid-row-end: 5;
     }
 
     & .horario {
@@ -251,9 +258,16 @@
       }
     }
 
-    & .links {
-      grid-column-start: 1;
-      grid-column-end: 2;
+    & .notices {
+      // position: absolute;
+      // grid-column-start: 1;
+      // grid-column-end: 2;
+
+      grid-area: notices;
+
+      width: 100%;
+
+      @include border__dark;
     }
   }
 }
