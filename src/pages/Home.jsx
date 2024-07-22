@@ -28,6 +28,7 @@ import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import Aside from "../components/Aside.jsx";
 import imagenData from "../../data/imageSlider.js";
 import Carousel from "@/containers/CarouselFacebook.jsx";
+import Border from "@/components/border/Border.jsx";
 
 export const metadata = {
   title: "Alirio Solarte",
@@ -46,7 +47,6 @@ const Home = () => {
   const cirugias = [c1, c2, c3, c4, c5, c6, c7];
   // const cirugias = [imagenData];
 
-  // aside content
   const asideItems = [
     {
       title: "Hernias",
@@ -74,6 +74,33 @@ const Home = () => {
     },
   ];
 
+  const instagramItems = [
+    {
+      title: "Escleroterapia",
+      content: "Procedimiento médico utilizado para tratar venas varicosas",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fescleroterapia.jpg?alt=media&token=4ddaa317-9396-4e55-906c-8b6187cb3652",
+      links: [
+        {
+          text: "Ver video",
+          url: "https://www.instagram.com/p/Cxs7JTbuRKW/",
+        },
+      ],
+    },
+    {
+      title: "Colecistectomía",
+      content: "Cirugía para extirpar la vesícula biliar",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcolecistectomia.jpg?alt=media&token=9e7a4f94-861e-4f3f-b9ad-65b59d97888e",
+      links: [
+        {
+          text: "Ver video",
+          url: "https://www.instagram.com/p/CwTSX_OIho-/",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <article className={`${styles.presentation}`}>
@@ -81,21 +108,23 @@ const Home = () => {
       </article>
 
       <article className={styles.tratamientos}>
-        <h3>Procedimientos</h3>
-
-        <ul>
-          <li>Laparoscopia</li>
-          <li>Endoscopia</li>
-          <li>Hígado graso</li>
-          <li>Bichectomía</li>
-          <li>Hernioplastia umbilical</li>
-        </ul>
+        <div className={styles.procedimientos}>
+          <h3>Procedimientos</h3>
+          <ul>
+            <li>Laparoscopia</li>
+            <li>Endoscopia</li>
+            <li>Hígado graso</li>
+            <li>Bichectomía</li>
+            <li>Hernioplastia umbilical</li>
+          </ul>
+        </div>
 
         {/* <button>Ver más</button> */}
       </article>
 
+      <Border />
       <article className={styles.aside}>
-        <h1></h1>
+        <h1>Facebook</h1>
         <aside>
           {asideItems.map((item, index) => (
             <Aside
@@ -109,19 +138,28 @@ const Home = () => {
         </aside>
       </article>
 
-      <article className={styles.facebook}>
-        <h3>Publicaciones de redes sociales</h3>
+      <article className={styles.instagram}>
+        <h1>Instagram</h1>
+        <aside>
+          {instagramItems.map((item, index) => (
+            <Aside
+              key={index}
+              title={item.title}
+              content={item.content}
+              imageUrl={item.imageUrl}
+              links={item.links}
+            />
+          ))}
+        </aside>
       </article>
 
       <article className={styles.horario}>
         <ImageSlider imagePaths={imagePath} enableTransition={false} />
       </article>
 
-      <article className={styles.links}>
-        <Procedimientos imageData={imagePath} enableTransition={false} />
+      <article className={styles.notices}>
+        <h1>Noticias</h1>
       </article>
-
-      <article className="notices"></article>
     </div>
   );
 };
