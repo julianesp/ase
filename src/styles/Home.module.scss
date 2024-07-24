@@ -140,7 +140,7 @@
 
   & .notices {
     // @include publications;
-    display: none;
+    // display: none;
   }
 }
 
@@ -183,7 +183,8 @@
       "cirugias notices";
     gap: 0 5px;
 
-    margin: 70px 100px 0;
+    // margin: 70px 100px 0;
+    margin: 70px auto;
 
     // width: 900px;
     // height: 100vh;
@@ -191,12 +192,14 @@
     & .presentation {
       // grid-column-start: 1;
       // grid-column-end: 3;
-      grid-area: presentation;
+      // grid-area: presentation;
 
+      display: flex;
       align-items: center;
       justify-content: center;
 
       margin-bottom: 30px;
+      margin: 0 auto;
     }
 
     & .tratamientos {
@@ -229,7 +232,9 @@
       grid-row-start: 3;
       grid-row-end: 4;
 
-      width: 250px;
+      margin: 0;
+
+      // width: 250px;
       height: 99%;
 
       color: #000;
@@ -237,6 +242,10 @@
       // border: 2px solid #baba;
       // border-radius: 20px;
       // box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
+
+      & aside {
+        width: calc(100% - 30px);
+      }
     }
 
     & .instagram {
@@ -245,17 +254,17 @@
 
       grid-row-start: 4;
       grid-row-end: 5;
+
+      margin: 0;
+
+      & aside {
+        width: calc(100% - 30px);
+      }
     }
 
     & .horario {
       grid-column-start: 1;
       grid-column-end: 2;
-
-      // border: 2px solid #000;
-
-      margin: 0;
-      & img {
-      }
     }
 
     & .notices {
@@ -263,11 +272,11 @@
       // grid-column-start: 1;
       // grid-column-end: 2;
 
+      @include border__dark;
+
       grid-area: notices;
 
-      width: 100%;
-
-      @include border__dark;
+      height: 100%;
     }
   }
 }

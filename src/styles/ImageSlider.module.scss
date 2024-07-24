@@ -77,9 +77,9 @@
 
 @media screen and (min-width: 700px) {
   .image {
-    width: 100%;
+    // width: 100%;
     & img {
-      width: 550px;
+      // width: 550px;
     }
   }
 }
@@ -88,6 +88,14 @@
   .image {
     margin-top: 0;
     & img {
+    }
+
+    & .buttonContainer {
+      & button {
+        & img {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
