@@ -183,11 +183,12 @@
       "cirugias notices";
     gap: 0 5px;
 
-    // margin: 70px 100px 0;
-    margin: 70px auto;
+    // width: 100dvw;
+    width: 100%;
+    max-width: none;
 
-    // width: 900px;
-    // height: 100vh;
+    border: none;
+    border-radius: 0%;
 
     & .presentation {
       // grid-column-start: 1;
@@ -198,8 +199,8 @@
       align-items: center;
       justify-content: center;
 
-      margin-bottom: 30px;
-      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     & .tratamientos {
@@ -220,7 +221,15 @@
 
       width: calc(100% - 120px);
 
-      // background-color: #fff;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+
+      & .procedimientos {
+        width: 100%;
+        min-width: inherit;
+        max-width: 500px;
+      }
     }
 
     & .aside {
@@ -232,10 +241,10 @@
       grid-row-start: 3;
       grid-row-end: 4;
 
-      margin: 0;
+      margin: 30px 0;
 
       // width: 250px;
-      height: 99%;
+      // height: 99%;
 
       color: #000;
 
@@ -268,15 +277,22 @@
     }
 
     & .notices {
-      // position: absolute;
-      // grid-column-start: 1;
-      // grid-column-end: 2;
-
       @include border__dark;
 
-      grid-area: notices;
+      // grid-area: notices;
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      grid-row-start: 2;
+      grid-row-end: 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // top: 0;
 
       height: 100%;
+
     }
   }
 }
