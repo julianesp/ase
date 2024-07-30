@@ -70,6 +70,10 @@ const NavBar = () => {
             Inicio
           </Link>
 
+          <Link href="../app/users/home/Users" onClick={handleLinkClick}>
+            Usuarios
+          </Link>
+
           <Link href="/Perfil" onClick={handleLinkClick}>
             Sobre mí
           </Link>
