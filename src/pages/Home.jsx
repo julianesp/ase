@@ -27,6 +27,9 @@ import Aside from "../components/Aside.jsx";
 import Border from "@/components/border/Border.jsx";
 import VisorImages from "../components/VisorImages.js";
 
+import Usuario from "../app/users/create/page.jsx";
+import Link from "next/link";
+
 export const metadata = {
   title: "Alirio Solarte",
   description: "Servicio de cirugía general",
@@ -150,7 +153,10 @@ const Home = () => {
       </article>
 
       <article className={styles.notices}>
-        <h1>Noticias</h1>
+        <h1>Usuarios</h1>
+        <Link href={`/users/create`}>Crear usuarios</Link>
+
+        {/* <Usuario /> */}
       </article>
     </div>
   );

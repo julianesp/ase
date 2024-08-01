@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import axios from "axios"; //npm install axios https://www.npmjs.com/package/axios
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Addnewuser = () => {
   const [inputs, setInputs] = useState([]);
@@ -100,6 +101,8 @@ const Addnewuser = () => {
             Add New User
           </button>
         </form>
+
+        <Link href={`/users/read`}>Ver creados</Link>
       </div>
     </div>
   );
