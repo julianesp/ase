@@ -71,7 +71,7 @@ const NavBar = () => {
           </Link>
 
           <Link href={`/addProduct`} onClick={handleLinkClick}>
-            Usuarios
+            Accesorios
           </Link>
 
           <Link href="/Perfil" onClick={handleLinkClick}>

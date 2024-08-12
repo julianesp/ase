@@ -1,6 +1,8 @@
 //app\api\products\route.js
-import connectMongoDB from "@/libs/mongodb";
-import Product from "@/models/ProductModel";
+// import connectMongoDB from "@/libs/mongodb";
+import connectMongoDB from "../../../libs/mongodb";
+// import Product from "@/models/ProductModel";
+import Product from "../../../models/ProductModel";
 import { NextResponse } from "next/server";
 
 export async function GET() {

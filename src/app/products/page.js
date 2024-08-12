@@ -4,9 +4,9 @@ import ProductList from "@/components/ProductList";
 export default function Page() {
   return <ProductList />;
 }
-{
-  <ProductList />;
-}
+// {
+//   <ProductList />;
+// }
 //app\products\page.js
 // import Productlist from "@/components/ProductsList";
 

@@ -152,10 +152,9 @@ const Home = () => {
       </article>
 
       <article className={styles.notices}>
-        <h1>Usuarios</h1>
-        <Link href={`/users/create`}>Crear usuarios</Link>
-
-        {/* <Usuario /> */}
+        <h1>Instrumentos</h1>
+        <h1>Show products here</h1>
+        <Link href={`/products`}>Crear usuarios</Link>
       </article>
     </div>
   );
