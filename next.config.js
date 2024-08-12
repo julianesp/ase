@@ -22,6 +22,14 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+
+  // include images from browser
+  // experimental: {
+  //   urlImports: [
+  //     "https://console.firebase.google.com/u/0/project/aliriose-3a721/storage/aliriose-3a721.appspot.com/files/~2Fimages?hl=es",
+  //     "https://console.firebase.google.com/u/0/?hl=es",
+  //   ],
+  // },
 };
 
 module.exports = nextConfig;

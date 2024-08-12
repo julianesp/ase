@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+// import guide from "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Flist_images.png?alt=media&token=ce9c2e97-ade1-49d2-a593-4ffe92f1eb2e";
 import guide from "../../../public/images/list_images.png";
 
 export default function AddProduct() {
