@@ -21,7 +21,6 @@ import c7 from "/public/images/services/colonoscopia.jpg";
 
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
-import Procedimientos from "../containers/PresentacionProcedimientos.jsx";
 import Aside from "../components/Aside.jsx";
 
 import Border from "@/components/border/Border.jsx";
@@ -45,8 +44,8 @@ const Home = () => {
       title: "Hernias",
       content: "Explicando diferencias entre sus tipos",
       // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      // "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",
@@ -59,7 +58,7 @@ const Home = () => {
       content: "Procedimiento durante la cirugía",
       // imageUrl:
       //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",
@@ -75,7 +74,7 @@ const Home = () => {
       content: "Explicando diferencias entre sus tipos",
       // imageUrl:
       //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",
@@ -88,7 +87,7 @@ const Home = () => {
       content: "Procedimiento durante la cirugía",
       // imageUrl:
       //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",
@@ -104,7 +103,7 @@ const Home = () => {
       content: "Procedimiento médico utilizado para tratar venas varicosas",
       // imageUrl:
       //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fescleroterapia.jpg?alt=media&token=4ddaa317-9396-4e55-906c-8b6187cb3652",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",
@@ -117,7 +116,7 @@ const Home = () => {
       content: "Cirugía para extirpar la vesícula biliar",
       // imageUrl:
       //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcolecistectomia.jpg?alt=media&token=9e7a4f94-861e-4f3f-b9ad-65b59d97888e",
-      imageUrl: "../../public/images/cirugia_laparoscopia.jpg",
+      imageUrl: "/images/cirugia_laparoscopia.jpg",
       links: [
         {
           text: "Ver video",

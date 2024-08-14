@@ -4,8 +4,9 @@ const path = require("path");
 const nextConfig = {
   output: "standalone",
   images: {
-    unoptimized: true,
-    domains: ["firebasestorage.googleapis.com"],
+    // unoptimized: true,
+    // domains: ["firebasestorage.googleapis.com"],
+    // remotePatterns: ["firebasestorage.googleapis.com"],
   },
 
   webpack: (config, { isServer }) => {
@@ -23,12 +24,8 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
 
-  // include images from browser
   // experimental: {
-  //   urlImports: [
-  //     "https://console.firebase.google.com/u/0/project/aliriose-3a721/storage/aliriose-3a721.appspot.com/files/~2Fimages?hl=es",
-  //     "https://console.firebase.google.com/u/0/?hl=es",
-  //   ],
+  //   isrMemoryCacheSize: 0,
   // },
 };
 
