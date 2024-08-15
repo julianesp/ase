@@ -186,7 +186,8 @@ const Home = () => {
       <article className={styles.notices}>
         <h1>Instrumentos</h1>
         <Link href={`/addProduct`}>Crear instrumentos</Link>
-        {`/products`}
+
+        {/* <Link>Mostrar instrumentos</Link> */}
       </article>
     </div>
   );

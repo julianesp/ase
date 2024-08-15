@@ -5,7 +5,8 @@ import Image from "next/image";
 const getProducts = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/products", {
-      // cache: "no-store",
+      // allows update the page when delete a accesorie
+      cache: "no-store",
     });
 
     if (!res.ok) {

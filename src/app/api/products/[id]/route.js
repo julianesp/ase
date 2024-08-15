@@ -11,11 +11,14 @@ export async function PUT(request, { params }) {
     newPrice: price,
     newCategory: category,
   } = await request.json();
+
   await connectMongoDB();
+
   await Product.findByIdAndUpdate(id, { name, image, price, category });
+
   return NextResponse.json(
     { message: "Producto actualizado" },
-    { status: 200 },
+    { status: 200 }
   );
 }
 

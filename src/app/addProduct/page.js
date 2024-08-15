@@ -89,6 +89,7 @@ export default function AddProduct() {
           <button type="submit" className="btn btn-primary w-full max-w-xs">
             Agregar accesorio
           </button>
+
           <Link href="/products">
             <h1 className="mt-9 btn btn-primary w-full max-w-xs">
               Mostrar accesorios
