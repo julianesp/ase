@@ -4,9 +4,18 @@ import Image from "next/image";
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products", {
-      // allows update the page when delete a accesorie
-      cache: "no-store",
+    // const res = await fetch("http://localhost:3000/api/products", {
+    //   // allows update the page when delete a accesorie
+    //   cache: "no-store",
+    // });
+
+    const res = await fetch("http://localhost:3001/api/addProduct", {
+      // Cambia a port 3001 si Express está corriendo en este puerto
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ name, image, price, category }),
     });
 
     if (!res.ok) {

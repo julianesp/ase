@@ -20,7 +20,7 @@ export default function AddProduct() {
     e.preventDefault();
 
     if (!name || !image) {
-      alert("Name and image are required.");
+      alert("El nombre y la imagen son requeridos");
       return;
     }
 
@@ -68,7 +68,7 @@ export default function AddProduct() {
             className="input input-bordered input-accent w-full max-w-xs"
             type="text"
             placeholder="/images/1.jpg"
-            defaultValue="/images/1.jpg"
+            // defaultValue="/images/1.jpg"
           />
           <input
             onChange={(e) => setPrice(e.target.value)}
@@ -76,7 +76,7 @@ export default function AddProduct() {
             className="input input-bordered input-accent w-full max-w-xs"
             type="number"
             placeholder="$1.000"
-            defaultValue="1"
+            // defaultValue="1"
           />
           <input
             onChange={(e) => setCategory(e.target.value)}
