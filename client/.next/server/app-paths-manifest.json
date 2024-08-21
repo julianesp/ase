@@ -1,6 +1,6 @@
 {
   "/addProduct/page": "app/addProduct/page.js",
   "/products/page": "app/products/page.js",
-  "/api/products/route": "app/api/products/route.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/api/products/route": "app/api/products/route.js"
 }
