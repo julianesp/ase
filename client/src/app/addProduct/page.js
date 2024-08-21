@@ -36,7 +36,7 @@ export default function AddProduct() {
       if (res.ok) {
         router.push("/products");
       } else {
-        throw new Error("Failed to create a Product");
+        throw new Error("Error al crear productos");
       }
     } catch (error) {
       console.log(error);

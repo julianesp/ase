@@ -13,7 +13,7 @@ export async function connectedDB() {
   // en la siguiente linea se llamar al nombre de la base por consola
   console.log(`Nombre de usuario: ${db.connection.db.databaseName}`);
   // readyState devuelve valores 0, 1
-  // conn.isConnected = db.connection[0].readyState;
+  conn.isConnected = db.connection.readyState;
 }
 
 connection.on("connected", () => {
@@ -22,4 +22,8 @@ connection.on("connected", () => {
 
 connection.on("error", (err) => {
   console.log("Mongoose está desconectado", err);
+});
+
+connection.on("disconnect", () => {
+  console.log("Mongoose está desconectado");
 });
