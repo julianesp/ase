@@ -6,7 +6,7 @@ import Image from "next/image";
 const getProducts = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/products", {
-      cache: "no-store",
+      // cache: "no-store",
     });
 
     if (!res.ok) {
@@ -16,6 +16,7 @@ const getProducts = async () => {
     return res.json();
   } catch (error) {
     console.log("Error loading products: ", error);
+    return { products: [] }; // Devuelve un arreglo vacío en caso de error
   }
 };
 
@@ -30,7 +31,7 @@ export default async function ProductssList() {
         </div>
         <div className="text-right">
           <Link className="btn btn-primary" href={"/addProduct"}>
-            Add Product
+            Agregar accesorio
           </Link>
         </div>
         <table className="table">
