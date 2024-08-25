@@ -24,7 +24,7 @@ import ImageSlider from "../containers/ImageSlider.js";
 import Aside from "../components/Aside.jsx";
 
 import Border from "@/components/border/Border.jsx";
-import VisorImages from "../components/VisorImages.js";
+// import VisorImages from "../components/VisorImages.js";
 
 import Link from "next/link";
 
@@ -185,7 +185,7 @@ const Home = () => {
 
       <article className={styles.notices}>
         <h1>Instrumentos</h1>
-        <Link href={`/users/create`}>Crear instrumentos</Link>
+        <Link href={`/addProduct`}>Crear accesorios</Link>
 
         {/* <Link>Mostrar instrumentos</Link> */}
       </article>
