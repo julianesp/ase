@@ -47,7 +47,7 @@ export default function AddProduct() {
   return (
     <div>
       <div className="flex justify-between items-center">
-        <h1 className="font-bold py-10 text-2xl">Add New Product</h1>
+        <h1 className="font-bold py-10 text-2xl">Agregar nuevo accesorio</h1>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input

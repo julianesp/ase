@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products");
-    // const res = await fetch("http://localhost:3000/api/products", {
-    //   // permite renderizado de accesorios
-    //   cache: "no-store",
-    // });
+    // const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("http://localhost:3000/api/products", {
+      // permite renderizado de accesorios
+      cache: "no-store",
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch products");
