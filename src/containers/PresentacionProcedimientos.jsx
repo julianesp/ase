@@ -9,30 +9,30 @@ import styles from "../styles/PresentacionProcedimientos.scss";
 import imageData from "../../data/imageSlider"; // Importa el archivo de datos
 
 const Procedimientos = ({ enableTransition = true }) => {
-const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-const goToPreviousSlide = () => {
-  setCurrentImageIndex((prevIndex) =>
-    prevIndex === 0 ? imageData.length - 1 : prevIndex - 1
-  );
-};
+  const goToPreviousSlide = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? imageData.length - 1 : prevIndex - 1,
+    );
+  };
 
-const goToNextSlide = useCallback(() => {
-  setCurrentImageIndex((prevIndex) =>
-    prevIndex === imageData.length - 1 ? 0 : prevIndex + 1
-  );
-}, []);
+  const goToNextSlide = useCallback(() => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === imageData.length - 1 ? 0 : prevIndex + 1,
+    );
+  }, []);
 
-useEffect(() => {
-  let interval;
-  if (enableTransition) {
-    interval = setInterval(goToNextSlide, 5000);
-  }
+  useEffect(() => {
+    let interval;
+    if (enableTransition) {
+      interval = setInterval(goToNextSlide, 5000);
+    }
 
-  return () => clearInterval(interval);
-}, [enableTransition, goToNextSlide]);
+    return () => clearInterval(interval);
+  }, [enableTransition, goToNextSlide]);
 
-const currentImage = imageData[currentImageIndex];
+  const currentImage = imageData[currentImageIndex];
 
   return (
     <div className={styles.image}>
@@ -48,11 +48,11 @@ const currentImage = imageData[currentImageIndex];
         </button>
       </div>
 
-<div className={styles.overlayButton}>
-  <a href={currentImage.url} target="_blank" rel="noopener noreferrer">
-    Abrir enlace
-  </a>
-</div>
+      <div className={styles.overlayButton}>
+        <a href={currentImage.url} target="_blank" rel="noopener noreferrer">
+          Abrir enlace
+        </a>
+      </div>
     </div>
   );
 };

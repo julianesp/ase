@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import listado from "../../../public/images/list_images.png";
 
-import muestra from "../../../public/images/cirugias/colonoscopia.png";
+// import muestra from "../../../public/images/cirugias/colonoscopia.png";
 
 export default function AddProduct() {
   const [name, setName] = useState("");
@@ -45,7 +45,7 @@ export default function AddProduct() {
   };
 
   return (
-    <>
+    <div>
       <div className="flex justify-between items-center">
         <h1 className="font-bold py-10 text-2xl">Add New Product</h1>
       </div>
@@ -89,9 +89,14 @@ export default function AddProduct() {
         <Link href={`/products/`}>Mostrar accesorios</Link>
 
         <div className="flex justify-center items-center gap-3">
-          <Image src={listado} width={500} height={500} />
+          <Image
+            alt="Listado de accesorios"
+            src={listado}
+            width={500}
+            height={500}
+          />
         </div>
       </form>
-    </>
+    </div>
   );
 }

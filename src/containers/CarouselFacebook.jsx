@@ -13,13 +13,13 @@ const Carousel = ({ enableTransition = true }) => {
 
   const goToPreviousSlide = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? imageData.length - 1 : prevIndex - 1
+      prevIndex === 0 ? imageData.length - 1 : prevIndex - 1,
     );
   };
 
   const goToNextSlide = useCallback(() => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === imageData.length - 1 ? 0 : prevIndex + 1
+      prevIndex === imageData.length - 1 ? 0 : prevIndex + 1,
     );
   }, []);
 

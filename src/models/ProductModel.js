@@ -10,7 +10,7 @@ const topicSchema = new Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const ProductModel =

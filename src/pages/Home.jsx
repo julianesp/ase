@@ -1,29 +1,25 @@
 "use client";
 
-import React, { useContext } from "react";
-import Head from "next/head";
-// import Layout from "../components/Layout.js";
-import Image from "next/image.js";
-// import Slider from "../containers/Slider.js";
+import React from "react";
 // images doc
 import d1 from "/public/images/doctor/1.png";
 import d2 from "/public/images/doctor/2.png";
 import d3 from "/public/images/doctor/3.png";
 
 // images cirugias
-import c1 from "/public/images/cirugias/cirugia_vesicula.png";
-import c2 from "/public/images/cirugias/colonoscopia.png";
-import c3 from "/public/images/cirugias/lapa_vesicula.png";
-import c4 from "/public/images/services/cirugia_laparoscopia_1.jpg";
-import c5 from "/public/images/services/colecistectomia.jpg";
-import c6 from "/public/images/services/patologias.jpg";
-import c7 from "/public/images/services/colonoscopia.jpg";
+// import c1 from "/public/images/cirugias/cirugia_vesicula.png";
+// import c2 from "/public/images/cirugias/colonoscopia.png";
+// import c3 from "/public/images/cirugias/lapa_vesicula.png";
+// import c4 from "/public/images/services/cirugia_laparoscopia_1.jpg";
+// import c5 from "/public/images/services/colecistectomia.jpg";
+// import c6 from "/public/images/services/patologias.jpg";
+// import c7 from "/public/images/services/colonoscopia.jpg";
 
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
 import Aside from "../components/Aside.jsx";
 
-import Border from "@/components/border/Border.jsx";
+// import Border from "@/components/border/Border.jsx";
 // import VisorImages from "../components/VisorImages.js";
 
 import Link from "next/link";
@@ -68,34 +64,30 @@ const Home = () => {
     },
   ];
 
-  const instrumentos = [
-    {
-      title: "Hernias",
-      content: "Explicando diferencias entre sus tipos",
-      // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
-      links: [
-        {
-          text: "Ver video",
-          url: "https://www.facebook.com/share/r/jZ9eKTKxL7UqyWZt/",
-        },
-      ],
-    },
-    {
-      title: "Laparoscopia",
-      content: "Procedimiento durante la cirugía",
-      // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
-      links: [
-        {
-          text: "Ver video",
-          url: "https://www.facebook.com/ALIRIO.SOLARTE/videos/896402830951345",
-        },
-      ],
-    },
-  ];
+  // const instrumentos = [
+  //   {
+  //     title: "Hernias",
+  //     content: "Explicando diferencias entre sus tipos",
+  //     imageUrl: "/images/cirugia_laparoscopia.jpg",
+  //     links: [
+  //       {
+  //         text: "Ver video",
+  //         url: "https://www.facebook.com/share/r/jZ9eKTKxL7UqyWZt/",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Laparoscopia",
+  //     content: "Procedimiento durante la cirugía",
+  //     imageUrl: "/images/cirugia_laparoscopia.jpg",
+  //     links: [
+  //       {
+  //         text: "Ver video",
+  //         url: "https://www.facebook.com/ALIRIO.SOLARTE/videos/896402830951345",
+  //       },
+  //     ],
+  //   },
+  // ];
 
   const instagramItems = [
     {
@@ -184,7 +176,7 @@ const Home = () => {
       </article>
 
       <article className={styles.notices}>
-        <h1>Instrumentos</h1>
+        <h1>Accesorios</h1>
         <Link href={`/addProduct`}>Crear accesorios</Link>
 
         {/* <Link>Mostrar instrumentos</Link> */}

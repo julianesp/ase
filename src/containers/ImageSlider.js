@@ -11,13 +11,13 @@ const Procedimientos = ({ imagePaths, enableTransition = true }) => {
 
   const goToPreviousSlide = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? imagePaths.length - 1 : prevIndex - 1
+      prevIndex === 0 ? imagePaths.length - 1 : prevIndex - 1,
     );
   };
 
   const goToNextSlide = useCallback(() => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === imagePaths.length - 1 ? 0 : prevIndex + 1
+      prevIndex === imagePaths.length - 1 ? 0 : prevIndex + 1,
     );
   }, [imagePaths.length]);
 

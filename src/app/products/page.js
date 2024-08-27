@@ -4,6 +4,3 @@ import Productlist from "@/components/ProductList";
 export default function Home() {
   return <Productlist />;
 }
-// {
-//   </Productlist>
-// }
