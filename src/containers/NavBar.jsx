@@ -70,9 +70,9 @@ const NavBar = () => {
             Inicio
           </Link>
 
-          <Link href={`/products`} onClick={handleLinkClick}>
+          {/* <Link href={`/products`} onClick={handleLinkClick}>
             Accesorios
-          </Link>
+          </Link> */}
 
           <Link href="/Perfil" onClick={handleLinkClick}>
             Sobre mí

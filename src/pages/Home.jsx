@@ -35,6 +35,19 @@ export const metadata = {
 const Home = () => {
   const imagePath = [d1, d2, d3];
 
+  // const [accesorios, setAccesorios] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchAccesorios = async () => {
+  //     try {
+  //       const response = await fetch("/api/products");
+  //       const data = await response.json();
+  //       setAccesorios(data);
+  //     } catch (error) {
+  //       console.error("Error al obtener los accesorios:", error);
+  //     }
+  //   };
+
   const asideItems = [
     {
       title: "Hernias",
@@ -176,10 +189,16 @@ const Home = () => {
       </article>
 
       <article className={styles.notices}>
-        <h1>Accesorios</h1>
-        <Link href={`/addProduct`}>Crear accesorios</Link>
-
-        {/* <Link>Mostrar instrumentos</Link> */}
+        <h3>Actividades diplomado</h3>
+        <Link href={`/addProduct`} className="">
+          Crear accesorios
+        </Link>
+        <Link href={`/products`} className="">
+          Mostrar accesorios
+        </Link>
+        <Link href={`https://julianesp.github.io/exercises_javascript_ibero/`}>
+          Taller ejercicios JavaScript
+        </Link>
       </article>
     </div>
   );
