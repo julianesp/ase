@@ -154,12 +154,6 @@ jobs:
           name: .next
           path: .next
 
-          # This content can delete
-      - name: Build with Next.js
-        run: |
-          export NEXT_PUBLIC_API_URL=https://tu-dominio-de-produccion.com
-          ${{ steps.detect-package-manager.outputs.runner }} next build
-
   deploy:
     environment:
       name: production
