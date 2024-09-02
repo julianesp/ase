@@ -188,7 +188,7 @@ const Home = () => {
         <ImageSlider imagePaths={imagePath} enableTransition={false} />
       </article>
 
-      <article className={styles.notices}>
+      {/* <article className={styles.notices}>
         <h3>Actividades diplomado</h3>
         <Link href={`/addProduct`} className="">
           Crear accesorios
@@ -199,7 +199,7 @@ const Home = () => {
         <Link href={`https://julianesp.github.io/exercises_javascript_ibero/`}>
           Taller ejercicios JavaScript
         </Link>
-      </article>
+      </article> */}
     </div>
   );
 };
