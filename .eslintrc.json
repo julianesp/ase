@@ -2,7 +2,9 @@
   "extends": ["next", "next/core-web-vitals", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", {
+    "prettier/prettier": [
+      "error",
+      {
         // "singleQuote": true,
         // "tabWidth": 2,
         // "useTabs": false,
@@ -13,21 +15,19 @@
         // "printWidth": 80,
         // "proseWrap": "preserve",
         // "endOfLine": "lf"
-   
-    }]
+      }
+    ],
     "react/react-in-jsx-scope": "off",
-    "no-unused-vars": "warn",
-
+    "no-unused-vars": "warn"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
-  }
+  },
 
   "peerDependencies": {
-  "react": "^17.0.0 || ^18.0.0",
-  "react-dom": "^17.0.0 || ^18.0.0"
-},
-
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
 }
