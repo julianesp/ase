@@ -6,11 +6,11 @@
   display: flex;
   justify-content: space-between;
 
-  margin: 1px auto;
+  // margin: 1px auto;
   padding: 0;
 
-  width: 100vw;
-  max-width: 1000px;
+  width: 99vw;
+  // max-width: 1000px;
   height: 55px;
 
   top: 0px;
@@ -66,7 +66,7 @@
 
   background-color: rgba(24, 28, 36, 0.9);
   color: #000;
-  backdrop-filter: blur(5px);
+  // backdrop-filter: blur(5px);
 }
 
 .container .enlaces__menu.open {
@@ -186,7 +186,13 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    margin: 0px 10%;
+    // position: relative;
+
+    // border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-end-end-radius: 30px;
+    border-end-start-radius: 30px;
 
     .circle {
       display: none;
@@ -197,6 +203,7 @@
     }
 
     .enlaces__menu.closed {
+      // position: absolute;
       flex-direction: row;
 
       margin: 0;
@@ -205,8 +212,8 @@
       width: 250px;
       height: 50px;
 
-      top: 3px;
-      left: 740px;
+      top: 7px;
+      left: 1010px;
 
       // quitar fondo oscuro a enlaces
       background-color: transparent;

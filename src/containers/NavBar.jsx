@@ -11,7 +11,7 @@ const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const menuRef = useRef(null);
-  const { userInfo, setUserInfo } = useContext(UserContext);
+  // const { userInfo, setUserInfo } = useContext(UserContext);
 
   useEffect(() => {
     setIsClient(true); // Marcar que estamos en el cliente

@@ -12,3 +12,40 @@ body {
   background-color: rgba(48, 100, 204, 0.1);
   font-family: "Lato";
 }
+
+/* Estilos generales para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #009dff; /* Color de la barra */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Espacio alrededor de la barra */
+}
+
+/* Estilos para la resolución >= 1024px */
+@media screen and (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Cambia el color de fondo del track */
+    background: #e0e0e0; 
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Cambia el color de la barra */
+    /* background-color: #555;  */
+    background-color: rgba(48, 100, 204, 0.9); 
+    border-radius: 10px;
+    border: 2px solid #e0e0e0; /* Espacio alrededor de la barra */
+  }
+}
+

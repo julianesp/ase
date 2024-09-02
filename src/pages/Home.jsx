@@ -5,24 +5,9 @@ import React from "react";
 import d1 from "/public/images/doctor/1.png";
 import d2 from "/public/images/doctor/2.png";
 import d3 from "/public/images/doctor/3.png";
-
-// images cirugias
-// import c1 from "/public/images/cirugias/cirugia_vesicula.png";
-// import c2 from "/public/images/cirugias/colonoscopia.png";
-// import c3 from "/public/images/cirugias/lapa_vesicula.png";
-// import c4 from "/public/images/services/cirugia_laparoscopia_1.jpg";
-// import c5 from "/public/images/services/colecistectomia.jpg";
-// import c6 from "/public/images/services/patologias.jpg";
-// import c7 from "/public/images/services/colonoscopia.jpg";
-
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
 import Aside from "../components/Aside.jsx";
-
-// import Border from "@/components/border/Border.jsx";
-// import VisorImages from "../components/VisorImages.js";
-
-import Link from "next/link";
 
 export const metadata = {
   title: "Alirio Solarte",
@@ -35,26 +20,12 @@ export const metadata = {
 const Home = () => {
   const imagePath = [d1, d2, d3];
 
-  // const [accesorios, setAccesorios] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchAccesorios = async () => {
-  //     try {
-  //       const response = await fetch("/api/products");
-  //       const data = await response.json();
-  //       setAccesorios(data);
-  //     } catch (error) {
-  //       console.error("Error al obtener los accesorios:", error);
-  //     }
-  //   };
-
   const asideItems = [
     {
       title: "Hernias",
       content: "Explicando diferencias entre sus tipos",
-      // imageUrl:
-      // "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
       links: [
         {
           text: "Ver video",
@@ -65,9 +36,8 @@ const Home = () => {
     {
       title: "Laparoscopia",
       content: "Procedimiento durante la cirugía",
-      // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
       links: [
         {
           text: "Ver video",
@@ -77,38 +47,13 @@ const Home = () => {
     },
   ];
 
-  // const instrumentos = [
-  //   {
-  //     title: "Hernias",
-  //     content: "Explicando diferencias entre sus tipos",
-  //     imageUrl: "/images/cirugia_laparoscopia.jpg",
-  //     links: [
-  //       {
-  //         text: "Ver video",
-  //         url: "https://www.facebook.com/share/r/jZ9eKTKxL7UqyWZt/",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Laparoscopia",
-  //     content: "Procedimiento durante la cirugía",
-  //     imageUrl: "/images/cirugia_laparoscopia.jpg",
-  //     links: [
-  //       {
-  //         text: "Ver video",
-  //         url: "https://www.facebook.com/ALIRIO.SOLARTE/videos/896402830951345",
-  //       },
-  //     ],
-  //   },
-  // ];
-
   const instagramItems = [
     {
       title: "Escleroterapia",
       content: "Procedimiento médico utilizado para tratar venas varicosas",
-      // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fescleroterapia.jpg?alt=media&token=4ddaa317-9396-4e55-906c-8b6187cb3652",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fescleroterapia.jpg?alt=media&token=4ddaa317-9396-4e55-906c-8b6187cb3652",
+
       links: [
         {
           text: "Ver video",
@@ -119,9 +64,9 @@ const Home = () => {
     {
       title: "Colecistectomía",
       content: "Cirugía para extirpar la vesícula biliar",
-      // imageUrl:
-      //   "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcolecistectomia.jpg?alt=media&token=9e7a4f94-861e-4f3f-b9ad-65b59d97888e",
-      imageUrl: "/images/cirugia_laparoscopia.jpg",
+      imageUrl:
+        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcolecistectomia.jpg?alt=media&token=9e7a4f94-861e-4f3f-b9ad-65b59d97888e",
+
       links: [
         {
           text: "Ver video",
@@ -200,6 +145,10 @@ const Home = () => {
           Taller ejercicios JavaScript
         </Link>
       </article> */}
+
+      <article className={styles.notices}>
+        <h3>Anuncios</h3>
+      </article>
     </div>
   );
 };

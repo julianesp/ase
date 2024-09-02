@@ -17,11 +17,11 @@
 @mixin border__dark {
   width: auto;
 
-  border: 1px solid #000;
+  border: 3px solid #bababa;
   border-radius: 20px;
   box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
   // background-color: rgba(149, 177, 220, 0.5);
-  color: #000;
+  // color: #000;
 }
 
 @mixin publications {
