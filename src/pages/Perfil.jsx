@@ -24,13 +24,6 @@ const Profile = () => {
     setShowImage1(false);
   };
 
-  const images = [
-    {
-      src: "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fdoctor.jpg?alt=media&token=17518223-afde-4b6d-9840-f78aef96ded7",
-      alt: "Médico cirujano",
-    },
-  ];
-
   return (
     <RootLayout>
       <div className={styles.dev}>

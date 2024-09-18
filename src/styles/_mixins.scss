@@ -15,7 +15,7 @@
 }
 
 @mixin border__dark {
-  width: auto;
+  width: calc(100% - 10px);
 
   border: 1px solid #bababa;
   border-radius: 20px;

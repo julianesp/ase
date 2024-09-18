@@ -63,6 +63,10 @@
     }
   }
 
+  & .citas {
+    @include border__dark;
+  }
+
   & .aside {
     display: flex;
     flex-direction: column;
@@ -182,7 +186,8 @@
       "procedimientos notices"
       "facebook notices"
       "instagram notices"
-      "cirugias notices";
+      "cirugias notices"
+      "citas citas";
     gap: 0 5px;
 
     // width: 100dvw;
@@ -235,6 +240,10 @@
         min-width: inherit;
         max-width: 500px;
       }
+    }
+
+    & .citas {
+      grid-area: citas;
     }
 
     & .aside {

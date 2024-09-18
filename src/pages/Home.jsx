@@ -2,12 +2,14 @@
 
 import React from "react";
 // images doc
-import d1 from "/public/images/doctor/1.png";
-import d2 from "/public/images/doctor/2.png";
-import d3 from "/public/images/doctor/3.png";
 import styles from "../styles/Home.module.scss";
 import ImageSlider from "../containers/ImageSlider.js";
 import Aside from "../components/Aside.jsx";
+
+import d1 from "/public/images/doctor/1.png";
+import d2 from "/public/images/doctor/2.png";
+import d3 from "/public/images/doctor/3.png";
+import Citas from "../components/Citas";
 
 export const metadata = {
   title: "Alirio Solarte",
@@ -97,7 +99,12 @@ const Home = () => {
         {/* <button>Ver más</button> */}
       </article>
 
-      {/* <Border /> */}
+      <article className={styles.citas}>
+        {/* Agendar citas */}
+        <h1>Agendar cita</h1>
+
+        <Citas />
+      </article>
 
       <article className={styles.aside}>
         <h1>Facebook</h1>
