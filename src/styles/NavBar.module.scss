@@ -17,8 +17,18 @@
   border: 1px solid #fff;
   border-radius: 30px;
 
+  border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-end-end-radius: 30px;
+      border-end-start-radius: 30px;
+
   background-color: rgba(24, 28, 36, 0.6);
   backdrop-filter: blur(5px);
+}
+
+.container a {
+  left: 200px;
+  margin-left: 10px;
 }
 
 .container .container__principal {
@@ -26,12 +36,11 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 1px;
-  margin-left: 3px;
-  // margin: 9px 0 5px 2px;
+  margin: 0 0 0 3px;
 
-  // backdrop-filter: blur(10px);
-  // border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
 }
 
 .container .container__principal .enlaces__logo {
@@ -39,7 +48,8 @@
 }
 
 .container .container__principal img {
-  border: 1px solid #fff;
+  
+  border: none;
 }
 
 .container .enlaces__menu {
@@ -50,24 +60,23 @@
   align-items: center;
   flex-direction: column;
 
-  top: 100%;
-  left: -250px;
+  margin-top: 50px;
 
-  // width: 100px;
-  height: 250px;
+    top: 60%;
+    left: -300px;
 
-  border-radius: 20px;
+    height: 50vh;
+    width: 200px;
 
-  /* background-color: rgba(255, 255, 255, 0.9); */
-
-  background-color: rgba(24, 28, 36, 0.9);
-  color: #000;
-  // backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background-color: rgba(24, 28, 36, 0.9);
 }
 
 .container .enlaces__menu.open {
   position: absolute;
-  width: 210px;
+
+  width: 250px;
+  height: 350px;
 
   left: 2px;
 
@@ -180,33 +189,38 @@
 
 /* screens responsives */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
   .container {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-end-end-radius: 30px;
-    border-end-start-radius: 30px;
+    // border-top-left-radius: 0px;
+    // border-top-right-radius: 0px;
+    // border-end-end-radius: 30px;
+    // border-end-start-radius: 30px;
+
+    width: calc(100% - 1px);
 
     .circle {
       display: none;
     }
 
     .enlaces__menu {
+      display: flex;
+      justify-content: right;
       background-color: transparent;
+
     }
 
     .enlaces__menu.closed {
-      // position: absolute;
       flex-direction: row;
 
       margin: 0;
       padding: 0;
 
-      width: 250px;
+      width: auto; /* Ajuste dinámico */
       height: 50px;
 
       top: 7px;
-      left: 1010px;
+      // left: 1010px;
+      right: 20px;
 
       // quitar fondo oscuro a enlaces
       background-color: transparent;
@@ -228,14 +242,83 @@
 
       border: none;
       animation: none;
+
+      /* Ajustar el ancho de los enlaces */
+    width: auto; /* Ancho automático basado en el contenido */
+    padding: 0 15px; /* Espaciado interno para hacerlos más pequeños */
+    margin-right: 10px; /* Espacio entre enlaces y al lado derecho */
     }
 
     .enlaces__menu a:hover {
+      padding: 0 15px;
+
+      transition: 0.5s ease-in all;
+
       animation: none;
       color: #fff;
       text-decoration: underline;
-      // border: 1px solid #fff;
-      padding: 0;
     }
+
+    
   }
 }
+
+// @media screen and (min-width: 1024px) {
+//   .container {
+//     border-top-left-radius: 0px;
+//     border-top-right-radius: 0px;
+//     border-end-end-radius: 30px;
+//     border-end-start-radius: 30px;
+
+//     .circle {
+//       display: none;
+//     }
+
+//     .enlaces__menu {
+//       background-color: transparent;
+//     }
+
+//     .enlaces__menu.closed {
+//       // position: absolute;
+//       flex-direction: row;
+
+//       margin: 0;
+//       padding: 0;
+
+//       width: 250px;
+//       height: 50px;
+
+//       top: 7px;
+//       left: 1010px;
+
+//       // quitar fondo oscuro a enlaces
+//       background-color: transparent;
+//       background: none;
+//       border: none;
+//       box-shadow: none;
+//       animation: none;
+//     }
+
+//     .enlaces__menu.open {
+//       background-color: transparent;
+//     }
+
+//     .enlaces__menu a {
+//       transition: 0.5s ease-in all;
+
+//       color: #fff;
+//       font-size: 1.2rem;
+
+//       border: none;
+//       animation: none;
+//     }
+
+//     .enlaces__menu a:hover {
+//       animation: none;
+//       color: #fff;
+//       text-decoration: underline;
+//       // border: 1px solid #fff;
+//       padding: 0;
+//     }
+//   }
+// }
