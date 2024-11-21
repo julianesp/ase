@@ -6,11 +6,9 @@
   display: flex;
   justify-content: space-between;
 
-  // margin: 1px auto;
   padding: 0;
 
   width: 99vw;
-  // max-width: 1000px;
   height: 55px;
 
   top: 0px;
@@ -19,8 +17,6 @@
   border: 1px solid #fff;
   border-radius: 30px;
 
-  //vista borrosa
-  // backdrop-filter: blur(10px);
   background-color: rgba(24, 28, 36, 0.6);
   backdrop-filter: blur(5px);
 }
@@ -186,9 +182,6 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    // position: relative;
-
-    // border-radius: 0px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-end-end-radius: 30px;
