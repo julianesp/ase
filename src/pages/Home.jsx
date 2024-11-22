@@ -100,9 +100,6 @@ const Home = () => {
       </article>
 
       <article className={styles.citas}>
-        {/* Agendar citas */}
-        <h1>Agendar cita</h1>
-
         <Citas />
       </article>
 

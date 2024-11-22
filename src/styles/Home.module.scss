@@ -65,6 +65,14 @@
 
   & .citas {
     @include border__dark;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    margin: 0 auto 50px;
+    width: 600px;
   }
 
   & .aside {
