@@ -27,8 +27,8 @@
 
   padding: 10px;
 
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 
   bottom: 5px;
   left: 5px;
@@ -62,11 +62,12 @@
 }
 
 .footer .flecha img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 
   right: 30px;
 }
+
 .footer .llamar {
   position: fixed;
 
@@ -227,33 +228,27 @@
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
-  /* background-color: #fff;
-  border-radius: 20px; */
 }
 
 .footer .redes {
-  position: static;
-
-  /* display: none; */
+  display: none;
   justify-content: center;
   align-items: center;
+  transition: 0.3s ease-in;
 
-  margin: 10px 0;
-
-  bottom: 5px;
+  // background-color: rgba(234, 236, 239, 0.8);
+  border-radius: 30px;
 }
-.footer .redes.tiktok {
-  background-color: #fff;
-  border-radius: 50%;
-}
-
 .footer .redes ul {
-  display: flex;
-  gap: 0 2.5rem;
-
+  padding: 0 25px;
   list-style: none;
-  margin: 7px 0;
-  padding: 0;
+}
+.footer .redes ul li {
+  margin-top: 5px;
+
+  background-color: #fff;
+
+  border-radius: 50%;
 }
 
 .footer .redes ul li img {
@@ -262,19 +257,13 @@
 }
 
 .footer .redes.open {
+  display: flex;
   position: fixed;
 
-  padding: 0 5px;
-
-  bottom: 50px;
-  left: 10px;
+  bottom: 60px;
+  left: -8px;
 
   transition: 0.3s ease-in;
-
-  /* background-color: rgba(181, 183, 187, 0.6); */
-  background-color: rgba(234, 236, 239, 0.8);
-  border-radius: 30px;
-  border: 1px solid #fff;
 
   animation-name: showMenuBurger;
   animation-duration: 0.3s;
@@ -282,107 +271,107 @@
 
 @keyframes showMenuBurger {
   from {
-    transform: translateX(-100px);
+    transform: translateX(-250px);
   }
   to {
     transform: translateX(0);
   }
 }
 
-.footer .redes.closed {
-  display: flex;
+// .footer .redes.closed {
+//   display: flex;
 
-  right: -100px;
+//   right: -100px;
 
-  transition: 0.5s ease-out;
+//   transition: 0.5s ease-out;
 
-  animation-name: hiddenMenuBurger;
-  animation-duration: 1s;
-}
+//   animation-name: hiddenMenuBurger;
+//   animation-duration: 1s;
+// }
 
-.footer .redes.closed ul li a {
-  position: fixed;
-}
+// .footer .redes.closed ul li a {
+//   position: fixed;
+// }
 
-@keyframes hiddenMenuBurger {
-  from {
-    transform: translateX(-300px);
-  }
+// @keyframes hiddenMenuBurger {
+//   from {
+//     transform: translateX(-300px);
+//   }
 
-  to {
-    transform: translateX(-500px);
-  }
-}
+//   to {
+//     transform: translateX(-500px);
+//   }
+// }
 
-.footer .back {
-  position: static;
+// .footer .back {
+//   position: static;
 
-  margin: 10px 0;
+//   margin: 10px 0;
 
-  bottom: 50px;
-}
+//   bottom: 50px;
+// }
 
-.footer .back.open {
-  /* display: none; */
-  position: fixed;
+// .footer .back.open {
+//   /* display: none; */
+//   position: fixed;
 
-  padding: 0 5px;
+//   padding: 0 5px;
 
-  bottom: 130px;
-  left: 10px;
+//   bottom: 130px;
+//   left: 10px;
 
-  transition: 0.3s ease-in;
+//   transition: 0.3s ease-in;
 
-  /* background-color: rgba(181, 183, 187, 0.6); */
-  background-color: rgba(234, 236, 239, 0.8);
-  border-radius: 30px;
-  border: 1px solid #fff;
+//   /* background-color: rgba(181, 183, 187, 0.6); */
+//   background-color: rgba(234, 236, 239, 0.8);
+//   border-radius: 30px;
+//   border: 1px solid #fff;
 
-  animation-name: showBack;
-  animation-duration: 0.3s;
-}
+//   animation-name: showBack;
+//   animation-duration: 0.3s;
+// }
 
-@keyframes showBack {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-1000px);
-  }
-}
+// @keyframes showBack {
+//   from {
+//     transform: translateX(0px);
+//   }
+//   to {
+//     transform: translateX(-1000px);
+//   }
+// }
 
-.footer .back.closed {
-  display: flex;
+// .footer .back.closed {
+//   display: flex;
 
-  transition: 0.5s ease-out;
+//   transition: 0.5s ease-out;
 
-  animation-name: hiddenArrow;
-  animation-duration: 1s;
-}
+//   animation-name: hiddenArrow;
+//   animation-duration: 1s;
+// }
 
-.footer .back.closed ul li a {
-  position: fixed;
-}
+// .footer .back.closed ul li a {
+//   position: fixed;
+// }
 
-@keyframes hiddenArrow {
-  from {
-    transform: translateX(-300px);
-  }
+// @keyframes hiddenArrow {
+//   from {
+//     transform: translateX(-300px);
+//   }
 
-  to {
-    transform: translateX(-5000px);
-  }
-}
-.footer .externo {
-  width: calc(100% - 10px);
+//   to {
+//     transform: translateX(-5000px);
+//   }
+// }
+// .footer .externo {
+//   width: calc(100% - 10px);
 
-  text-align: center;
-}
-.footer .externo a {
-  font-size: 0.7rem;
-  text-decoration: underline;
-  color: #fff;
-}
+//   text-align: center;
+// }
+// .footer .externo a {
+//   font-size: 0.7rem;
+//   text-decoration: underline;
+//   color: #fff;
+// }
 
 @media screen and (min-width: 768px) {
   .footer {
@@ -399,12 +388,12 @@
 
   .footer .flecha {
     bottom: 20px;
-    left: 43px;
+    left: 15px;
   }
 
   .footer .llamar {
     bottom: 20px;
-    right: 50px;
+    right: 15px;
   }
 
   .footer .logo {

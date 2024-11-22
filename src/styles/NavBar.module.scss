@@ -32,9 +32,9 @@
 }
 
 .container .container__principal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
 
   margin: 0 0 0 3px;
 
@@ -44,6 +44,7 @@
 }
 
 .container .container__principal .enlaces__logo {
+  padding-top: 2px;
   border-radius: 50%;
 }
 
