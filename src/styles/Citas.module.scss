@@ -1,15 +1,15 @@
 .form-container {
-  margin: 0 100px;
-  padding: 0 100px;
+  margin: 0 90px;
+  padding: 0 45px;
   
   width: 100%;
-  max-width: 600px;
   min-width: 320px;
+  max-width: 600px;
 
-  border-radius: 8px;
+  border-radius: 20px;
   border: 1px solid #000;
   background-color: #f9f9f9;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-container h1 {
