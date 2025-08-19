@@ -1,0 +1,263 @@
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+.faq {
+  width: 100%;
+  max-width: 100vw;
+  padding: 40px 20px;
+  background: #fff;
+  overflow-x: hidden;
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .preguntasContainer {
+    margin-bottom: 50px;
+  }
+
+  .preguntaItem {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+  }
+
+  .preguntaButton {
+    width: 100%;
+    padding: 20px 25px;
+    background: #fff;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #f8f9fa;
+    }
+
+    &.activa {
+      background: linear-gradient(135deg, vars.$primary, #3498db);
+      color: #fff;
+    }
+
+    .preguntaTexto {
+      flex: 1;
+      margin-right: 15px;
+      line-height: 1.4;
+    }
+
+    .icono {
+      font-size: 1.5rem;
+      font-weight: 300;
+      min-width: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    &.activa .icono {
+      transform: rotate(180deg);
+    }
+  }
+
+  .respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: #f8f9fa;
+
+    &.abierta {
+      max-height: 500px;
+      padding: 25px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #34495e;
+      text-align: justify;
+    }
+  }
+
+  .contactoAdicional {
+    text-align: center;
+    background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #d5dbdb;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #5d6d7e;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .contactoButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .telefonoButton,
+    .whatsappButton {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      min-width: 200px;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      }
+    }
+
+    .telefonoButton {
+      background: linear-gradient(135deg, vars.$primary, #3498db);
+      color: #fff;
+
+      &:hover {
+        background: linear-gradient(135deg, #2980b9, vars.$primary);
+      }
+    }
+
+    .whatsappButton {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+
+      &:hover {
+        background: linear-gradient(135deg, #128c7e, #25d366);
+      }
+    }
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .faq {
+    padding: 60px 30px;
+    
+    .header {
+      margin-bottom: 60px;
+      
+      h2 {
+        font-size: 3rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .preguntaItem {
+      margin-bottom: 20px;
+    }
+
+    .preguntaButton {
+      padding: 25px 30px;
+      font-size: 1.2rem;
+    }
+
+    .respuesta.abierta {
+      padding: 30px;
+    }
+
+    .contactoAdicional {
+      padding: 50px;
+      
+      .contactoButtons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .faq {
+    padding: 80px 40px;
+    
+    .container {
+      max-width: 900px;
+    }
+    
+    .preguntaButton {
+      font-size: 1.15rem;
+      
+      &:hover {
+        background: linear-gradient(135deg, rgba(vars.$primary, 0.1), rgba(#3498db, 0.1));
+      }
+    }
+
+    .contactoAdicional {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+/* Large Desktop styles */
+@media screen and (min-width: 1440px) {
+  .faq {
+    padding: 100px 60px;
+    
+    .container {
+      max-width: 1000px;
+    }
+    
+    .contactoAdicional {
+      padding: 60px;
+    }
+  }
+}

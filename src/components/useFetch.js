@@ -1,20 +1,39 @@
-import UseFetch from "@/components/useFetch";
+import { useState, useEffect, useMemo } from "react";
 
-const useFetch = async (url, options) => {
-  // Make a fetch request to the specified URL
-  useFetch(url, options);
+const useFetch = (url, options = {}) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Check if the response was successful
-  if (response.ok) {
-    // Get the response body
-    const body = await response.json();
+  const memoizedOptions = useMemo(() => options, [options]);
 
-    // Return the response body
-    return body;
-  } else {
-    // Throw an error
-    throw new Error(response.statusText);
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await fetch(url, memoizedOptions);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (url) {
+      fetchData();
+    }
+  }, [url, memoizedOptions]);
+
+  return { data, loading, error };
 };
 
 export default useFetch;

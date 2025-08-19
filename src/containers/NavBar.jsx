@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/assets/logo.jpg";
 import styles from "../styles/NavBar.module.scss";
-import { UserContext } from "../UserContext";
 
 const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -70,12 +69,16 @@ const NavBar = () => {
             Inicio
           </Link>
 
-          {/* <Link href={`/products`} onClick={handleLinkClick}>
-            Accesorios
-          </Link> */}
+          <Link href="/#perfil-medico" onClick={handleLinkClick}>
+            Dr. Solarte
+          </Link>
 
-          <Link href="/Perfil" onClick={handleLinkClick}>
-            Sobre mí
+          <Link href="/#especialidades" onClick={handleLinkClick}>
+            Especialidades
+          </Link>
+
+          <Link href="/#preguntas-frecuentes" onClick={handleLinkClick}>
+            FAQ
           </Link>
         </menu>
       )}

@@ -1,111 +1,273 @@
-@import "./variables.scss";
-@import "./mixins.scss";
+@use "./variables.scss" as vars;
+@use "./mixins.scss" as mixins;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
-/* styles to presentation of start page */
+/* Mobile First Responsive Design */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  overflow: hidden;
-
-  // margin: 0 5px;
 
   width: 100%;
-  min-width: 320px;
-  max-width: 1024px;
+  margin: 0 auto;
+  overflow-x: hidden;
 
-  // border: 2px solid #000;
   background-color: #fff;
 
   & .presentation {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 100%;
-    min-width: 320px;
-    max-width: 750px;
-    margin-top: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, vars.$primary-pale 0%, vars.$primary-ultra-light 50%, #fff 100%);
+    min-height: 500px;
+  }
+
+  & .heroContent {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  & .heroTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: vars.$primary-dark;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+  & .heroSubtitle {
+    font-size: 1.3rem;
+    color: vars.$primary;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  & .heroDescription {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  & .heroButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  & .btnPrimary,
+  & .btnSecondary {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  & .btnPrimary {
+    background: linear-gradient(135deg, vars.$primary, vars.$primary-light);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(vars.$primary, 0.3);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(vars.$primary, 0.4);
+    }
+  }
+
+  & .btnSecondary {
+    background: #fff;
+    color: vars.$primary;
+    border: 2px solid vars.$primary;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    &:hover {
+      background: vars.$primary;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+
+  & .heroImages {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  & .imageSlider {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+
+  & .heroImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  & .sliderControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  & .sliderBtn {
+    background: vars.$primary;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: vars.$primary-dark;
+      transform: scale(1.1);
+    }
+  }
+
+  & .sliderDots {
+    display: flex;
+    gap: 8px;
+  }
+
+  & .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.activeDot {
+      background: vars.$primary;
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      background: vars.$primary-light;
+    }
   }
 
   & .tratamientos {
-    @include border__light;
+    @include mixins.border__light;
     width: 100%;
-    min-width: 300px;
-    max-width: 400px;
-
-    margin: 20px 0;
+    max-width: 350px;
+    margin: 15px 0;
+    padding: 10px;
 
     & h3 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       text-decoration: dotted;
-      margin: 10px 0;
+      margin: 8px 0;
+      text-align: center;
     }
 
     & .procedimientos {
       position: relative;
-
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
-      // width: 200px;
-
-      background-color: rgba($primary-color, 0.9);
+      padding: 15px;
+      background-color: rgba(vars.$primary, 0.9);
       border: 1px solid #fff;
       border-radius: 20px;
       box-shadow: 3px 3px 10px #fff;
+
+      & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        & li {
+          margin: 5px 0;
+          font-size: 0.9rem;
+        }
+      }
     }
   }
 
   & .citas {
-    // @include border__dark;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 50px;
-    margin: 0 auto 50px;
     width: 100%;
+    margin: 20px 0;
+    padding: 0 5px;
   }
 
   & .aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    overflow-x: auto;
-
-    margin: 20px 50px 0;
-
     width: 100%;
-    min-width: 300px;
-    max-width: 700px;
+    max-width: 100vw;
+    margin: 15px 0;
+    padding: 0 10px;
+    overflow: hidden;
 
     & h1 {
-      margin: 0 auto;
-      padding: 3px 10px;
-
+      margin: 0 auto 10px;
+      padding: 8px 15px;
       width: max-content;
       text-align: center;
-
       background-color: rgba(8, 102, 254, 1);
       color: #fff;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1.1rem;
     }
 
     & aside {
       display: flex;
-      // flex-direction: column;
       overflow-x: auto;
-
+      gap: 10px;
+      padding: 5px 0;
       color: #000;
+
+      /* Scrollbar styling for mobile */
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
     }
   }
 
@@ -113,24 +275,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-
-    overflow-x: auto;
-
-    margin: 20px 50px 0;
-
     width: 100%;
-    min-width: 300px;
-    max-width: 700px;
+    max-width: 100vw;
+    margin: 15px 0;
+    padding: 0 10px;
+    overflow: hidden;
 
     & h1 {
-      margin: 0 auto;
-      padding: 3px 10px;
-
+      margin: 0 auto 10px;
+      padding: 8px 15px;
       width: max-content;
       text-align: center;
-
-      background-color: rgba(8, 102, 254, 1);
       background: radial-gradient(
         circle at 33% 100%,
         #fed373 4%,
@@ -139,189 +294,324 @@
         #9b36b7 85%
       );
       color: #fff;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1.1rem;
     }
 
     & aside {
       display: flex;
       overflow-x: auto;
+      gap: 10px;
+      padding: 5px 0;
+
+      /* Scrollbar styling for mobile */
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
     }
   }
 
-  & .horario {
-    @include center;
-  }
 
   & .notices {
-    // @include publications;
-    // display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0 40px;
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+
+    & h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    & p {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.5;
+      margin: 0;
+    }
   }
 }
 
+/* Tablet styles (768px+) */
 @media screen and (min-width: 768px) {
   .container {
-    // display: flex;
+    // max-width: 768px;
+    padding: 0 20px;
 
-    & .presentation {
-      width: 700px;
-    }
-
-    & .aside {
-      // display: flex;
-      // flex-direction: row;
-
-      // width: 300px;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    @include border__light;
-    // filter: blur(5px);
-    position: relative;
-    display: grid;
-    // align-items: center;
-    // justify-self: center;
-    justify-self: center;
-    align-items: center;
-
-    grid-template-columns: 60% 20%;
-    grid-template-rows: 1fr;
-
-    grid-template-areas:
-      "presentation presentation"
-      "procedimientos notices"
-      "facebook notices"
-      "instagram notices"
-      "cirugias notices"
-      "citas citas";
-    gap: 0 5px;
-
-    // width: 100dvw;
-    width: 100%;
-    max-width: none;
-
-    border: none;
-    border-radius: 0%;
-
-    & .presentation {
-      // grid-column-start: 1;
-      // grid-column-end: 3;
-      // grid-area: presentation;
-
-      display: flex;
+    & .heroSection {
+      flex-direction: row;
+      padding: 10px 30px;
+      min-height: 600px;
+      gap: 20px;
       align-items: center;
-      justify-content: center;
+    }
 
-      margin-top: 30px;
-      margin-bottom: 50px;
+    & .heroContent {
+      flex: 1;
+      text-align: left;
+      margin-bottom: 0;
+      max-width: none;
+    }
+
+    & .heroImages {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    & .heroTitle {
+      font-size: 3rem;
+    }
+
+    & .heroSubtitle {
+      font-size: 1.5rem;
+    }
+
+    & .heroDescription {
+      font-size: 1.2rem;
+    }
+
+    & .heroButtons {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    & .heroImage {
+      height: 400px;
     }
 
     & .tratamientos {
-      // position: absolute;
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      max-width: 500px;
+      margin: 25px 0;
 
-      grid-area: procedimientos;
-
-      margin: 0 auto;
-      padding: 0;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      // width: calc(100% - 120px);
-      width: 100vw;
-
-      background-color: transparent;
-      border: none;
-      box-shadow: none;
+      & h3 {
+        font-size: 1.5rem;
+      }
 
       & .procedimientos {
-        grid-area: procedimientos;
+        padding: 20px;
 
-        width: 100%;
-        min-width: inherit;
-        max-width: 500px;
+        & ul li {
+          font-size: 1rem;
+          margin: 8px 0;
+        }
       }
     }
 
     & .citas {
-      grid-area: citas;
+      margin: 30px 0;
     }
 
-    & .aside {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-
-      grid-row-start: 3;
-      grid-row-end: 4;
-
-      margin: 30px auto;
-
-      // width: 250px;
-      // height: 99%;
-
-      color: #000;
-
-      // border: 2px solid #baba;
-      // border-radius: 20px;
-      // box-shadow: -3px 3px 10px rgba(155, 153, 155, 0.667);
-
-      & aside {
-        width: calc(100% - 30px);
-      }
-    }
-
+    & .aside,
     & .instagram {
-      grid-column-start: 1;
-      grid-column-end: 2;
+      margin: 25px 0;
 
-      grid-row-start: 4;
-      grid-row-end: 5;
-
-      margin: 0 auto;
+      & h1 {
+        font-size: 1.3rem;
+        padding: 10px 20px;
+      }
 
       & aside {
-        width: calc(100% - 30px);
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
 
-    & .horario {
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
 
     & .notices {
-      @include border__dark;
-
-      // grid-area: notices;
-      grid-column-start: 2;
-      grid-column-end: 3;
-
-      grid-row-start: 2;
-      grid-row-end: 5;
-
-      display: flex;
-      align-items: center;
-      // justify-content: center;
-      flex-direction: column;
-
-      height: 100%;
+      margin: 25px 0;
 
       & h3 {
-        color: #000;
-      }
-
-      & a {
-        @include bottoms;
+        font-size: 1.4rem;
       }
     }
   }
 }
+
+// @media screen and (min-width: 1024px) {
+//   .container {
+//     position: relative;
+//     display: grid;
+//     max-width: 1200px;
+//     padding: 0 30px;
+//     margin: 0 auto;
+
+//     grid-template-columns: 2fr 1fr;
+//     grid-template-areas:
+//       "presentation presentation"
+//       "procedimientos notices"
+//       "facebook notices"
+//       "instagram notices"
+//       "horario notices"
+//       "citas citas";
+//     gap: 20px;
+
+//     & .presentation {
+//       grid-area: presentation;
+//       max-width: 100%;
+//       margin: 30px 0 20px;
+//     }
+
+//     & .tratamientos {
+//       grid-area: procedimientos;
+//       max-width: 100%;
+//       margin: 0;
+//       justify-self: center;
+
+//       & .procedimientos {
+//         max-width: 600px;
+//         padding: 25px;
+
+//         & h3 {
+//           font-size: 1.6rem;
+//         }
+
+//         & ul li {
+//           font-size: 1.1rem;
+//           margin: 10px 0;
+//         }
+//       }
+//     }
+
+//     & .citas {
+//       grid-area: citas;
+//       margin: 20px 0;
+//     }
+
+//     & .aside {
+//       grid-area: facebook;
+//       margin: 0;
+//       padding: 0 20px;
+
+//       & aside {
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//         gap: 20px;
+//       }
+//     }
+
+//     & .instagram {
+//       grid-area: instagram;
+//       margin: 0;
+//       padding: 0 20px;
+
+//       & aside {
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//         gap: 20px;
+//       }
+//     }
+
+//     & .horario {
+//       grid-area: horario;
+//       margin: 0;
+//     }
+
+//     & .notices {
+//       @include mixins.border__dark;
+//       grid-area: notices;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       padding: 20px;
+//       height: fit-content;
+//       position: sticky;
+//       top: 20px;
+
+//       & h3 {
+//         color: #000;
+//         font-size: 1.5rem;
+//         margin-bottom: 15px;
+//       }
+
+//       & a {
+//         @include mixins.bottoms;
+//         margin: 10px 0;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 1440px) {
+//   .container {
+//     max-width: 1400px;
+//     padding: 0 40px;
+//     gap: 30px;
+
+//     & .presentation {
+//       margin: 40px 0 30px;
+//     }
+
+//     & .tratamientos {
+//       & .procedimientos {
+//         max-width: 700px;
+//         padding: 30px;
+
+//         & h3 {
+//           font-size: 1.8rem;
+//           margin: 15px 0;
+//         }
+
+//         & ul li {
+//           font-size: 1.2rem;
+//           margin: 12px 0;
+//         }
+//       }
+//     }
+
+//     & .citas {
+//       margin: 30px 0;
+//     }
+
+//     & .aside,
+//     & .instagram {
+//       padding: 0 30px;
+
+//       & h1 {
+//         font-size: 1.4rem;
+//         padding: 12px 25px;
+//         margin-bottom: 15px;
+//       }
+
+//       & aside {
+//         gap: 25px;
+//       }
+//     }
+
+//     & .horario {
+//       margin: 10px 0;
+//     }
+
+//     & .notices {
+//       padding: 30px;
+
+//       & h3 {
+//         font-size: 1.6rem;
+//         margin-bottom: 20px;
+//       }
+
+//       & a {
+//         margin: 12px 0;
+//         width: 180px;
+//         height: 45px;
+//         font-size: 1.1rem;
+//       }
+//     }
+//   }
+// }

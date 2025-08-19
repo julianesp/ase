@@ -70,13 +70,56 @@ const Contacto = () => {
       </article>
 
       <article className={styles.description}>
-        <p>Servicio de cirugía general</p>
+        <h3>Cirugía General y Especializada</h3>
+        <p>Procedimientos Laparoscópicos • Endoscopia Digestiva</p>
+        <p>Cirugía Mínimamente Invasiva</p>
       </article>
 
       <article className={styles.doctor}>
-        <p>Dr. Alirio Solarte España</p>
-        <p>Médico cirujano</p>
-        <p>Sibundoy - Putumayo</p>
+        <h2>Dr. Alirio Solarte España</h2>
+        <p>Médico Cirujano General</p>
+        <p>Especialista en Laparoscopia y Endoscopia</p>
+        <div className={styles.location}>
+          <p>📍 Sibundoy - Putumayo, Colombia</p>
+        </div>
+      </article>
+
+      <article className={styles.credentials}>
+        <h4>Registro Profesional</h4>
+        <p>• Registro Médico Nacional</p>
+        <p>• Especialización en Cirugía General</p>
+        <p>• Certificación en Procedimientos Laparoscópicos</p>
+        <p>• Entrenamiento en Endoscopia Digestiva</p>
+      </article>
+
+      <article className={styles.services}>
+        <h4>Servicios Especializados</h4>
+        <div className={styles.servicesList}>
+          <p>✓ Colecistectomía Laparoscópica</p>
+          <p>✓ Hernioplastia</p>
+          <p>✓ Apendicectomía</p>
+          <p>✓ Endoscopia Digestiva Alta</p>
+          <p>✓ Colonoscopia</p>
+          <p>✓ Biopsia Hepática</p>
+          <p>✓ Cirugía de Vesícula</p>
+          <p>✓ Tratamiento de Patologías Abdominales</p>
+        </div>
+      </article>
+
+      <article className={styles.contact}>
+        <h4>Información de Contacto</h4>
+        <p>📞 Consultas: +57 313 862 7818</p>
+        <p>📱 WhatsApp: +57 317 450 3604</p>
+        <p>🏥 Consulta Privada y Hospitalaria</p>
+        <p>⏰ Atención por Cita Previa</p>
+      </article>
+
+      <article className={styles.legal}>
+        <h4>Información Legal</h4>
+        <p>Este sitio web contiene información médica general y educativa.</p>
+        <p>No reemplaza la consulta médica profesional personalizada.</p>
+        <p>Consulte siempre con un profesional de la salud.</p>
+        <p>© 2024 Dr. Alirio Solarte España. Todos los derechos reservados.</p>
       </article>
 
       <article

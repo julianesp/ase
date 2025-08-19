@@ -1,25 +1,27 @@
-@import "./_mixins.scss";
+@use "./_mixins.scss" as mixins;
 
 .footer {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
 
   margin-top: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 30px 20px 100px;
 
   width: 100%;
-  height: auto;
+  min-height: auto;
 
-  background-color: rgba(48, 100, 204, 0.9);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 100, 204, 0.95),
+    rgba(24, 28, 36, 0.9)
+  );
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 
-  bottom: 0;
-  top: 0;
+  color: #fff;
 }
 
 .footer .flecha {
@@ -97,7 +99,7 @@
 
 .footer .logo {
   & img {
-    @include border__light;
+    @include mixins.border__light;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -106,53 +108,63 @@
 }
 
 .footer .description {
-  position: relative;
-
-  margin-top: 10px;
-  margin-bottom: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  vertical-align: middle;
-
-  width: calc(100% - 30px);
-  height: 50px;
-}
-
-.footer .description p {
-  @include border__light;
-  margin: 5px 0;
-
-  width: calc(100% - 30px);
-
-  color: #000;
-  font-size: 1.2rem;
-
-  text-transform: uppercase;
   text-align: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
 
-  background-color: #fff;
-  border-radius: 20px;
-}
-
-// styles for descriptio doctor
-.footer .doctor {
-  @include border__light;
-  padding: 0;
-  margin-bottom: 30px;
-
-  width: calc(100% - 30px);
-
-  color: #fff;
-  // text-decoration: underline;
-  text-align: center;
-  font-size: 1.25rem;
+  & h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
   & p {
-    margin: 10px 0;
-    // padding: 10px 0;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+  }
+}
+
+// styles for doctor info
+.footer .doctor {
+  text-align: center;
+  margin: 30px 0;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  & h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  & p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+  }
+
+  & .location {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    & p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 
@@ -164,7 +176,7 @@
   width: 75%;
   height: 150px;
 
-  @include border__light;
+  @include mixins.border__light;
 
   & ul {
     color: #fff;
@@ -278,22 +290,117 @@
   }
 }
 
+// New medical sections styles
+.footer .credentials,
+.footer .services,
+.footer .contact,
+.footer .legal {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  & h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+  }
+
+  & p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+  }
+}
+
+.footer .services {
+  .servicesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+
+    & p {
+      font-size: 0.9rem;
+      margin: 4px 0;
+      padding: 4px 0;
+    }
+  }
+}
+
+.footer .contact {
+  & p {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+.footer .legal {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+
+  & p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
 .footer .externo a {
-  font-size: .6rem;
-  color: #fff;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 768px) {
   .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 50px;
-    grid-template-areas:
-      "especialidad especialidad especialidad"
-      "doctor logo mapa"
-      "doctor externo .";
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px 30px 120px;
+    align-items: start;
+  }
 
-    justify-items: center;
+  .footer .description {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+  }
+
+  .footer .logo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 20px 0;
+  }
+
+  .footer .doctor {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    justify-self: center;
+  }
+
+  .footer .credentials,
+  .footer .services {
+    max-width: 100%;
+  }
+
+  .footer .services .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .contact,
+  .footer .legal {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    justify-self: center;
   }
 
   .footer .flecha {
@@ -305,43 +412,76 @@
     bottom: 20px;
     right: 15px;
   }
-
-  .footer .logo {
-    grid-area: logo;
-  }
-
-  .footer .description {
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    width: 100%;
-
-    /* box-shadow: -10px 10px 10px #fff; */
-  }
-
-  .footer .doctor {
-    // grid-area: doctor;
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 2;
-    grid-row-end: 4;
-
-    border: unset;
-    box-shadow: unset;
-  }
-
-  .footer .ubicacion .consultorio {
-    grid-area: mapa;
-  }
-
-  .footer .externo {
-    grid-area: externo;
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  .footer .flecha {
-    cursor: pointer;
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 50px 40px 120px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
   }
+
+  .footer .logo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 0 0 30px 0;
+    
+    & img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .footer .description {
+    grid-column: 1;
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .footer .doctor {
+    grid-column: 2;
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .footer .credentials {
+    grid-column: 1;
+    margin: 20px 0 0 0;
+  }
+
+  .footer .services {
+    grid-column: 2;
+    margin: 20px 0 0 0;
+    
+    .servicesList {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer .contact {
+    grid-column: 1;
+    margin: 20px 0 0 0;
+    max-width: 100%;
+  }
+
+  .footer .legal {
+    grid-column: 2;
+    margin: 20px 0 0 0;
+    max-width: 100%;
+  }
+
+  .footer .externo {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }

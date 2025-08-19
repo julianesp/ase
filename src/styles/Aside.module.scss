@@ -1,80 +1,172 @@
-@import "./mixins";
-@import "./variables";
-/* components/AsideItem.module.css */
+@use "./mixins" as mixins;
+@use "./variables" as vars;
+/* Mobile First Aside Component */
 .aside-item {
-  @include border__dark;
-
+  @include mixins.border__dark;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   align-items: center;
-
-  padding: 20px;
-  margin: 10px 10px 10px;
-
-  border: 1px solid #baba;
+  padding: 15px;
+  margin: 5px;
+  border: 1px solid #ddd;
   background-color: #f9f9f9;
-
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
   width: 100%;
-  min-width: 250px;
-  max-width: 500px;
-
-  height: 350px;
+  min-width: 260px;
+  max-width: calc(100vw - 40px);
+  height: 300px;
+  
+  flex-shrink: 0;
 
   & p {
-    margin: 5px 0;
-    font-size: 0.9rem;
+    margin: 8px 0;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.4;
   }
 }
 
 .aside-item h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
 }
 
 .aside-item ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 10px 0 0 0;
 
   & li {
     text-align: center;
+    margin-bottom: 8px;
+    
     & a {
-      @include border__dark;
-
-      padding: 10px 20px;
-
-      transition: 0.3s ease-in all;
-
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      transition: all 0.3s ease;
       text-decoration: none;
       background-color: #fff;
+      color: #333;
+      font-size: 0.8rem;
+      font-weight: 500;
 
       &:hover {
-        background-color: $primary-color;
+        background-color: vars.$primary;
         color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
     }
   }
 }
 
-.aside-item li {
-  margin-bottom: 8px;
-}
-
 .aside-image {
-  // margin-bottom: 16px;
-
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .aside-item {
+    padding: 18px;
+    margin: 8px;
+    min-width: 300px;
+    max-width: 350px;
+    height: 320px;
+    
+    & h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    
+    & p {
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+    
+    & ul li a {
+      padding: 10px 18px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  .aside-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Desktop styles */
 @media screen and (min-width: 1024px) {
   .aside-item {
-    & h3,
-    p {
+    padding: 20px;
+    margin: 10px;
+    min-width: 320px;
+    max-width: 380px;
+    height: 350px;
+    
+    & h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
       color: #000;
     }
+    
+    & p {
+      font-size: 0.95rem;
+      margin: 12px 0;
+      color: #000;
+    }
+    
+    & ul li a {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .aside-image {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Large Desktop styles */
+@media screen and (min-width: 1440px) {
+  .aside-item {
+    padding: 25px;
+    margin: 12px;
+    min-width: 350px;
+    max-width: 420px;
+    height: 380px;
+    
+    & h3 {
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+    
+    & p {
+      font-size: 1rem;
+      margin: 15px 0;
+    }
+    
+    & ul li a {
+      padding: 14px 22px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  .aside-image {
+    width: 200px;
+    height: 200px;
   }
 }

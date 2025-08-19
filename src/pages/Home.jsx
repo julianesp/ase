@@ -1,19 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 // images doc
 import styles from "../styles/Home.module.scss";
-import ImageSlider from "../containers/ImageSlider.js";
 import Aside from "../components/Aside.jsx";
+import EspecialidadesMedicas from "../components/EspecialidadesMedicas.jsx";
+import PerfilMedico from "../components/PerfilMedico.jsx";
+import PreguntasFrecuentes from "../components/PreguntasFrecuentes.jsx";
 
 import d1 from "/public/images/doctor/1.png";
 import d2 from "/public/images/doctor/2.png";
 import d3 from "/public/images/doctor/3.png";
-import Citas from "../components/Citas";
 
 export const metadata = {
-  title: "Alirio Solarte",
-  description: "Servicio de cirugía general",
+  title:
+    "Dr. Alirio Solarte España - Cirujano General | Laparoscopia y Endoscopia",
+  description:
+    "Especialista en Cirugía General, Laparoscópica y Endoscopia Digestiva en Sibundoy, Putumayo. Más de 15 años de experiencia en procedimientos mínimamente invasivos. Consultas presenciales y virtuales.",
+  keywords:
+    "cirugía general, laparoscopia, endoscopia, colecistectomía, hernioplastia, apendicectomía, cirujano Putumayo, Sibundoy, procedimientos mínimamente invasivos",
   image:
     "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Flogo_circular.jpeg?alt=media&token=67019e7b-b635-4507-b1fb-70c8b9aecbef",
   url: "https://julianesp.github.io/ase/",
@@ -21,6 +27,19 @@ export const metadata = {
 
 const Home = () => {
   const imagePath = [d1, d2, d3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const goToPreviousSlide = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? imagePath.length - 1 : prevIndex - 1,
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === imagePath.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
 
   const asideItems = [
     {
@@ -81,30 +100,72 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <article className={`${styles.presentation}`}>
-        <ImageSlider imagePaths={imagePath} enableTransition={true} />
-      </article>
-
-      <article className={styles.tratamientos}>
-        <div className={styles.procedimientos}>
-          <h3>Procedimientos</h3>
-          <ul>
-            <li>Laparoscopia</li>
-            <li>Endoscopia</li>
-            <li>Hígado graso</li>
-            <li>Bichectomía</li>
-            <li>Hernioplastia umbilical</li>
-          </ul>
+        <div className={styles.heroSection}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>Dr. Alirio Solarte España</h1>
+            <p className={styles.heroSubtitle}>
+              Cirujano General Especializado
+            </p>
+            <p className={styles.heroDescription}>
+              Más de 15 años de experiencia en cirugía laparoscópica y
+              endoscopia digestiva
+            </p>
+            <div className={styles.heroButtons}>
+              <a href="#perfil-medico" className={styles.btnPrimary}>
+                Conocer al Doctor
+              </a>
+              <a href="tel:+573174503604" className={styles.btnSecondary}>
+                Agendar Cita
+              </a>
+            </div>
+          </div>
+          <div className={styles.heroImages}>
+            <div className={styles.imageSlider}>
+              <Image
+                src={imagePath[currentImageIndex]}
+                alt={`Imagen ${currentImageIndex + 1} del Dr. Alirio Solarte`}
+                className={styles.heroImage}
+                width={400}
+                height={400}
+              />
+              <div className={styles.sliderControls}>
+                <button
+                  onClick={goToPreviousSlide}
+                  className={styles.sliderBtn}
+                >
+                  &#8249;
+                </button>
+                <div className={styles.sliderDots}>
+                  {imagePath.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`${styles.dot} ${
+                        index === currentImageIndex ? styles.activeDot : ""
+                      }`}
+                    />
+                  ))}
+                </div>
+                <button onClick={goToNextSlide} className={styles.sliderBtn}>
+                  &#8250;
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* <button>Ver más</button> */}
       </article>
 
-      <article className={styles.citas}>
-        <Citas />
-      </article>
+      {/* Perfil Médico Profesional */}
+      <PerfilMedico />
+
+      {/* Especialidades Médicas Detalladas */}
+      <EspecialidadesMedicas />
+
+      {/* Preguntas Frecuentes */}
+      <PreguntasFrecuentes />
 
       <article className={styles.aside}>
-        <h1>Facebook</h1>
+        <h1>Videos Educativos - Facebook</h1>
         <aside>
           {asideItems.map((item, index) => (
             <Aside
@@ -119,7 +180,7 @@ const Home = () => {
       </article>
 
       <article className={styles.instagram}>
-        <h1>Instagram</h1>
+        <h1>Casos Clínicos - Instagram</h1>
         <aside>
           {instagramItems.map((item, index) => (
             <Aside
@@ -131,27 +192,6 @@ const Home = () => {
             />
           ))}
         </aside>
-      </article>
-
-      <article className={styles.horario}>
-        <ImageSlider imagePaths={imagePath} enableTransition={false} />
-      </article>
-
-      {/* <article className={styles.notices}>
-        <h3>Actividades diplomado</h3>
-        <Link href={`/addProduct`} className="">
-          Crear accesorios
-        </Link>
-        <Link href={`/products`} className="">
-          Mostrar accesorios
-        </Link>
-        <Link href={`https://julianesp.github.io/exercises_javascript_ibero/`}>
-          Taller ejercicios JavaScript
-        </Link>
-      </article> */}
-
-      <article className={styles.notices}>
-        <h3>Anuncios</h3>
       </article>
     </div>
   );
