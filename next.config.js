@@ -2,6 +2,7 @@ const path = require("path");
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {},
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.module.rules.push({
@@ -23,6 +24,20 @@ const nextConfig = {
         hostname: "firebasestorage.googleapis.com",
       },
     ],
+  },
+  
+  async headers() {
+    return [
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, no-cache, must-revalidate',
+          },
+        ],
+      },
+    ];
   },
 };
 

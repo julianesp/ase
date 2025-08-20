@@ -101,7 +101,7 @@ const Home = () => {
     <div className={styles.container}>
       <article className={`${styles.presentation}`}>
         <div className={styles.heroSection}>
-          <div className={styles.heroContent}>
+          {/* <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Dr. Alirio Solarte España</h1>
             <p className={styles.heroSubtitle}>
               Cirujano General Especializado
@@ -118,7 +118,8 @@ const Home = () => {
                 Agendar Cita
               </a>
             </div>
-          </div>
+          </div> */}
+
           <div className={styles.heroImages}>
             <div className={styles.imageSlider}>
               <Image
@@ -155,15 +156,6 @@ const Home = () => {
         </div>
       </article>
 
-      {/* Perfil Médico Profesional */}
-      <PerfilMedico />
-
-      {/* Especialidades Médicas Detalladas */}
-      <EspecialidadesMedicas />
-
-      {/* Preguntas Frecuentes */}
-      <PreguntasFrecuentes />
-
       <article className={styles.aside}>
         <h1>Videos Educativos - Facebook</h1>
         <aside>
@@ -193,6 +185,15 @@ const Home = () => {
           ))}
         </aside>
       </article>
+
+      {/* Perfil Médico Profesional */}
+      <PerfilMedico />
+
+      {/* Especialidades Médicas Detalladas */}
+      <EspecialidadesMedicas />
+
+      {/* Preguntas Frecuentes */}
+      <PreguntasFrecuentes />
     </div>
   );
 };

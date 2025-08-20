@@ -129,7 +129,7 @@ const Contacto = () => {
         <ul>
           <li>
             <Link
-              href="https://www.facebook.com/profile.php?id=100085485673809"
+              href="https://www.facebook.com/ALIRIO.SOLARTE"
               target="_blank"
               rel="noreferrer"
               passHref
@@ -139,7 +139,7 @@ const Contacto = () => {
           </li>
           <li>
             <Link
-              href="https://www.instagram.com/alexriob/"
+              href="https://www.instagram.com/dr_aliriosolarte/"
               target="_blank"
               rel="noreferrer"
               passHref
@@ -159,7 +159,7 @@ const Contacto = () => {
           </li>
           <li className={styles.tiktok}>
             <Link
-              href="https://www.tiktok.com/@julii1295?_t=8n2OQ52Q4aD&_r=1"
+              href="https://www.tiktok.com/@cirugia_general?_t=ZS-8z1R7phsrYY&_r=1"
               target="_blank"
               rel="noreferrer"
               passHref
