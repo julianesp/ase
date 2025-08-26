@@ -23,22 +23,34 @@ const nextConfig = {
         protocol: "https",
         hostname: "firebasestorage.googleapis.com",
       },
+      {
+        protocol: "https",
+        hostname: "0dwas2ied3dcs14f.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ihlfsrfme90d2jjk.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "vercel.com",
+      },
     ],
   },
-  
-  async headers() {
-    return [
-      {
-        source: '/sw.js',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-store, no-cache, must-revalidate',
-          },
-        ],
-      },
-    ];
-  },
+
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/sw.js",
+  //       headers: [
+  //         {
+  //           key: "Cache-Control",
+  //           value: "no-store, no-cache, must-revalidate",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

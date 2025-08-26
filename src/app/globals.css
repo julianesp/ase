@@ -21,6 +21,23 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo claro (por defecto) */
+.light-theme {
+  background-color: rgba(48, 100, 204, 0.1);
+  color: #333;
+}
+
+/* Modo oscuro */
+.dark-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-theme main {
+  background-color: #1a1a1a;
 }
 
 /* main {
@@ -44,6 +61,16 @@ body {
   background-color: #009dff; /* Color de la barra */
   border-radius: 10px;
   border: 2px solid #f1f1f1; /* Espacio alrededor de la barra */
+}
+
+/* Scrollbar para modo oscuro */
+.dark-theme ::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border: 2px solid #2a2a2a;
 }
 
 /* Responsive styles */

@@ -12,8 +12,8 @@ const AsideItem = ({ title, content, imageUrl, links }) => {
           src={imageUrl}
           alt={title}
           className={styles["aside-image"]}
-          width={100}
-          height={100}
+          width={150}
+          height={150}
         />
       )}
       <h3>{title}</h3>

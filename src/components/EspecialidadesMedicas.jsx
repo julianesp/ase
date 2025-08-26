@@ -106,7 +106,7 @@ const EspecialidadesMedicas = () => {
           ))}
         </div>
 
-        <div className={styles.cta}>
+        {/* <div className={styles.cta}>
           <h3>¿Necesita más información?</h3>
           <p>
             Consulte con el Dr. Alirio Solarte España para evaluar su caso
@@ -115,7 +115,7 @@ const EspecialidadesMedicas = () => {
           <a href="tel:+573138627818" className={styles.ctaButton}>
             Solicitar Consulta
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
