@@ -23,52 +23,150 @@
   border-top-right-radius: 15px;
 
   color: #fff;
+  
+  :global(.dark-theme) & {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.95),
+      rgba(10, 10, 10, 0.9)
+    );
+  }
 }
 
 .footer .flecha {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 
-  padding: 10px;
+  padding: 1px 0 0 0;
+  width: 40px;
+  height: 40px;
 
-  width: 20px;
-  height: 20px;
+  bottom: 10px;
+  left: 10px;
 
-  bottom: 5px;
-  left: 5px;
+  // background: linear-gradient(145deg, #4267B2, #E1306C, #FF8500);
+  // border-radius: 15px;
+  // border: 2px solid #fff;
+  // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #000;
+  transition: all 0.3s ease;
+  // animation: socialPulse 2s infinite;
+  // animation-delay: 1s;
 
-  // Nueva animación de pulso
-  // animation: pulse 1s infinite;
-  animation: pulse 0.7s;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
 
-  // Apagar la animación inicialmente
-  // animation-play-state: paused;
-  animation-play-state: running;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
-// Nueva animación de pulso
+.footer .socialIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  // svg {
+  //   transition: transform 0.2s ease;
+  // }
+
+  span:first-child {
+    // font-size: 24px;
+    // margin-bottom: 2px;
+    // filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.footer .socialIconImage {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  :global(.dark-theme) & {
+    background-color: #e0e0e0;
+  }
+}
+
+.footer .socialText {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+// Nueva animación de pulso social
+@keyframes socialPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Animación de pulso de corazón
+@keyframes heartPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  15% {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  }
+  30% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  45% {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  }
+  60% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Clase para aplicar el pulso de corazón
+.heartPulse {
+  animation: heartPulse 2s ease-in-out;
+}
+
+// Mantener animación original para compatibilidad
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
-  // 50% {
-  //   transform: scale(1.05);
-  // }
   100% {
     transform: scale(1.1);
   }
-}
-
-.footer .flecha img {
-  width: 20px;
-  height: 20px;
-
-  right: 30px;
 }
 
 .footer .llamar {
@@ -139,7 +237,7 @@
   max-width: 500px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 
   & h2 {
@@ -259,7 +357,7 @@
 .footer .redes ul li {
   margin-top: 5px;
 
-  background-color: #fff;
+  // background-color: #fff;
 
   border-radius: 50%;
 }
@@ -405,8 +503,24 @@
   }
 
   .footer .flecha {
-    bottom: 20px;
-    left: 15px;
+    // bottom: 20px;
+    // left: 15px;
+    // width: 70px;
+    // height: 70px;
+
+    .socialIcon {
+      gap: 6px;
+    }
+
+    .socialIconImage {
+      width: 35px;
+      height: 35px;
+      padding: 10px;
+    }
+
+    .socialText {
+      font-size: 11px;
+    }
   }
 
   .footer .llamar {

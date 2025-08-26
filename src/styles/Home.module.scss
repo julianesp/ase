@@ -15,6 +15,10 @@
 
   background-color: #fff;
 
+  :global(.dark-theme) & {
+    background-color: #1a1a1a;
+  }
+
   & .presentation {
     width: 100%;
     margin: 0;
@@ -25,14 +29,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 5px;
+    padding: 40px 5px 0 0;
     background: linear-gradient(
       135deg,
       vars.$primary-pale 0%,
       vars.$primary-ultra-light 50%,
       #fff 100%
     );
-    min-height: 500px;
+    min-height: 430px;
+
+    :global(.dark-theme) & {
+      background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #3a3a3a 50%,
+        #1a1a1a 100%
+      );
+    }
 
     @media (min-width: 426px) {
       width: auto;
@@ -124,12 +137,49 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+
+    :global(.dark-theme) & {
+      background: #2a2a2a;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  & .playPauseControls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 15;
+  }
+
+  & .playPauseBtn {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.9);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   & .heroImage {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: top;
     display: block;
   }
 
@@ -140,6 +190,10 @@
     padding: 5px 20px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
+
+    :global(.dark-theme) & {
+      background: rgba(42, 42, 42, 0.95);
+    }
   }
 
   & .sliderBtn {
@@ -256,6 +310,10 @@
       color: #fff;
       border-radius: 8px;
       font-size: 1.1rem;
+
+      :global(.dark-theme) & {
+        background-color: rgba(74, 144, 226, 1);
+      }
     }
 
     & aside {
@@ -265,7 +323,7 @@
       gap: 10px;
       padding: 5px 0;
       color: #000;
-      
+
       scroll-behavior: smooth;
       transition: transform 0.3s ease;
     }
@@ -344,7 +402,7 @@
       overflow: hidden;
       gap: 10px;
       padding: 5px 0;
-      
+
       scroll-behavior: smooth;
       transition: transform 0.3s ease;
     }
@@ -421,6 +479,7 @@
 
     & .heroImage {
       height: 400px;
+      object-position: top;
     }
 
     & .tratamientos {

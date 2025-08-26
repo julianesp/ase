@@ -1,5 +1,7 @@
 import Footer from "../containers/Footer";
 import NavBar from "../containers/NavBar";
+import ThemeToggle from "../components/ThemeToggle";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -22,9 +24,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <ThemeToggle />
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

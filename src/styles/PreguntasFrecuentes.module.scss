@@ -8,6 +8,10 @@
   background: #fff;
   overflow-x: hidden;
   
+  :global(.dark-theme) & {
+    background: #1a1a1a;
+  }
+  
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -22,6 +26,10 @@
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 15px;
+      
+      :global(.dark-theme) & {
+        color: #e0e0e0;
+      }
     }
     
     p {
@@ -30,6 +38,10 @@
       line-height: 1.6;
       max-width: 600px;
       margin: 0 auto;
+      
+      :global(.dark-theme) & {
+        color: #b0b0b0;
+      }
     }
   }
 
@@ -45,6 +57,12 @@
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
+    
+    :global(.dark-theme) & {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
 
     &:hover {
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -73,6 +91,20 @@
     &.activa {
       background: linear-gradient(135deg, vars.$primary, #3498db);
       color: #fff;
+    }
+    
+    :global(.dark-theme) & {
+      background: #2a2a2a;
+      color: #e0e0e0;
+      
+      &:hover {
+        background: #3a3a3a;
+      }
+      
+      &.activa {
+        background: linear-gradient(135deg, #4a90e2, #5ba3f5);
+        color: #fff;
+      }
     }
 
     .preguntaTexto {
@@ -111,6 +143,14 @@
       line-height: 1.7;
       color: #34495e;
       text-align: justify;
+    }
+    
+    :global(.dark-theme) & {
+      background: #3a3a3a;
+      
+      p {
+        color: #c0c0c0;
+      }
     }
   }
 
@@ -236,6 +276,10 @@
       
       &:hover {
         background: linear-gradient(135deg, rgba(vars.$primary, 0.1), rgba(#3498db, 0.1));
+      }
+      
+      :global(.dark-theme) &:hover {
+        background: linear-gradient(135deg, rgba(74, 144, 226, 0.2), rgba(91, 163, 245, 0.2));
       }
     }
 

@@ -7,7 +7,6 @@ import face from "../../public/assets/redes/facebook.png";
 import ins from "../../public/assets/redes/instagram.png";
 import tik from "../../public/assets/redes/tiktok.png";
 import wha from "../../public/assets/redes/whatsapp.png";
-import arrow from "../../public/next.png";
 import call from "../../public/call.png";
 import logo from "../../public/logo.jpg";
 import styles from "../styles/Footer.module.scss";
@@ -15,13 +14,67 @@ import styles from "../styles/Footer.module.scss";
 const Contacto = () => {
   const [menuOption, setMenuOptions] = useState(false);
   const menuRef = useRef(null);
-  // const [isClient, setIsClient] = useState(false);
-  // const [animate, setAnimate] = useState(false);
   const flechaRef = useRef(null);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const [showPulse, setShowPulse] = useState(false);
+  const pulseIntervalRef = useRef(null);
 
   const switchOptions = () => {
     setMenuOptions(!menuOption);
   };
+
+  // Detectar interacción del usuario
+  useEffect(() => {
+    let scrollTimeout;
+
+    const handleUserInteraction = () => {
+      if (!hasUserInteracted) {
+        setHasUserInteracted(true);
+        // Iniciar pulso después de 3 segundos de la primera interacción
+        setTimeout(() => {
+          setShowPulse(true);
+          // Configurar pulso cada 30 segundos
+          pulseIntervalRef.current = setInterval(() => {
+            setShowPulse(true);
+            // Quitar el pulso después de 2 segundos
+            setTimeout(() => setShowPulse(false), 2000);
+          }, 30000);
+        }, 3000);
+      }
+    };
+
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        handleUserInteraction();
+      }, 150);
+    };
+
+    const handleClick = () => {
+      handleUserInteraction();
+    };
+
+    const handleKeyDown = () => {
+      handleUserInteraction();
+    };
+
+    // Agregar listeners para detectar interacción
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("click", handleClick);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("touchstart", handleClick);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClick);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("touchstart", handleClick);
+      if (pulseIntervalRef.current) {
+        clearInterval(pulseIntervalRef.current);
+      }
+      clearTimeout(scrollTimeout);
+    };
+  }, [hasUserInteracted]);
 
   // Función para cerrar el menú cuando se hace clic fuera
   useEffect(() => {
@@ -51,13 +104,24 @@ const Contacto = () => {
     <main className={styles.footer}>
       <article
         ref={flechaRef}
-        className={styles.flecha}
+        className={`${styles.flecha} ${showPulse ? styles.heartPulse : ""}`}
         onClick={switchOptions}
       >
-        <Image alt="Links to navigation" src={arrow} priority />
+        <div className={styles.socialIcon}>
+          <Image
+            src="https://0dwas2ied3dcs14f.public.blob.vercel-storage.com/icons/arrow.png"
+            alt="Redes Sociales"
+            width={30}
+            height={30}
+            className={styles.socialIconImage}
+          />
+          {/* <span className={styles.socialText}>Redes</span> */}
+        </div>
       </article>
 
-      <article className={styles.llamar}>
+      <article
+        className={`${styles.llamar} ${showPulse ? styles.heartPulse : ""}`}
+      >
         <Link href="tel:+573138627818">
           <Image alt="Contáctame" src={call} priority />
         </Link>
@@ -119,7 +183,7 @@ const Contacto = () => {
         <p>Este sitio web contiene información médica general y educativa.</p>
         <p>No reemplaza la consulta médica profesional personalizada.</p>
         <p>Consulte siempre con un profesional de la salud.</p>
-        <p>© 2024 Dr. Alirio Solarte España. Todos los derechos reservados.</p>
+        <p>© 2025 Dr. Alirio Solarte España. Todos los derechos reservados.</p>
       </article>
 
       <article

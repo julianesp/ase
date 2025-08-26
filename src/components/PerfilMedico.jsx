@@ -76,7 +76,7 @@ const PerfilMedico = () => {
             </div>
             <div className={styles.doctorImage}>
               <Image
-                src="/images/doctor.jpg"
+                src="https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/doctor.jpg"
                 alt="Dr. Alirio Solarte España"
                 width={300}
                 height={300}
@@ -89,7 +89,7 @@ const PerfilMedico = () => {
         <div className={styles.estadisticas}>
           {estadisticas.map((stat, index) => (
             <div key={index} className={styles.estadistica}>
-              <h3>{stat.numero}</h3>
+              <h3 className="dark:bg-black text-black">{stat.numero}</h3>
               <p>{stat.descripcion}</p>
             </div>
           ))}
@@ -125,7 +125,7 @@ const PerfilMedico = () => {
             <div className={styles.formacionList}>
               {formacion.map((item, index) => (
                 <div key={index} className={styles.formacionItem}>
-                  <div className={styles.año}>{item.año}</div>
+                  <div className={`${styles.año} `}>{item.año}</div>
                   <div className={styles.formacionContent}>
                     <h4>{item.titulo}</h4>
                     <p>{item.institucion}</p>

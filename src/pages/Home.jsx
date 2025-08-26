@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 // images doc
 import styles from "../styles/Home.module.scss";
@@ -9,9 +9,12 @@ import EspecialidadesMedicas from "../components/EspecialidadesMedicas.jsx";
 import PerfilMedico from "../components/PerfilMedico.jsx";
 import PreguntasFrecuentes from "../components/PreguntasFrecuentes.jsx";
 
-import d1 from "/public/images/doctor/1.png";
-import d2 from "/public/images/doctor/2.png";
-import d3 from "/public/images/doctor/3.png";
+// URLs de imágenes en Vercel Blob Storage
+const doctorImages = [
+  "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/doctor/1.png",
+  "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/doctor/2.png",
+  "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/doctor/3.png",
+];
 
 export const metadata = {
   title:
@@ -21,13 +24,14 @@ export const metadata = {
   keywords:
     "cirugía general, laparoscopia, endoscopia, colecistectomía, hernioplastia, apendicectomía, cirujano Putumayo, Sibundoy, procedimientos mínimamente invasivos",
   image:
-    "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Flogo_circular.jpeg?alt=media&token=67019e7b-b635-4507-b1fb-70c8b9aecbef",
+    "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/logo.jpg",
   url: "https://julianesp.github.io/ase/",
 };
 
 const Home = () => {
-  const imagePath = [d1, d2, d3];
+  const imagePath = doctorImages;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const goToPreviousSlide = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -41,12 +45,29 @@ const Home = () => {
     );
   };
 
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  // Auto-avance del slider
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === imagePath.length - 1 ? 0 : prevIndex + 1,
+      );
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, [isPlaying, imagePath.length]);
+
   const asideItems = [
     {
       title: "Hernias",
       content: "Explicando diferencias entre sus tipos",
       imageUrl:
-        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Fhernia.jpg?alt=media&token=ef907b8c-2f95-405c-88ca-bda3dd5de3bf",
+        "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/services/hernioplastia.jpg",
       links: [
         {
           text: "Ver video",
@@ -58,7 +79,7 @@ const Home = () => {
       title: "Laparoscopia",
       content: "Procedimiento durante la cirugía",
       imageUrl:
-        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcirugias%2Flaparoscopia.jpg?alt=media&token=c61c39d9-7d7c-445c-974d-8203322d7280",
+        "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/laparoscopia_1.jpg",
       links: [
         {
           text: "Ver video",
@@ -73,7 +94,7 @@ const Home = () => {
       title: "Escleroterapia",
       content: "Procedimiento médico utilizado para tratar venas varicosas",
       imageUrl:
-        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fescleroterapia.jpg?alt=media&token=4ddaa317-9396-4e55-906c-8b6187cb3652",
+        "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/services/escleroterapia.jpg",
 
       links: [
         {
@@ -86,7 +107,7 @@ const Home = () => {
       title: "Colecistectomía",
       content: "Cirugía para extirpar la vesícula biliar",
       imageUrl:
-        "https://firebasestorage.googleapis.com/v0/b/aliriose-3a721.appspot.com/o/images%2Fcolecistectomia.jpg?alt=media&token=9e7a4f94-861e-4f3f-b9ad-65b59d97888e",
+        "https://ihlfsrfme90d2jjk.public.blob.vercel-storage.com/images/services/colecistectomia.jpg",
 
       links: [
         {
@@ -122,6 +143,15 @@ const Home = () => {
 
           <div className={styles.heroImages}>
             <div className={styles.imageSlider}>
+              <div className={styles.playPauseControls}>
+                <button
+                  onClick={togglePlayPause}
+                  className={styles.playPauseBtn}
+                  title={isPlaying ? "Pausar" : "Reproducir"}
+                >
+                  {isPlaying ? "⏸️" : "▶️"}
+                </button>
+              </div>
               <Image
                 src={imagePath[currentImageIndex]}
                 alt={`Imagen ${currentImageIndex + 1} del Dr. Alirio Solarte`}
@@ -186,13 +216,10 @@ const Home = () => {
         </aside>
       </article>
 
-      {/* Perfil Médico Profesional */}
       <PerfilMedico />
 
-      {/* Especialidades Médicas Detalladas */}
       <EspecialidadesMedicas />
 
-      {/* Preguntas Frecuentes */}
       <PreguntasFrecuentes />
     </div>
   );
